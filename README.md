@@ -16,7 +16,7 @@ This project has 2 disctinct way of launching attacks :
 | Bundled in NeoLoad | No
 | Download Binaries | <ul><li>[latest release] is only compatible with NeoLoad from version 7.7</li></ul>|
                 
-                ### Installation
+### Installation
 
 1. Download the [latest release]() for NeoLoad from version 7.7
 1. Read the NeoLoad documentation to see [How to install a custom Advanced Action](https://www.neotys.com/documents/doc/neoload/latest/en/html/#25928.htm).
