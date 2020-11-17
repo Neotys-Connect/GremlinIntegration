@@ -1,0 +1,7 @@
+<basic-logical-action-container element-number="1" execution-type="0"
+    name="add to cart" pacingEnd="0" pacingMode="MODE_NO_PACING"
+    pacingStart="0" pacingValue="0" slaProfileEnabled="false"
+    traceVariableNamesAsString=""
+    uid="37f869d2-b27f-4524-b627-5360f2ff0ec4" weightsEnabled="false">
+    <weighted-embedded-action uid="9d3c9b10-2c67-4014-a1cf-2e54ec1f6fdd"/>
+</basic-logical-action-container>

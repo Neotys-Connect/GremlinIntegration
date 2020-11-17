@@ -1,0 +1,106 @@
+<scenario postMonitoringTime="-1" preMonitoringTime="-1"
+    slaProfileEnabled="false" traceVariables="true" uid="scenario1" virtualUsersStates="true">
+    <!--****** POPULATION POLICY ******-->
+    <population-policy name="Retail">
+        <duration-policy-entry iterations="1" time="300" timeUnit="0" type="2"/>
+        <volume-policy-entry>
+            <constant-volume-policy iterationNumber="1" userNumber="10"/>
+        </volume-policy-entry>
+        <start-stop-policy-entry start-delay="0" start-type="0"
+            stop-delay="60000" stop-type="0"/>
+        <runtime-policy continueOnError="true" thinktimePolicy="0"
+            thinktimeValue="5000" vuStartDelay="0" vuStartMode="0"/>
+        <!--****** POPULATION LG HOSTS ******-->
+        <lg-hosts>
+            <lg-host-entry>$zoneID=Default zone;$lgID=localhost:7100</lg-host-entry>
+        </lg-hosts>
+    </population-policy>
+    <!--****** POPULATION POLICY ******-->
+    <population-policy name="Gremlin Scenario">
+        <duration-policy-entry iterations="1" time="120" timeUnit="0" type="1"/>
+        <volume-policy-entry>
+            <constant-volume-policy iterationNumber="1" userNumber="1"/>
+        </volume-policy-entry>
+        <start-stop-policy-entry start-delay="0" start-type="0"
+            stop-delay="60000" stop-type="0"/>
+        <runtime-policy continueOnError="true" thinktimePolicy="0"
+            thinktimeValue="5000" vuStartDelay="0" vuStartMode="0"/>
+        <!--****** POPULATION LG HOSTS ******-->
+        <lg-hosts>
+            <lg-host-entry>$zoneID=Default zone;$lgID=localhost:7100</lg-host-entry>
+        </lg-hosts>
+    </population-policy>
+    <dashboards defaultDashboardUid="Graph board"/>
+    <!--****** DASHBOARDS  ******-->
+    <charts-model-description name="Graph board">
+        <chart-description autoRange="true"
+            chart-description-type="chart-description-type"
+            domainMarkerVisible="true" granularityLevel="0"
+            historyState="XMIN" includeInReport="false"
+            rangeMarkerVisible="true" title="User Load and Error Rate" typeName="CLASSIC">
+            <monitor-curve-description color="20,106,203"
+                connectionName="NeoLoad" dashed="false"
+                monitorName="UserLoad" monitoredHostName="NeoLoad"
+                scale="1.0" selected="false"/>
+            <action-curve-description
+                actionUid="2ee035d5-0178-378f-8d0a-63218f082d2f"
+                color="200,0,0" dashed="false" populationName=""
+                scale="1.0" selected="false"
+                statisticName="result.errors" zoneName=""/>
+        </chart-description>
+        <chart-description autoRange="true"
+            chart-description-type="chart-description-type"
+            domainMarkerVisible="true" granularityLevel="0"
+            historyState="XMIN" includeInReport="false"
+            rangeMarkerVisible="true" title="Overall Throughput" typeName="CLASSIC">
+            <monitor-curve-description color="42,89,26"
+                connectionName="NeoLoad" dashed="false"
+                monitorName="throughput" monitoredHostName="NeoLoad"
+                scale="1.0" selected="false"/>
+        </chart-description>
+        <chart-description autoRange="true"
+            chart-description-type="chart-description-type"
+            domainMarkerVisible="true" granularityLevel="0"
+            historyState="XMIN" includeInReport="false"
+            rangeMarkerVisible="true" title="Load Generators CPU usage" typeName="CLASSIC">
+            <monitor-curve-description color="0,255,0"
+                connectionName="NeoLoad" dashed="false"
+                monitorName="lgcpu.localhost:7100"
+                monitoredHostName="LG localhost:7100" scale="1.0" selected="false"/>
+        </chart-description>
+        <empty-chart-description/>
+    </charts-model-description>
+    <!--****** END DASHBOARDS  ******-->
+    <!--****** START DATA FILTERS  ******-->
+    <!--****** END DATA FILTERS  ******-->
+    <!--****** START RENDEZ-VOUS POLICIES  ******-->
+    <!--****** END RENDEZ-VOUS POLICIES  ******-->
+    <!--****** START DEBUG POLICY ******-->
+    <debug-policy mode="0"/>
+    <!--****** END DEBUG POLICY ******-->
+    <!--****** START VU STATES ******-->
+    <!--****** END VU STATES ******-->
+    <!--****** START EXCLUSION FILTER ******-->
+    <request-path-exclusion-filter isEnabled="false">
+        <regexps>
+            <regexp>.*\.jpg</regexp>
+            <regexp>.*\.jpeg</regexp>
+            <regexp>.*\.gif</regexp>
+            <regexp>.*\.png</regexp>
+            <regexp>.*\.bmp</regexp>
+            <regexp>.*\.css</regexp>
+            <regexp>.*\.js</regexp>
+            <regexp>.*\.swf</regexp>
+            <regexp>.*\.ico</regexp>
+            <regexp>.*\.jar</regexp>
+            <regexp>.*\.class</regexp>
+            <regexp>.*\.properties</regexp>
+        </regexps>
+    </request-path-exclusion-filter>
+    <!--****** END  EXCLUSION FILTER ******-->
+    <!--****** START DYNATRACE MONITORING ******-->
+    <dynatrace-monitoring/>
+    <!--****** END  DYNATRACE MONITORING ******-->
+    <!--****** START TRACE VARIABLES ******-->
+    <!--****** END TRACE VARIABLES ******-->
+</scenario>

@@ -1,0 +1,918 @@
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+
+
+ 
+ 	
+    
+    
+    
+    
+    
+    
+		<html>
+			<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=edge">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1" />
+				<title>DVD Movies</title>
+				<meta name="keywords" content="  DVD Movies  " />
+				<meta name="description" content="Buy DVD Movies here." />
+				<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+				
+				<link type="text/css" rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" />
+				<link type="text/css" rel="stylesheet" href="/konakart/styles/jquery.selectboxit.css" />
+				<link type="text/css" rel="stylesheet" href="/konakart/styles/font-awesome/css/font-awesome.css" />
+				<link type='text/css' rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700'  >		
+				<link type="text/css" rel="stylesheet" href="/konakart/styles/jcarousel.css" />				
+				<link type="text/css" rel="stylesheet" href="/konakart/styles/kk-style.css" />
+
+				<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>				
+				<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+				<script type="text/javascript" src="/konakart/script/jquery.validate.min.js"></script>
+				<script type="text/javascript" src="/konakart/script/jquery.selectboxit.min.js"></script>
+				<script type="text/javascript" src="/konakart/script/jquery.ui.datepicker-en.js"></script>			 
+				<script type="text/javascript" src="/konakart/script/jquery.ui.datepicker-de.js"></script>			 
+				<script type="text/javascript" src="/konakart/script/jquery.ui.datepicker-pt.js"></script>			 
+				<script type="text/javascript" src="/konakart/script/jquery.ui.datepicker-es.js"></script>			 
+				<script type="text/javascript" src="/konakart/script/ddpowerzoomer.js">
+				/***********************************************
+				* Image Power Zoomer- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+				* This notice MUST stay intact for legal use
+				* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+				***********************************************/
+				</script>			 
+				<script type="text/javascript" src="/konakart/script/jquery.jcarousel.min.js"></script>
+				<script type="text/javascript" src="/konakart/script/jquery.touchSwipe.min.js"></script>
+				<script type="text/javascript" src="/konakart/script/jquery.cookie.js"></script>
+				<script type="text/javascript" src="/konakart/script/jquery-backward-timer.min.js"></script>
+				<script type="text/javascript" src="/konakart/script/kk.js"></script>	
+				<script type="text/javascript" src="/konakart/script/kk.validation.js"></script>	
+				<script>
+				// Picture element HTML5 shiv
+				document.createElement( "picture" );
+				</script>
+				<script type="text/javascript" src="/konakart/script/picturefill-min.js"></script>							
+				
+				<base href="http://ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780/konakart/"/>										
+				<!--- KonaKart v9.0.0.0.17740 -->
+			</head>
+			
+				<body id="catalog.showcats.page">
+			
+
+			
+			
+
+			<input type="hidden" value="null" id="kk_xsrf_token"/>
+	
+	
+	<script language="JavaScript" type="text/javascript">
+		if (top.location != location) {
+					top.location.href = document.location.href ;
+			}
+				
+			// Set jquery validation messages
+			jQuery.validator.messages = {
+					state: 'Required field.',
+					country: 'Required field.',
+					required: 'Required field.',
+					creditcard: 'Please enter a valid credit card number.',
+					digits: 'Please enter only digits.',
+					maxlength: jQuery.validator.format('Please enter no more than {0} characters.'),
+					minlength: jQuery.validator.format('Please enter at least {0} characters.'),
+					expirydate: 'Please specify a valid expiry date in the format MMYY.',
+					email:	'Please enter a valid email address.',
+					url:	'Please enter a valid URL.',
+					number:	'Please enter a valid number.',
+ 					equalTo: 'The passwords do not match.'
+		};		 
+	</script>			
+	
+				
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+<script type="text/javascript">	
+$(function() {
+	$('#lang-select').selectBoxIt({
+		downArrowIcon: "selectboxit-down-arrow"
+    });	 
+
+	
+		
+	$('#currency-select').selectBoxIt({
+		downArrowIcon: "selectboxit-down-arrow"
+    });	
+	
+	
+    $('#open-search').click(function() {
+        $('#slide-out-search').slideToggle('fast');
+    });
+    $('#close-search').click(function() {
+        $('#slide-out-search').slideToggle('fast');
+    });
+    
+	
+
+});
+</script>
+
+<div id="top-bar-container">
+	<div id="slide-out-search">
+		 
+		 <div id="search">
+				
+				<form action="QuickSearch.action" id="quickSearchFormMobile" method="post">
+					<input type="hidden" value="null" name="xsrf_token"/>
+					<input type="hidden" value="true" name="searchInDesc"/>
+					<input type="text" id="search-input-mobile"  name="searchText" class="rounded-corners-left">
+					<a id="search-button-mobile" class="rounded-corners-right" onclick="javascript:document.getElementById('quickSearchFormMobile').submit();">Search</a>
+				</form>	
+            
+
+			<a id="adv-search-link" href="AdvancedSearch.action">Advanced Search</a>
+		</div>
+		<span id="close-search" class="fa fa-times" title='Close'></span>
+	</div>
+  	<div id="top-bar">
+  		<div id="search-container">
+	  		<div id="top-bar-search" class="top-bar-menu-item">
+			  	<span id="open-search" class="fa fa-search top-bar-menu-icon" title="Search"></span> 
+			</div>
+		</div>
+		<div id="selections-container">
+			<div id="selections">
+		  		<div id="language-selector" class="top-bar-menu-item">
+		  			<form action="SetLocale.action" method="post">  
+		  				<input type="hidden" value="null" name="xsrf_token"/>
+						<select id="lang-select" name="locale"  onchange="submit()">
+							<option  value="en_GB" data-icon="flag flag-en-GB" selected="selected">English</option>
+							<option  value="de_DE" data-icon="flag flag-de-DE"  >Deutsch</option>
+							<option  value="es_ES" data-icon="flag flag-es-ES"  >Español</option>
+							<option  value="pt_BR" data-icon="flag flag-pt-BR"  >Português</option>
+						</select>
+					</form>									
+		  		</div>
+		  		<div id="currency-selector"  class="top-bar-menu-item">
+					<form action="SelectCurrency.action" method="post">  
+						<input type="hidden" value="null" name="xsrf_token"/>
+						<select id="currency-select" name="currencyCode"  onchange="submit()">
+							
+								
+								
+									<option  value="USD">US $</option>
+								
+							
+								
+								
+									<option  value="EUR">EUR €</option>
+								
+							
+								
+								
+									<option  value="CHF">CHF</option>
+								
+							
+						</select>
+					</form>										  			
+		  		</div>
+		  	</div>
+		  </div>
+		 <div id="options-container">
+	  		<div id="options">		
+
+	  			  		
+	  		<div id="my-account" class="top-bar-menu-item">
+	  			<span class="fa fa-user top-bar-menu-icon"><a href="LogIn.action" title='My Account'></a></span>  			
+		  		<span class="top-bar-menu-title"><a href="LogIn.action">My Account</a></span>
+	  			
+	  		</div>
+	  			
+			
+			<div id="shopping-cart" class="top-bar-menu-item">
+				<span class="fa fa-shopping-cart top-bar-menu-icon" title='Shopping Cart'><span id="basket-items"></span></span>  			
+		  		<span class="shopping-cart-title top-bar-menu-title">Shopping Cart<span id="basket-items"> </span></span>
+		  		
+		  		
+		  	
+		    <div id="shopping-cart-container">
+			  	<div id="shopping-cart-mouseover-shadow" class="slide-out-shadow"></div>
+			  	<div id="shopping-cart-contents" class="slide-out-contents shadow">
+						
+						Your Shopping Cart is empty
+									  		
+			  	</div>	
+			</div>
+			</div>
+		</div>
+		</div>
+  	</div>
+</div>  
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+<div id="header-container">
+	<div id="header">
+		<div id="logo">
+			
+			 
+
+			
+				
+				
+				
+				
+				
+			 
+			<a href="Welcom.action"><img id="logo-1"  
+			    src="/konakart/images/content/logo.png"
+			    alt="KonaKart logo"/></a>
+		</div>
+		<div id="search">
+				
+				<form action="QuickSearch.action" id="quickSearchForm" method="post">
+					<input type="hidden" value="null" name="xsrf_token"/>
+					<input type="hidden" value="true" name="searchInDesc"/>
+					<input type="text" id="search-input" name="searchText" class="rounded-corners-left">
+					<a id="search-button" class="rounded-corners-right" onclick="javascript:document.getElementById('quickSearchForm').submit();">Search</a>
+				</form>	
+            
+		</div>
+		<a id="adv-search-link" href="AdvancedSearch.action">Advanced Search</a>
+ 	</div>
+</div>
+	    		<div id="page-container">
+	    			<div id="page" class="category">
+						
+
+
+
+
+
+
+
+<div id="main-menu">
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=1' class="menu-item rounded-corners" style="width: auto;">Computer Peripherals</a>
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=2' class="menu-item rounded-corners" style="width: auto;">Games</a>
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=3' class="menu-item rounded-corners" style="width: auto;">DVD Movies</a>
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=24' class="menu-item rounded-corners" style="width: auto;">Home & Garden</a>
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=23' class="menu-item rounded-corners" style="width: auto;">Electronics</a>
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=22' class="menu-item rounded-corners" style="width: auto;">Software</a>
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=21' class="menu-item rounded-corners last-child" style="width: auto;">Gifts</a>
+						
+</div>
+
+						
+
+
+
+
+
+
+ <div id="breadcrumbs">
+	
+    	<span class="breadcrumb-item"><a href="Welcome.action">Home</a></span>
+													
+	
+    	 
+    	
+            
+			
+				<span class="breadcrumb-separator"></span>				
+				
+				
+				<span class="breadcrumb-item"><a href="SelectCat.action?catId=3">DVD Movies</a></span>
+					    												
+				    												
+	 	
+ </div>
+						
+
+
+
+
+
+
+
+
+
+ 
+	
+
+	<script>
+
+		if ($(window).width() < 750) {
+			  $(function() {
+			    $( "#side-menu-mobile" ).accordion({
+			    	collapsible: true,
+			    	active: false,
+			    	heightStyle: "content"
+			    });
+			  });
+		}else{
+			window.onresize = function() {
+				if ($(window).width() < 750) {
+				  $(function() {
+				    $( "#side-menu-mobile" ).accordion({
+				    	collapsible: true,
+				    	active: false,
+				    	heightStyle: "content"
+				    });
+				  });
+				}
+			};
+		}
+
+	  </script>
+
+	<div id="side-menu">	
+  							
+				<div class="side-menu-section">
+					<h1>Categories</h1>
+					<ul>				
+					
+						
+						
+						<li>
+						
+						
+						
+							
+						
+						
+						
+							<a href='SelectCat.action?catId=3&t=1589554928717'><span class="current-cat">DVD Movies (17)</span></a>
+						
+						</li>
+					
+						
+						
+						<li>
+						
+							<span class='fa fa-angle-right'></span>
+						
+						
+						
+							
+						
+						
+						
+							<a href='SelectCat.action?catId=15&t=1589554928717'>Drama (3)</a>
+						
+						</li>
+					
+						
+						
+						<li>
+						
+							<span class='fa fa-angle-right'></span>
+						
+						
+						
+							
+						
+						
+						
+							<a href='SelectCat.action?catId=14&t=1589554928717'>Thriller (1)</a>
+						
+						</li>
+					
+						
+						
+						<li>
+						
+							<span class='fa fa-angle-right'></span>
+						
+						
+						
+							
+						
+						
+						
+							<a href='SelectCat.action?catId=13&t=1589554928717'>Cartoons (1)</a>
+						
+						</li>
+					
+						
+						
+						<li>
+						
+							<span class='fa fa-angle-right'></span>
+						
+						
+						
+							
+						
+						
+						
+							<a href='SelectCat.action?catId=12&t=1589554928717'>Comedy (2)</a>
+						
+						</li>
+					
+						
+						
+						<li>
+						
+							<span class='fa fa-angle-right'></span>
+						
+						
+						
+							
+						
+						
+						
+							<a href='SelectCat.action?catId=11&t=1589554928717'>Science Fiction (1)</a>
+						
+						</li>
+					
+						
+						
+						<li>
+						
+							<span class='fa fa-angle-right'></span>
+						
+						
+						
+							
+						
+						
+						
+							<a href='SelectCat.action?catId=10&t=1589554928717'>Action (9)</a>
+						
+						</li>
+					
+					</ul>
+				</div>
+				
+				
+					<h1>
+						Refine Search	
+					</h1>
+				
+				
+				    						
+				
+					<div class="side-menu-section">
+						<h2>Manufacturers</h2>	
+						<ul>				
+							
+								
+								
+								
+									<li><a href='FilterSearchByManufacturer.action?manuId=4&t=1589554928717'><span class="kk-not-selected"></span>Fox (5)</a></li>	
+								
+							
+								
+								
+								
+									<li><a href='FilterSearchByManufacturer.action?manuId=11&t=1589554928717'><span class="kk-not-selected"></span>Lionsgate (1)</a></li>	
+								
+							
+								
+								
+								
+									<li><a href='FilterSearchByManufacturer.action?manuId=3&t=1589554928717'><span class="kk-not-selected"></span>Warner (11)</a></li>	
+								
+							
+						</ul>
+					</div>
+								
+				
+				
+					    																											
+	</div>
+	<div id="side-menu-mobile">	
+  							
+				
+				<h1>Categories</h1>
+				<div class="side-menu-section">	
+					<ul>				
+					
+						
+						
+						<li>
+						
+						
+						
+							
+						
+						
+						
+							<a href='SelectCat.action?catId=3&t=1589554928717'><span class="current-cat">DVD Movies (17)</span></a>
+						
+						</li>
+					
+						
+						
+						<li>
+						
+							<span class='fa fa-angle-right'></span>
+						
+						
+						
+							
+						
+						
+						
+							<a href='SelectCat.action?catId=15&t=1589554928717'>Drama (3)</a>
+						
+						</li>
+					
+						
+						
+						<li>
+						
+							<span class='fa fa-angle-right'></span>
+						
+						
+						
+							
+						
+						
+						
+							<a href='SelectCat.action?catId=14&t=1589554928717'>Thriller (1)</a>
+						
+						</li>
+					
+						
+						
+						<li>
+						
+							<span class='fa fa-angle-right'></span>
+						
+						
+						
+							
+						
+						
+						
+							<a href='SelectCat.action?catId=13&t=1589554928717'>Cartoons (1)</a>
+						
+						</li>
+					
+						
+						
+						<li>
+						
+							<span class='fa fa-angle-right'></span>
+						
+						
+						
+							
+						
+						
+						
+							<a href='SelectCat.action?catId=12&t=1589554928717'>Comedy (2)</a>
+						
+						</li>
+					
+						
+						
+						<li>
+						
+							<span class='fa fa-angle-right'></span>
+						
+						
+						
+							
+						
+						
+						
+							<a href='SelectCat.action?catId=11&t=1589554928717'>Science Fiction (1)</a>
+						
+						</li>
+					
+						
+						
+						<li>
+						
+							<span class='fa fa-angle-right'></span>
+						
+						
+						
+							
+						
+						
+						
+							<a href='SelectCat.action?catId=10&t=1589554928717'>Action (9)</a>
+						
+						</li>
+					
+					</ul>
+				</div>
+				
+				
+					<h1>
+						Refine Search	
+					</h1>
+					<div id="refine-search-content">
+						
+						    						
+						
+						
+							<h2>Manufacturers</h2>
+							<div class="side-menu-section">
+								<ul>				
+									
+										
+										
+										
+											<li><a href='FilterSearchByManufacturer.action?manuId=4&t=1589554928717'><span class="kk-not-selected"></span>Fox (5)</a></li>	
+										
+									
+										
+										
+										
+											<li><a href='FilterSearchByManufacturer.action?manuId=11&t=1589554928717'><span class="kk-not-selected"></span>Lionsgate (1)</a></li>	
+										
+									
+										
+										
+										
+											<li><a href='FilterSearchByManufacturer.action?manuId=3&t=1589554928717'><span class="kk-not-selected"></span>Warner (11)</a></li>	
+										
+									
+								</ul>
+							</div>
+										
+						
+						
+						</div>
+						
+					
+					    																											
+	</div>
+ 
+
+						<div id="content" class="narrow">
+							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+
+		
+			
+			
+			
+			
+			
+		
+		
+	
+	
+	
+		
+			<a href="SelectProd.action?prodId=20">
+				<picture class="rounded-corners">
+					<!--[if IE 9]><video style="display: none;"><![endif]-->
+					<source srcset="/konakart/images/content/dark-knight.png" media="(min-width: 750px)">
+					<source srcset="/konakart/images/content/dark-knight-medium.png" media="(min-width: 440px)">
+					<source srcset="/konakart/images/content/dark-knight-small.png" >
+					<!--[if IE 9]></video><![endif]-->
+					<img srcset="/konakart/images/content/dark-knight.png">
+				</picture>
+			</a> 	
+		
+	
+
+
+
+	
+		
+		
+		
+		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+
+		
+		
+	
+
+	
+		<div id="banners">
+		
+			<a href="SelectProd.action?prodId=11">
+				<picture class="banner-double rounded-corners">
+					<!--[if IE 9]><video style="display: none;"><![endif]-->
+					<source srcset="/konakart/images/content/harry-potter.png" media="(min-width: 750px)">
+					<source srcset="/konakart/images/content/harry-potter-medium.png" media="(min-width: 440px)">
+					<source srcset="/konakart/images/content/harry-potter-small.png" >
+					<!--[if IE 9]></video><![endif]-->
+					<img srcset="/konakart/images/content/harry-potter.png">
+				</picture>
+			</a> 	
+			
+
+		
+			<picture class="banner-double rounded-corners last-child">
+				<!--[if IE 9]><video style="display: none;"><![endif]-->
+				<source srcset="/konakart/images/content/movie-deals.png" media="(min-width: 750px)">
+				<source srcset="/konakart/images/content/movie-deals-medium.png" media="(min-width: 440px)">
+				<source srcset="/konakart/images/content/movie-deals-small.png" >
+				<!--[if IE 9]></video><![endif]-->
+				<img srcset="/konakart/images/content/movie-deals.png">
+			</picture>
+			
+		
+	</div>
+
+
+ 
+					 		
+
+
+
+
+
+
+
+
+
+
+
+	
+ 
+		    	
+<script type="text/javascript">$(function() {var jc876 = $('#jc876');jc876.on('jcarousel:reload jcarousel:create', function () {var itemWidth =  180;var width = jc876.width();if (width < 440){itemWidth =  150;}var numItems = Math.floor(width / itemWidth);if (numItems == 0) {numItems = 1;jc876.jcarousel('items').css('width', itemWidth + 'px');} else {var extra = width - (numItems*itemWidth);var extraPerItem  = extra / numItems;rightMargin = Math.ceil(extraPerItem/2);var leftMargin = Math.floor(extraPerItem/2);jc876.jcarousel('items').css('width', itemWidth + 'px');jc876.jcarousel('items').css('margin-left', leftMargin + 'px');jc876.jcarousel('items').css('margin-right', rightMargin + 'px');}jc876.jcarousel('scroll', 0, true, function(scrolled) {setControls(jc876,$('#jc876-prev'),$('#jc876-next'));})}).jcarousel({wrap: null});$('#jc876-prev').jcarouselControl({method: function() {jc876.jcarousel('scroll', '-='+jc876.jcarousel('visible').length, true, function(scrolled) {setControls(jc876,$('#jc876-prev'),$('#jc876-next'));})} }); $('#jc876-next').jcarouselControl({method: function() {jc876.jcarousel('scroll', '+='+jc876.jcarousel('visible').length, true, function(scrolled) {setControls(jc876,$('#jc876-prev'),$('#jc876-next'));})} }); jc876.swipe({swipeRight: function(event, direction, distance, duration, fingerCount) {jc876.jcarousel('scroll', '-='+jc876.jcarousel('visible').length, true, function(scrolled) {setControls(jc876,$('#jc876-prev'),$('#jc876-next'));}) },swipeLeft: function(event, direction, distance, duration, fingerCount) {jc876.jcarousel('scroll', '+='+jc876.jcarousel('visible').length, true, function(scrolled) {setControls(jc876,$('#jc876-prev'),$('#jc876-next'));}) }});});</script><div class="item-area wide rounded-corners"><div class="item-area-header"><h2 class="item-area-title">New Arrivals in DVD Movies</h2><div class="item-area-navigation jcarousel-wrapper"><a href="#" id="jc876-prev" class="jcarousel-control-prev jcarousel-border-prev"></a><a href="#" id="jc876-next" class="jcarousel-control-next jcarousel-border-next"></a></div></div><div id="jc876" class="jcarousel"><ul><li><div class="item"><div class="item-over" id="834ov-20" ><div class="items-left amber">3<br/>Left</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="834atc-20" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/6/8/9/6/68965D51-F873-4D1B-8A37-92A340E5B913_1_medium.jpg" border="0" alt="The Dark Knight" title="The Dark Knight" ><a class="item-title" href="SelectProd.action?prodId=20" >The Dark Knight</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$54.99</div></div></div></li><li><div class="item"><div class="item-over" id="18ov-19" ><div class="items-left amber">3<br/>Left</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="18atc-19" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/C/1/9/2/C1929825-BD7C-4FE3-8AE8-DFEA73A230F0_1_medium.jpg" border="0" alt="There's Something About Mary" title="There's Something About Mary" ><a class="item-title" href="SelectProd.action?prodId=19" >There's Something About Mary</a><div class="rating"><a class="item-title" href="SelectProd.action?prodId=19&showRevs=t" ><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (1 Reviews)</a></div><div class="pricing"><div class="price">$49.99</div></div></div></li><li><div class="item"><div class="item-over" id="614ov-18" ><div class="items-left amber">3<br/>Left</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="614atc-18" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/C/5/1/A/C51A6C94-27CC-4159-89CF-D8EEFDBB2928_1_medium.jpg" border="0" alt="Speed 2: Cruise Control" title="Speed 2: Cruise Control" ><a class="item-title" href="SelectProd.action?prodId=18" >Speed 2: Cruise Control</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$42.00</div></div></div></li><li><div class="item"><div class="item-over" id="448ov-17" ><div class="items-left amber">3<br/>Left</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="448atc-17" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/8/C/7/A/8C7A57B8-A6B5-48A5-A965-87A7D728F1BE_1_medium.jpg" border="0" alt="Speed" title="Speed" ><a class="item-title" href="SelectProd.action?prodId=17" >Speed</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$39.99</div></div></div></li><li><div class="item"><div class="item-over" id="546ov-16" ><div class="items-left amber">3<br/>Left</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="546atc-16" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/2/1/E/0/21E0683C-62A7-4282-A36F-E0D6BC9AE8A2_1_medium.jpg" border="0" alt="Titanic" title="Titanic" ><a class="item-title" href="SelectProd.action?prodId=16" >Titanic</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$38.99</div></div></div></li><li><div class="item"><div class="item-over" id="72ov-15" ><div class="items-left amber">3<br/>Left</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="72atc-15" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/E/6/A/B/E6AB1135-5B32-4FD1-BF28-12C5CD256CD9_1_medium.jpg" border="0" alt="Frantic" title="Frantic" ><a class="item-title" href="SelectProd.action?prodId=15" >Frantic</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$35.00</div></div></div></li><li><div class="item"><div class="item-over" id="162ov-14" ><div class="items-left amber">3<br/>Left</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="162atc-14" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/F/3/1/8/F3186F6D-20DB-49A8-84F8-3F98BE3BA076_1_medium.jpg" border="0" alt="Red Corner" title="Red Corner" ><a class="item-title" href="SelectProd.action?prodId=14" >Red Corner</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$32.00</div></div></div></li><li><div class="item"><div class="item-over" id="407ov-13" ><div class="items-left amber">3<br/>Left</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="407atc-13" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/6/7/7/E/677E32E4-1DB2-44AD-A5BF-3CE389A25D3F_1_medium.jpg" border="0" alt="Lethal Weapon" title="Lethal Weapon" ><a class="item-title" href="SelectProd.action?prodId=13" >Lethal Weapon</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$34.99</div></div></div></li><li><div class="item"><div class="item-over" id="638ov-12" ><div class="items-left amber">2<br/>Left</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="638atc-12" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/F/7/E/6/F7E61CE3-5778-4790-A705-EE2D9980E979_1_medium.jpg" border="0" alt="Die Hard With A Vengeance" title="Die Hard With A Vengeance" ><a class="item-title" href="SelectProd.action?prodId=12" >Die Hard With A Vengeance</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$39.99</div></div></div></li><li><div class="item"><div class="item-over" id="271ov-11" ><div class="items-left amber">1<br/>Left</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="271atc-11" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/3/F/D/D/3FDD11D0-C6F2-45D0-B906-7DDFDA015594_1_medium.jpg" border="0" alt="Harry Potter - The Goblet of Fire" title="Harry Potter - The Goblet of Fire" ><a class="item-title" href="SelectProd.action?prodId=11" >Harry Potter - The Goblet of Fire</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$29.99</div></div></div></li></ul></div></div>
+
+ 
+							
+							
+							
+							
+				    	</div>
+						
+
+
+
+
+
+
+<script>
+function onBlur(el) {
+    if (el.value == '') {
+        el.value = el.defaultValue;
+    }
+}
+function onFocus(el) {
+    if (el.value == el.defaultValue) {
+        el.value = '';
+    }
+}
+
+$(function() {
+	$("#newsletter-input").keydown(function (e){
+	    if(e.keyCode == 13){
+	    	submitNewsletterForm();
+	    }
+	});
+});		
+</script>
+
+
+<div id="kkfooter">
+    <div id="contact-info" class="footer-area narrow">
+    	KonaKart<br />
+		020 7946 0000<br />
+		<a href ="#">info@konakart.com</a>
+    </div>
+   	<div id="newsletter" class="footer-area wide">
+   		Subscribe to our Newsletter<br />
+ 		<input type="text" id="newsletter-input" class="rounded-corners-left" onblur="onBlur(this)" onfocus="onFocus(this)" value="Your Email">
+		<a id="newsletter-button" class="rounded-corners-right">Sign Up</a>
+		<div id="newsletter-msg"></div>
+   	</div>
+   	<div id="links-1" class="footer-area narrow">
+		<a href ="AboutUs.action">About Us</a><br />
+		<a href ="ShippingAndHandling.action">Shipping & Handling</a><br />
+		<a href ="Returns.action">Returns</a><br />
+		<a href ="InternationalOrders.action">International Orders</a><br />
+   	</div>
+   	<div id="links-2" class="footer-area narrow">
+		<a href ="PrivacyPolicy.action">Privacy Policy</a><br />
+		<a href ="TermsOfUse.action">Terms of use</a><br />
+		<a href ="Help.action">Help</a><br />
+		<a href ="ContactUs.action">Contact Us</a><br />
+   	</div>
+   	<div id="social" class="footer-area narrow last-child">
+		Connect with us<br />
+		<a href="http://www.twitter.com" target="_blank" class="fa fa-twitter-square"></a>
+		<a href="http://www.facebook.com" target="_blank" class="fa fa-facebook-square"></a>
+		<a href="http://www.pinterest.com" target="_blank" class="fa fa-pinterest-square"></a>
+   	</div>
+</div>
+		    		</div>
+	    		</div>
+				
+<div id="copyright-container">
+	<!-- Please leave the "Powered by KonaKart" link - it's a condition of the licence  -->
+	<div id="copyright">© 2014 - 2019 KonaKart Store - Powered by <a href="http://www.konakart.com">KonaKart</a></div>
+</div>
+						
+    
+			</body>
+		</html>
+	

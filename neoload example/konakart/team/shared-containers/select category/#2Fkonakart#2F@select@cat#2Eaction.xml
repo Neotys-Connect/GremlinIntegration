@@ -1,0 +1,258 @@
+<http-page executeResourcesDynamically="false"
+    name="/konakart/SelectCat.action" playRequestsSequentially="false"
+    recordedArtifactZipFileName="team/shared-containers/select category/%resources%/recorded-artifacts/3bdb2683-8067-45ae-aa2a-4c9fcb00ae5d.zip"
+    slaProfileEnabled="false" thinkTime="8300"
+    thinkTimeMode="MODE_RANGE_THINK_TIME" thinkTimeRangeEnd="10000"
+    thinkTimeRangeStart="5000" uid="3bdb2683-8067-45ae-aa2a-4c9fcb00ae5d">
+    <embedded-action>436c0b06-0ef6-4213-8ba1-8590305f5fab</embedded-action>
+    <embedded-action>7a8d5acc-3d00-4ec0-8423-36527ec972bb</embedded-action>
+    <embedded-action>be3938c9-7305-421b-a486-94b0e5e37679</embedded-action>
+    <embedded-action>87b7298b-7d59-4eb3-acc8-99b8eefdbd32</embedded-action>
+    <embedded-action>bcb90efd-c1cd-493f-a150-8b70fc475c31</embedded-action>
+    <embedded-action>da7cf84f-dee6-46d5-8c4d-cc925308483f</embedded-action>
+    <embedded-action>92d04ffc-fc22-4d26-8eb9-6cc84c0dd461</embedded-action>
+    <screenshotFileDescription>recorded-screenshots/sc_ed681415-15dc-41df-9558-96c103da59dd.jpg</screenshotFileDescription>
+</http-page>
+<http-action actionType="1" contentType="text/html;charset=UTF-8"
+    extractorInjectPathPolicy="2" extractorPathPolicy="1"
+    followRedirects="false" generatedByClient="false"
+    linkExtractorSeveralMatchOccurrence="1"
+    linkExtractorSeveralMatchPolicy="1" linkExtractorType="6"
+    method="GET" name="/konakart/SelectCat.action"
+    path="/konakart/SelectCat.action" postType="2"
+    recordedArtifactZipFileName="team/shared-containers/select category/%resources%/recorded-artifacts/3bdb2683-8067-45ae-aa2a-4c9fcb00ae5d.zip"
+    recordedResponseCode="301" responseSize="0" serverUid="host"
+    slaProfileEnabled="false" uid="436c0b06-0ef6-4213-8ba1-8590305f5fab" useKeepAlive="false">
+    <responsePageFileDescription>recorded-responses/res_436c0b06-0ef6-4213-8ba1-8590305f5fab.html</responsePageFileDescription>
+    <requestContentFileDescription>recorded-requests/req_436c0b06-0ef6-4213-8ba1-8590305f5fab.txt</requestContentFileDescription>
+    <parameter encodeName="true" encodeValue="true" name="catId"
+        recordRawValue="3" separator="=" value="${Category}" valueMode="USE_VALUE"/>
+    <header name="Accept" value="text/html, application/xhtml+xml, image/jxr, */*"/>
+    <header name="Accept-Encoding" value="gzip, deflate"/>
+    <header name="Accept-Language" value="fr-FR"/>
+    <header name="Cookie" value="JSESSIONID=78CBE1F4FBE874DB236B3DE89543D978; CUSTOMER_UUID=375cfbed-334a-4d4e-8cc3-929063bc8c63"/>
+    <header name="Host" value="ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780"/>
+    <header name="Proxy-Connection" value="Keep-Alive"/>
+    <header name="Referer" value="http://ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780/konakart/Welcome.action"/>
+    <header name="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"/>
+    <responseHeaders>HTTP/1.1 301 &#xd;
+Location: http://ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780/konakart/DVD-Movies/1_3_-1_-1.action&#xd;
+Expires: Wed, 11 Jan 1984 05:00:00 GMT&#xd;
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate&#xd;
+Pragma: no-cache&#xd;
+Connection: close&#xd;
+Content-Type: text/html;charset=UTF-8&#xd;
+Content-Length: 0&#xd;
+Date: Fri, 15 May 2020 15:02:08 GMT&#xd;
+Server: KonaKart</responseHeaders>
+    <record-html-infos extractorRegExp="false" htmlType="0"/>
+</http-action>
+<http-action actionType="2" contentType="text/html;charset=UTF-8"
+    extractorInjectPathPolicy="2" extractorPathPolicy="1"
+    followRedirects="false" generatedByClient="false"
+    linkExtractorSeveralMatchOccurrence="1"
+    linkExtractorSeveralMatchPolicy="1" linkExtractorType="6"
+    method="GET" name="/konakart/DVD-Movies/1_3_-1_-1.action"
+    path="/konakart/DVD-Movies/1_3_-1_-1.action" postCharset=""
+    postType="2"
+    recordedArtifactZipFileName="team/shared-containers/select category/%resources%/recorded-artifacts/3bdb2683-8067-45ae-aa2a-4c9fcb00ae5d.zip"
+    recordedResponseCode="200" responseSize="31583" serverUid="host"
+    slaProfileEnabled="false" uid="7a8d5acc-3d00-4ec0-8423-36527ec972bb" useKeepAlive="false">
+    <responsePageFileDescription>recorded-responses/res_7a8d5acc-3d00-4ec0-8423-36527ec972bb.html</responsePageFileDescription>
+    <requestContentFileDescription>recorded-requests/req_7a8d5acc-3d00-4ec0-8423-36527ec972bb.txt</requestContentFileDescription>
+    <variable-extractor assertionOnNoMatch="true"
+        defaultValue="&lt;NOT FOUND>" displayMode="0"
+        endsWithSimple="&quot;" extractFromVarNameAdv=""
+        extractFromVarNameSimple="" extractType="0" extractTypeAdv="0"
+        extractTypeSimple="0" matchNumber="-1" matchNumberAdv="1"
+        matchNumberSimple="-1" name="pictures"
+        refererUid="edc1b948-8aa3-465e-b8fa-c01e0ba7e2a0"
+        regExp="&lt;img  class=&quot;item-img&quot; src=&quot;/konakart/images/prod/(.*?)&quot;"
+        regExpAdv="" setDefaultValue="true"
+        startsWithSimple="&lt;img  class=&quot;item-img&quot; src=&quot;/konakart/images/prod/"
+        template="$1$" templateAdv="$1$"
+        uid="00065326-9241-4bbb-b993-dae32f931cfa" xpath="">
+        <variable-extractor-group extract="true" occurs="1" pattern="" type="4"/>
+    </variable-extractor>
+    <variable-extractor assertionOnNoMatch="true"
+        defaultValue="&lt;NOT FOUND>" displayMode="0"
+        endsWithSimple="&quot;" extractFromVarNameAdv=""
+        extractFromVarNameSimple="" extractType="0" extractTypeAdv="0"
+        extractTypeSimple="0" matchNumber="0" matchNumberAdv="1"
+        matchNumberSimple="0" name="prodId"
+        refererUid="edc1b948-8aa3-465e-b8fa-c01e0ba7e2a0"
+        regExp="ref=&quot;SelectProd\.action\?prodId=(.*?)&quot;"
+        regExpAdv="" setDefaultValue="true"
+        startsWithSimple="ref=&quot;SelectProd.action?prodId="
+        template="$1$" templateAdv="$1$"
+        uid="fbf44f50-5352-46e3-9ee7-8b35b95f5210" xpath="">
+        <variable-extractor-group extract="true" occurs="1" pattern="" type="4"/>
+    </variable-extractor>
+    <header name="Accept" value="text/html, application/xhtml+xml, image/jxr, */*"/>
+    <header name="Accept-Encoding" value="gzip, deflate"/>
+    <header name="Accept-Language" value="fr-FR"/>
+    <header name="Cookie" value="JSESSIONID=78CBE1F4FBE874DB236B3DE89543D978; CUSTOMER_UUID=375cfbed-334a-4d4e-8cc3-929063bc8c63"/>
+    <header name="Host" value="ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780"/>
+    <header name="Proxy-Connection" value="Keep-Alive"/>
+    <header name="Referer" value="http://ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780/konakart/Welcome.action"/>
+    <header name="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"/>
+    <responseHeaders>HTTP/1.1 200 &#xd;
+Content-Type: text/html;charset=UTF-8&#xd;
+Transfer-Encoding: chunked&#xd;
+Date: Fri, 15 May 2020 15:02:08 GMT&#xd;
+Server: KonaKart</responseHeaders>
+    <record-html-infos extractorRegExp="false" htmlType="0"/>
+</http-action>
+<http-action actionType="1" contentType="image/png"
+    eTag="W/&quot;964-1563274398000&quot;" extractorInjectPathPolicy="2"
+    extractorPathPolicy="1" followRedirects="false"
+    generatedByClient="false" linkExtractorSeveralMatchOccurrence="1"
+    linkExtractorSeveralMatchPolicy="1" linkExtractorType="6"
+    method="GET" name="/konakart/images/arrow-right-inactive.png"
+    path="/konakart/images/arrow-right-inactive.png" postType="2"
+    recordedArtifactZipFileName="team/shared-containers/select category/%resources%/recorded-artifacts/3bdb2683-8067-45ae-aa2a-4c9fcb00ae5d.zip"
+    recordedResponseCode="200" responseSize="0" serverUid="host"
+    slaProfileEnabled="false" uid="be3938c9-7305-421b-a486-94b0e5e37679" useKeepAlive="false">
+    <responsePageFileDescription>recorded-responses/res_be3938c9-7305-421b-a486-94b0e5e37679.png</responsePageFileDescription>
+    <requestContentFileDescription>recorded-requests/req_be3938c9-7305-421b-a486-94b0e5e37679.txt</requestContentFileDescription>
+    <header name="Accept" value="image/png, image/svg+xml, image/jxr, image/*;q=0.8, */*;q=0.5"/>
+    <header name="Accept-Encoding" value="gzip, deflate"/>
+    <header name="Accept-Language" value="fr-FR"/>
+    <header name="Cookie" value="JSESSIONID=78CBE1F4FBE874DB236B3DE89543D978; CUSTOMER_UUID=375cfbed-334a-4d4e-8cc3-929063bc8c63"/>
+    <header name="Host" value="ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780"/>
+    <header name="Proxy-Connection" value="Keep-Alive"/>
+    <header name="Referer" value="http://ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780/konakart/DVD-Movies/1_3_-1_-1.action"/>
+    <header name="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"/>
+    <responseHeaders>HTTP/1.1 200 &#xd;
+Accept-Ranges: bytes&#xd;
+ETag: W/"964-1563274398000"&#xd;
+Last-Modified: Tue, 16 Jul 2019 10:53:18 GMT&#xd;
+Content-Type: image/png&#xd;
+Content-Length: 964&#xd;
+Date: Fri, 15 May 2020 15:02:11 GMT&#xd;
+Server: KonaKart</responseHeaders>
+    <record-html-infos extractorRegExp="false" htmlType="0"/>
+</http-action>
+<http-action actionType="1" contentType="image/png"
+    eTag="W/&quot;136-1563274404000&quot;" extractorInjectPathPolicy="2"
+    extractorPathPolicy="1" followRedirects="false"
+    generatedByClient="false" linkExtractorSeveralMatchOccurrence="1"
+    linkExtractorSeveralMatchPolicy="1" linkExtractorType="6"
+    method="GET" name="/konakart/images/not-selected.png"
+    path="/konakart/images/not-selected.png" postType="2"
+    recordedArtifactZipFileName="team/shared-containers/select category/%resources%/recorded-artifacts/3bdb2683-8067-45ae-aa2a-4c9fcb00ae5d.zip"
+    recordedResponseCode="200" responseSize="0" serverUid="host"
+    slaProfileEnabled="false" uid="87b7298b-7d59-4eb3-acc8-99b8eefdbd32" useKeepAlive="false">
+    <responsePageFileDescription>recorded-responses/res_87b7298b-7d59-4eb3-acc8-99b8eefdbd32.png</responsePageFileDescription>
+    <requestContentFileDescription>recorded-requests/req_87b7298b-7d59-4eb3-acc8-99b8eefdbd32.txt</requestContentFileDescription>
+    <header name="Accept" value="image/png, image/svg+xml, image/jxr, image/*;q=0.8, */*;q=0.5"/>
+    <header name="Accept-Encoding" value="gzip, deflate"/>
+    <header name="Accept-Language" value="fr-FR"/>
+    <header name="Cookie" value="JSESSIONID=78CBE1F4FBE874DB236B3DE89543D978; CUSTOMER_UUID=375cfbed-334a-4d4e-8cc3-929063bc8c63"/>
+    <header name="Host" value="ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780"/>
+    <header name="Proxy-Connection" value="Keep-Alive"/>
+    <header name="Referer" value="http://ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780/konakart/DVD-Movies/1_3_-1_-1.action"/>
+    <header name="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"/>
+    <responseHeaders>HTTP/1.1 200 &#xd;
+Accept-Ranges: bytes&#xd;
+ETag: W/"136-1563274404000"&#xd;
+Last-Modified: Tue, 16 Jul 2019 10:53:24 GMT&#xd;
+Content-Type: image/png&#xd;
+Content-Length: 136&#xd;
+Date: Fri, 15 May 2020 15:02:11 GMT&#xd;
+Server: KonaKart</responseHeaders>
+    <record-html-infos extractorRegExp="false" htmlType="0"/>
+</http-action>
+<http-action actionType="1" contentType="image/png"
+    eTag="W/&quot;105507-1563274398000&quot;"
+    extractorInjectPathPolicy="2" extractorPathPolicy="1"
+    followRedirects="false" generatedByClient="false"
+    linkExtractorSeveralMatchOccurrence="1"
+    linkExtractorSeveralMatchPolicy="1" linkExtractorType="6"
+    method="GET" name="/konakart/images/content/dark-knight.png"
+    path="/konakart/images/content/dark-knight.png" postType="2"
+    recordedArtifactZipFileName="team/shared-containers/select category/%resources%/recorded-artifacts/3bdb2683-8067-45ae-aa2a-4c9fcb00ae5d.zip"
+    recordedResponseCode="200" responseSize="0" serverUid="host"
+    slaProfileEnabled="false" uid="bcb90efd-c1cd-493f-a150-8b70fc475c31" useKeepAlive="false">
+    <responsePageFileDescription>recorded-responses/res_bcb90efd-c1cd-493f-a150-8b70fc475c31.png</responsePageFileDescription>
+    <requestContentFileDescription>recorded-requests/req_bcb90efd-c1cd-493f-a150-8b70fc475c31.txt</requestContentFileDescription>
+    <header name="Accept" value="image/png, image/svg+xml, image/jxr, image/*;q=0.8, */*;q=0.5"/>
+    <header name="Accept-Encoding" value="gzip, deflate"/>
+    <header name="Accept-Language" value="fr-FR"/>
+    <header name="Cookie" value="JSESSIONID=78CBE1F4FBE874DB236B3DE89543D978; CUSTOMER_UUID=375cfbed-334a-4d4e-8cc3-929063bc8c63"/>
+    <header name="Host" value="ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780"/>
+    <header name="Proxy-Connection" value="Keep-Alive"/>
+    <header name="Referer" value="http://ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780/konakart/DVD-Movies/1_3_-1_-1.action"/>
+    <header name="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"/>
+    <responseHeaders>HTTP/1.1 200 &#xd;
+Accept-Ranges: bytes&#xd;
+ETag: W/"105507-1563274398000"&#xd;
+Last-Modified: Tue, 16 Jul 2019 10:53:18 GMT&#xd;
+Content-Type: image/png&#xd;
+Content-Length: 105507&#xd;
+Date: Fri, 15 May 2020 15:02:11 GMT&#xd;
+Server: KonaKart</responseHeaders>
+    <record-html-infos extractorRegExp="false" htmlType="0"/>
+</http-action>
+<http-action actionType="1" contentType="image/png"
+    eTag="W/&quot;56246-1563274398000&quot;"
+    extractorInjectPathPolicy="2" extractorPathPolicy="1"
+    followRedirects="false" generatedByClient="false"
+    linkExtractorSeveralMatchOccurrence="1"
+    linkExtractorSeveralMatchPolicy="1" linkExtractorType="6"
+    method="GET" name="/konakart/images/content/harry-potter.png"
+    path="/konakart/images/content/harry-potter.png" postType="2"
+    recordedArtifactZipFileName="team/shared-containers/select category/%resources%/recorded-artifacts/3bdb2683-8067-45ae-aa2a-4c9fcb00ae5d.zip"
+    recordedResponseCode="200" responseSize="0" serverUid="host"
+    slaProfileEnabled="false" uid="da7cf84f-dee6-46d5-8c4d-cc925308483f" useKeepAlive="false">
+    <responsePageFileDescription>recorded-responses/res_da7cf84f-dee6-46d5-8c4d-cc925308483f.png</responsePageFileDescription>
+    <requestContentFileDescription>recorded-requests/req_da7cf84f-dee6-46d5-8c4d-cc925308483f.txt</requestContentFileDescription>
+    <header name="Accept" value="image/png, image/svg+xml, image/jxr, image/*;q=0.8, */*;q=0.5"/>
+    <header name="Accept-Encoding" value="gzip, deflate"/>
+    <header name="Accept-Language" value="fr-FR"/>
+    <header name="Cookie" value="JSESSIONID=78CBE1F4FBE874DB236B3DE89543D978; CUSTOMER_UUID=375cfbed-334a-4d4e-8cc3-929063bc8c63"/>
+    <header name="Host" value="ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780"/>
+    <header name="Proxy-Connection" value="Keep-Alive"/>
+    <header name="Referer" value="http://ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780/konakart/DVD-Movies/1_3_-1_-1.action"/>
+    <header name="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"/>
+    <responseHeaders>HTTP/1.1 200 &#xd;
+Accept-Ranges: bytes&#xd;
+ETag: W/"56246-1563274398000"&#xd;
+Last-Modified: Tue, 16 Jul 2019 10:53:18 GMT&#xd;
+Content-Type: image/png&#xd;
+Content-Length: 56246&#xd;
+Date: Fri, 15 May 2020 15:02:11 GMT&#xd;
+Server: KonaKart</responseHeaders>
+    <record-html-infos extractorRegExp="false" htmlType="0"/>
+</http-action>
+<http-action actionType="1" contentType="image/png"
+    eTag="W/&quot;6257-1563274398000&quot;"
+    extractorInjectPathPolicy="2" extractorPathPolicy="1"
+    followRedirects="false" generatedByClient="false"
+    linkExtractorSeveralMatchOccurrence="1"
+    linkExtractorSeveralMatchPolicy="1" linkExtractorType="6"
+    method="GET" name="/konakart/images/content/movie-deals.png"
+    path="/konakart/images/content/movie-deals.png" postType="2"
+    recordedArtifactZipFileName="team/shared-containers/select category/%resources%/recorded-artifacts/3bdb2683-8067-45ae-aa2a-4c9fcb00ae5d.zip"
+    recordedResponseCode="200" responseSize="0" serverUid="host"
+    slaProfileEnabled="false" uid="92d04ffc-fc22-4d26-8eb9-6cc84c0dd461" useKeepAlive="false">
+    <responsePageFileDescription>recorded-responses/res_92d04ffc-fc22-4d26-8eb9-6cc84c0dd461.png</responsePageFileDescription>
+    <requestContentFileDescription>recorded-requests/req_92d04ffc-fc22-4d26-8eb9-6cc84c0dd461.txt</requestContentFileDescription>
+    <header name="Accept" value="image/png, image/svg+xml, image/jxr, image/*;q=0.8, */*;q=0.5"/>
+    <header name="Accept-Encoding" value="gzip, deflate"/>
+    <header name="Accept-Language" value="fr-FR"/>
+    <header name="Cookie" value="JSESSIONID=78CBE1F4FBE874DB236B3DE89543D978; CUSTOMER_UUID=375cfbed-334a-4d4e-8cc3-929063bc8c63"/>
+    <header name="Host" value="ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780"/>
+    <header name="Proxy-Connection" value="Keep-Alive"/>
+    <header name="Referer" value="http://ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780/konakart/DVD-Movies/1_3_-1_-1.action"/>
+    <header name="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"/>
+    <responseHeaders>HTTP/1.1 200 &#xd;
+Accept-Ranges: bytes&#xd;
+ETag: W/"6257-1563274398000"&#xd;
+Last-Modified: Tue, 16 Jul 2019 10:53:18 GMT&#xd;
+Content-Type: image/png&#xd;
+Content-Length: 6257&#xd;
+Date: Fri, 15 May 2020 15:02:11 GMT&#xd;
+Server: KonaKart</responseHeaders>
+    <record-html-infos extractorRegExp="false" htmlType="0"/>
+</http-action>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.neotys.gremlin</groupId>
+    <artifactId>chaosandLoadtesting</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>gremlinCommon</module>
+        <module>actions</module>
+        <module>apiclient</module>
+    </modules>
+
+
+    <repositories>
+        <repository>
+            <id>neotys-apis-releases</id>
+            <url>http://maven.neotys.com/content/groups/public</url>
+        </repository>
+    </repositories>
+
+</project>

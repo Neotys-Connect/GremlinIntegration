@@ -1,0 +1,33 @@
+<http-action actionType="1" contentType="image/jpeg"
+    eTag="W/&quot;4243-1563274404000&quot;"
+    extractorInjectPathPolicy="2" extractorPathPolicy="1"
+    followRedirects="false" generatedByClient="false"
+    lastModified="Tue, 16 Jul 2019 10:53:24 GMT"
+    linkExtractorSeveralMatchOccurrence="1"
+    linkExtractorSeveralMatchPolicy="1" linkExtractorType="6"
+    method="GET"
+    name="/konakart/images/prod/3/F/D/D/3FDD11D0-C6F2-45D0-B906-7DDFDA015594_1_medium.jpg"
+    path="/konakart/images/prod/${pictures_${loop_counter}}"
+    postType="2" recordedResponseCode="200" responseSize="0"
+    serverUid="host" slaProfileEnabled="false"
+    uid="b6830d18-a8a9-435f-8e51-16ef32ce1d40" useKeepAlive="false">
+    <responsePageFileDescription>team/shared-containers/select category/%resources%/recorded-responses/res_b6830d18-a8a9-435f-8e51-16ef32ce1d40</responsePageFileDescription>
+    <requestContentFileDescription>team/shared-containers/select category/%resources%/recorded-requests/req_b6830d18-a8a9-435f-8e51-16ef32ce1d40.txt</requestContentFileDescription>
+    <header name="Accept" value="image/png, image/svg+xml, image/jxr, image/*;q=0.8, */*;q=0.5"/>
+    <header name="Accept-Encoding" value="gzip, deflate"/>
+    <header name="Accept-Language" value="fr-FR"/>
+    <header name="Cookie" value="JSESSIONID=78CBE1F4FBE874DB236B3DE89543D978; CUSTOMER_UUID=375cfbed-334a-4d4e-8cc3-929063bc8c63"/>
+    <header name="Host" value="ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780"/>
+    <header name="Proxy-Connection" value="Keep-Alive"/>
+    <header name="Referer" value="http://ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780/konakart/DVD-Movies/1_3_-1_-1.action"/>
+    <header name="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"/>
+    <responseHeaders>HTTP/1.1 200 &#xd;
+Accept-Ranges: bytes&#xd;
+ETag: W/"6294-1563274402000"&#xd;
+Last-Modified: Tue, 16 Jul 2019 10:53:22 GMT&#xd;
+Content-Type: image/jpeg&#xd;
+Content-Length: 6294&#xd;
+Date: Fri, 15 May 2020 15:02:08 GMT&#xd;
+Server: KonaKart</responseHeaders>
+    <record-html-infos extractorRegExp="false" htmlType="0"/>
+</http-action>

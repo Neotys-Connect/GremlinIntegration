@@ -1,0 +1,576 @@
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+
+
+ 
+ 	
+    
+    
+    
+    
+    
+    
+		<html>
+			<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=edge">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1" />
+				<title>KonaKart</title>
+				<meta name="keywords" content="KonaKart Java Shopping Cart eCommerce" />
+				<meta name="description" content="Powered by KonaKart Java Shopping Cart " />
+				<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+				
+				<link type="text/css" rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" />
+				<link type="text/css" rel="stylesheet" href="/konakart/styles/jquery.selectboxit.css" />
+				<link type="text/css" rel="stylesheet" href="/konakart/styles/font-awesome/css/font-awesome.css" />
+				<link type='text/css' rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700'  >		
+				<link type="text/css" rel="stylesheet" href="/konakart/styles/jcarousel.css" />				
+				<link type="text/css" rel="stylesheet" href="/konakart/styles/kk-style.css" />
+
+				<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>				
+				<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+				<script type="text/javascript" src="/konakart/script/jquery.validate.min.js"></script>
+				<script type="text/javascript" src="/konakart/script/jquery.selectboxit.min.js"></script>
+				<script type="text/javascript" src="/konakart/script/jquery.ui.datepicker-en.js"></script>			 
+				<script type="text/javascript" src="/konakart/script/jquery.ui.datepicker-de.js"></script>			 
+				<script type="text/javascript" src="/konakart/script/jquery.ui.datepicker-pt.js"></script>			 
+				<script type="text/javascript" src="/konakart/script/jquery.ui.datepicker-es.js"></script>			 
+				<script type="text/javascript" src="/konakart/script/ddpowerzoomer.js">
+				/***********************************************
+				* Image Power Zoomer- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+				* This notice MUST stay intact for legal use
+				* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+				***********************************************/
+				</script>			 
+				<script type="text/javascript" src="/konakart/script/jquery.jcarousel.min.js"></script>
+				<script type="text/javascript" src="/konakart/script/jquery.touchSwipe.min.js"></script>
+				<script type="text/javascript" src="/konakart/script/jquery.cookie.js"></script>
+				<script type="text/javascript" src="/konakart/script/jquery-backward-timer.min.js"></script>
+				<script type="text/javascript" src="/konakart/script/kk.js"></script>	
+				<script type="text/javascript" src="/konakart/script/kk.validation.js"></script>	
+				<script>
+				// Picture element HTML5 shiv
+				document.createElement( "picture" );
+				</script>
+				<script type="text/javascript" src="/konakart/script/picturefill-min.js"></script>							
+				
+				<base href="http://ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780/konakart/"/>										
+				<!--- KonaKart v9.0.0.0.17740 -->
+			</head>
+			
+				<body id="catalog.main.page">
+			
+
+			
+			
+
+			<input type="hidden" value="null" id="kk_xsrf_token"/>
+	
+	
+	<script language="JavaScript" type="text/javascript">
+		if (top.location != location) {
+					top.location.href = document.location.href ;
+			}
+				
+			// Set jquery validation messages
+			jQuery.validator.messages = {
+					state: 'Required field.',
+					country: 'Required field.',
+					required: 'Required field.',
+					creditcard: 'Please enter a valid credit card number.',
+					digits: 'Please enter only digits.',
+					maxlength: jQuery.validator.format('Please enter no more than {0} characters.'),
+					minlength: jQuery.validator.format('Please enter at least {0} characters.'),
+					expirydate: 'Please specify a valid expiry date in the format MMYY.',
+					email:	'Please enter a valid email address.',
+					url:	'Please enter a valid URL.',
+					number:	'Please enter a valid number.',
+ 					equalTo: 'The passwords do not match.'
+		};		 
+	</script>			
+	
+				
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+<script type="text/javascript">	
+$(function() {
+	$('#lang-select').selectBoxIt({
+		downArrowIcon: "selectboxit-down-arrow"
+    });	 
+
+	
+		
+	$('#currency-select').selectBoxIt({
+		downArrowIcon: "selectboxit-down-arrow"
+    });	
+	
+	
+    $('#open-search').click(function() {
+        $('#slide-out-search').slideToggle('fast');
+    });
+    $('#close-search').click(function() {
+        $('#slide-out-search').slideToggle('fast');
+    });
+    
+	
+
+});
+</script>
+
+<div id="top-bar-container">
+	<div id="slide-out-search">
+		 
+		 <div id="search">
+				
+				<form action="QuickSearch.action" id="quickSearchFormMobile" method="post">
+					<input type="hidden" value="null" name="xsrf_token"/>
+					<input type="hidden" value="true" name="searchInDesc"/>
+					<input type="text" id="search-input-mobile"  name="searchText" class="rounded-corners-left">
+					<a id="search-button-mobile" class="rounded-corners-right" onclick="javascript:document.getElementById('quickSearchFormMobile').submit();">Search</a>
+				</form>	
+            
+
+			<a id="adv-search-link" href="AdvancedSearch.action">Advanced Search</a>
+		</div>
+		<span id="close-search" class="fa fa-times" title='Close'></span>
+	</div>
+  	<div id="top-bar">
+  		<div id="search-container">
+	  		<div id="top-bar-search" class="top-bar-menu-item">
+			  	<span id="open-search" class="fa fa-search top-bar-menu-icon" title="Search"></span> 
+			</div>
+		</div>
+		<div id="selections-container">
+			<div id="selections">
+		  		<div id="language-selector" class="top-bar-menu-item">
+		  			<form action="SetLocale.action" method="post">  
+		  				<input type="hidden" value="null" name="xsrf_token"/>
+						<select id="lang-select" name="locale"  onchange="submit()">
+							<option  value="en_GB" data-icon="flag flag-en-GB" selected="selected">English</option>
+							<option  value="de_DE" data-icon="flag flag-de-DE"  >Deutsch</option>
+							<option  value="es_ES" data-icon="flag flag-es-ES"  >Español</option>
+							<option  value="pt_BR" data-icon="flag flag-pt-BR"  >Português</option>
+						</select>
+					</form>									
+		  		</div>
+		  		<div id="currency-selector"  class="top-bar-menu-item">
+					<form action="SelectCurrency.action" method="post">  
+						<input type="hidden" value="null" name="xsrf_token"/>
+						<select id="currency-select" name="currencyCode"  onchange="submit()">
+							
+								
+								
+									<option  value="USD">US $</option>
+								
+							
+								
+								
+									<option  value="EUR">EUR €</option>
+								
+							
+								
+								
+									<option  value="CHF">CHF</option>
+								
+							
+						</select>
+					</form>										  			
+		  		</div>
+		  	</div>
+		  </div>
+		 <div id="options-container">
+	  		<div id="options">		
+
+	  			  		
+	  		<div id="my-account" class="top-bar-menu-item">
+	  			<span class="fa fa-user top-bar-menu-icon"><a href="LogIn.action" title='My Account'></a></span>  			
+		  		<span class="top-bar-menu-title"><a href="LogIn.action">My Account</a></span>
+	  			
+	  		</div>
+	  			
+			
+			<div id="shopping-cart" class="top-bar-menu-item">
+				<span class="fa fa-shopping-cart top-bar-menu-icon" title='Shopping Cart'><span id="basket-items"></span></span>  			
+		  		<span class="shopping-cart-title top-bar-menu-title">Shopping Cart<span id="basket-items"> </span></span>
+		  		
+		  		
+		  	
+		    <div id="shopping-cart-container">
+			  	<div id="shopping-cart-mouseover-shadow" class="slide-out-shadow"></div>
+			  	<div id="shopping-cart-contents" class="slide-out-contents shadow">
+						
+						Your Shopping Cart is empty
+									  		
+			  	</div>	
+			</div>
+			</div>
+		</div>
+		</div>
+  	</div>
+</div>  
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+	<div id="cookie-container">
+		<div id="cookie-warning">
+				<span style="display:table-cell; vertical-align:top;">Cookies help us deliver the best experience on our website. By using our website, you agree to our use of cookies.</span>
+				<span style="display:table-cell; vertical-align:middle;"><div id="cookie-warn-button" class="button small-rounded-corners">Continue</div></span>
+		</div>
+	</div>
+
+
+<div id="header-container">
+	<div id="header">
+		<div id="logo">
+			
+			 
+
+			
+				
+				
+				
+				
+				
+			 
+			<a href="Welcom.action"><img id="logo-1"  
+			    src="/konakart/images/content/logo.png"
+			    alt="KonaKart logo"/></a>
+		</div>
+		<div id="search">
+				
+				<form action="QuickSearch.action" id="quickSearchForm" method="post">
+					<input type="hidden" value="null" name="xsrf_token"/>
+					<input type="hidden" value="true" name="searchInDesc"/>
+					<input type="text" id="search-input" name="searchText" class="rounded-corners-left">
+					<a id="search-button" class="rounded-corners-right" onclick="javascript:document.getElementById('quickSearchForm').submit();">Search</a>
+				</form>	
+            
+		</div>
+		<a id="adv-search-link" href="AdvancedSearch.action">Advanced Search</a>
+ 	</div>
+</div>
+	    		<div id="page-container">
+	    			<div id="page" class="home">
+						
+
+
+
+
+
+
+
+<div id="main-menu">
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=1' class="menu-item rounded-corners" style="width: auto;">Computer Peripherals</a>
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=2' class="menu-item rounded-corners" style="width: auto;">Games</a>
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=3' class="menu-item rounded-corners" style="width: auto;">DVD Movies</a>
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=24' class="menu-item rounded-corners" style="width: auto;">Home & Garden</a>
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=23' class="menu-item rounded-corners" style="width: auto;">Electronics</a>
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=22' class="menu-item rounded-corners" style="width: auto;">Software</a>
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=21' class="menu-item rounded-corners last-child" style="width: auto;">Gifts</a>
+						
+</div>
+
+						
+
+
+
+
+
+
+ <div id="breadcrumbs">
+													
+	 	
+ </div>
+						
+						<div id="content" class="wide">
+							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	 
+
+	
+		
+		
+		
+		
+		
+		
+		
+	 
+
+	<div id="slideshow"  class="rounded-corners" >
+	<a href="SelectProd.action?prodId=34">
+		<picture id="slide-1" class="slide rounded-corners">
+			<!--[if IE 9]><video style="display: none;"><![endif]-->
+			<source srcset="/konakart/images/content/home_kindle-fire-hd.jpg" media="(min-width: 750px)">
+			<source srcset="/konakart/images/content/home_kindle-fire-hd-medium.jpg" media="(min-width: 440px)">
+			<source srcset="/konakart/images/content/home_kindle-fire-hd-small.jpg" >
+			<!--[if IE 9]></video><![endif]-->
+			<img srcset="/konakart/images/content/home_kindle-fire-hd.jpg" alt="/konakart/images/content/Kindle fire">
+		</picture>
+	</a>
+	</div>
+ 
+
+
+	
+	
+	
+	
+
+	 
+
+	
+		
+		
+		
+		
+	 
+	
+	
+		
+		
+		
+		
+	 
+	
+	
+		
+		
+		
+		
+	 
+	
+	
+		
+		
+		
+		
+	 
+	
+	<div id="banners">
+	
+		<a href="ShowSpecials.action"><img id="banner-1" class="banner-small rounded-corners" 
+			src="/konakart/images/content/home_electronics-sale.jpg"/></a>
+	 
+	
+		<a href="SelectCat.action?catId=23"><img id="banner-2" class="banner-small rounded-corners" 
+			src="/konakart/images/content/home_electronics-sale-2.jpg"/></a>
+	 
+	
+		<a href="SelectCat.action?catId=24"><img id="banner-3" class="banner-small rounded-corners" 
+			src="/konakart/images/content/home_gifts-for-the-home.jpg"/></a>
+	 
+	
+		<a href="SelectProd.action?prodId=35"><img id="banner-4" class="banner-small rounded-corners last-child" 
+			src="/konakart/images/content/home_iphone-5.jpg"/></a>
+	 
+	</div>
+ 
+
+
+ 
+					 		
+
+
+
+
+
+
+
+
+
+
+
+	
+ 
+		    	
+<script type="text/javascript">$(function() {var jc76 = $('#jc76');jc76.on('jcarousel:reload jcarousel:create', function () {var itemWidth =  180;var width = jc76.width();if (width < 440){itemWidth =  150;}var numItems = Math.floor(width / itemWidth);if (numItems == 0) {numItems = 1;jc76.jcarousel('items').css('width', itemWidth + 'px');} else {var extra = width - (numItems*itemWidth);var extraPerItem  = extra / numItems;rightMargin = Math.ceil(extraPerItem/2);var leftMargin = Math.floor(extraPerItem/2);jc76.jcarousel('items').css('width', itemWidth + 'px');jc76.jcarousel('items').css('margin-left', leftMargin + 'px');jc76.jcarousel('items').css('margin-right', rightMargin + 'px');}jc76.jcarousel('scroll', 0, true, function(scrolled) {setControls(jc76,$('#jc76-prev'),$('#jc76-next'));})}).jcarousel({wrap: null});$('#jc76-prev').jcarouselControl({method: function() {jc76.jcarousel('scroll', '-='+jc76.jcarousel('visible').length, true, function(scrolled) {setControls(jc76,$('#jc76-prev'),$('#jc76-next'));})} }); $('#jc76-next').jcarouselControl({method: function() {jc76.jcarousel('scroll', '+='+jc76.jcarousel('visible').length, true, function(scrolled) {setControls(jc76,$('#jc76-prev'),$('#jc76-next'));})} }); jc76.swipe({swipeRight: function(event, direction, distance, duration, fingerCount) {jc76.jcarousel('scroll', '-='+jc76.jcarousel('visible').length, true, function(scrolled) {setControls(jc76,$('#jc76-prev'),$('#jc76-next'));}) },swipeLeft: function(event, direction, distance, duration, fingerCount) {jc76.jcarousel('scroll', '+='+jc76.jcarousel('visible').length, true, function(scrolled) {setControls(jc76,$('#jc76-prev'),$('#jc76-next'));}) }});});</script><div class="item-area wide rounded-corners"><div class="item-area-header"><h2 class="item-area-title">New Arrivals</h2><div class="item-area-navigation jcarousel-wrapper"><a href="#" id="jc76-prev" class="jcarousel-control-prev jcarousel-border-prev"></a><a href="#" id="jc76-next" class="jcarousel-control-next jcarousel-border-next"></a></div></div><div id="jc76" class="jcarousel"><ul><li><div class="item"><div class="item-over" id="90ov-63" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="90atc-63" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/8/6/D/7/86D70649-28A3-492D-A18E-B6BB0934EB7C_1_medium.jpg" border="0" alt="Call Of Duty" title="Call Of Duty" ><a class="item-title" href="SelectProd.action?prodId=63" >Call Of Duty</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$39.99</div></div></div></li><li><div class="item"><div class="item-over" id="259ov-62" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="259atc-62" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/C/0/2/C/C02C89ED-CB73-4150-BB41-0726DEE2E5A1_1_medium.jpg" border="0" alt="Weather Station Clock" title="Weather Station Clock" ><a class="item-title" href="SelectProd.action?prodId=62" >Weather Station Clock</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$21.99</div></div></div></li><li><div class="item"><div class="item-over" id="644ov-61" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="644atc-61" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/3/1/1/1/3111B14C-0BC1-45E4-A4F9-968DAD99B6F2_1_medium.jpg" border="0" alt="Galaxy Tab S4" title="Galaxy Tab S4" ><a class="item-title" href="SelectProd.action?prodId=61" >Galaxy Tab S4</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$699.99</div></div></div></li><li><div class="item"><div class="item-over" id="628ov-60" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="628atc-60" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/5/4/F/D/54FDD302-5B74-4075-8C2E-B9E11A0EEF2E_1_medium.jpg" border="0" alt="iPad" title="iPad" ><a class="item-title" href="SelectProd.action?prodId=60" >iPad</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$599.99</div></div></div></li><li><div class="item"><div class="item-over" id="652ov-59" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="652atc-59" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/E/7/B/8/E7B8896B-3199-4C4A-966D-9CCD3EFAA33C_1_medium.jpg" border="0" alt="MUM48R1 Food Processor" title="MUM48R1 Food Processor" ><a class="item-title" href="SelectProd.action?prodId=59" >MUM48R1 Food Processor</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$199.49</div></div></div></li><li><div class="item"><div class="item-over" id="957ov-58" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="957atc-58" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/F/F/0/6/FF06923B-46B1-4F4B-9A6F-A68276A56FE5_1_medium.jpg" border="0" alt="Office Home and Student 2019" title="Office Home and Student 2019" ><a class="item-title" href="SelectProd.action?prodId=58" >Office Home and Student 2019</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$159.99</div></div></div></li><li><div class="item"><div class="item-over" id="772ov-57" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="772atc-57" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/1/0/3/0/10301426-3620-418E-AF4D-4319F708E564_1_medium.jpg" border="0" alt="Vision Clock" title="Vision Clock" ><a class="item-title" href="SelectProd.action?prodId=57" >Vision Clock</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$79.99</div></div></div></li><li><div class="item"><div class="item-over" id="238ov-56" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="238atc-56" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/A/8/6/C/A86C794E-5C00-4F5D-8D01-121C01E6A470_1_medium.jpg" border="0" alt="60s Pluto Starburst Clock" title="60s Pluto Starburst Clock" ><a class="item-title" href="SelectProd.action?prodId=56" >60s Pluto Starburst Clock</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$133.99</div></div></div></li><li><div class="item"><div class="item-over" id="217ov-55" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="217atc-55" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/5/E/8/9/5E89B135-269C-4094-81F1-A71C98D1412A_1_medium.jpg" border="0" alt="Ministry Clock" title="Ministry Clock" ><a class="item-title" href="SelectProd.action?prodId=55" >Ministry Clock</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$83.99</div></div></div></li><li><div class="item"><div class="item-over" id="179ov-54" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="179atc-54" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/E/C/D/2/ECD283D0-BFFD-4639-8B08-965C3470B895_1_medium.jpg" border="0" alt="Nikon 1 J2 Compact" title="Nikon 1 J2 Compact" ><a class="item-title" href="SelectProd.action?prodId=54" >Nikon 1 J2 Compact</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$549.95</div></div></div></li></ul></div></div>
+
+ 
+							
+
+
+
+
+
+		    	
+<script type="text/javascript">$(function() {var jc526 = $('#jc526');jc526.on('jcarousel:reload jcarousel:create', function () {var itemWidth =  180;var width = jc526.width();if (width < 440){itemWidth =  150;}var numItems = Math.floor(width / itemWidth);if (numItems == 0) {numItems = 1;jc526.jcarousel('items').css('width', itemWidth + 'px');} else {var extra = width - (numItems*itemWidth);var extraPerItem  = extra / numItems;rightMargin = Math.ceil(extraPerItem/2);var leftMargin = Math.floor(extraPerItem/2);jc526.jcarousel('items').css('width', itemWidth + 'px');jc526.jcarousel('items').css('margin-left', leftMargin + 'px');jc526.jcarousel('items').css('margin-right', rightMargin + 'px');}jc526.jcarousel('scroll', 0, true, function(scrolled) {setControls(jc526,$('#jc526-prev'),$('#jc526-next'));})}).jcarousel({wrap: null});$('#jc526-prev').jcarouselControl({method: function() {jc526.jcarousel('scroll', '-='+jc526.jcarousel('visible').length, true, function(scrolled) {setControls(jc526,$('#jc526-prev'),$('#jc526-next'));})} }); $('#jc526-next').jcarouselControl({method: function() {jc526.jcarousel('scroll', '+='+jc526.jcarousel('visible').length, true, function(scrolled) {setControls(jc526,$('#jc526-prev'),$('#jc526-next'));})} }); jc526.swipe({swipeRight: function(event, direction, distance, duration, fingerCount) {jc526.jcarousel('scroll', '-='+jc526.jcarousel('visible').length, true, function(scrolled) {setControls(jc526,$('#jc526-prev'),$('#jc526-next'));}) },swipeLeft: function(event, direction, distance, duration, fingerCount) {jc526.jcarousel('scroll', '+='+jc526.jcarousel('visible').length, true, function(scrolled) {setControls(jc526,$('#jc526-prev'),$('#jc526-next'));}) }});});</script><div class="item-area wide rounded-corners"><div class="item-area-header"><h2 class="item-area-title">Featured Products</h2><div class="item-area-navigation jcarousel-wrapper"><a href="#" id="jc526-prev" class="jcarousel-control-prev jcarousel-border-prev"></a><a href="#" id="jc526-next" class="jcarousel-control-next jcarousel-border-next"></a></div></div><div id="jc526" class="jcarousel"><ul><li><div class="item"><div class="item-over" id="787ov-33" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="787atc-33" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/F/9/8/F/F98F155B-2D6D-41C0-897F-3071B6354AD8_1_medium.jpg" border="0" alt="De'Longhi BCO 410" title="De'Longhi BCO 410" ><a class="item-title" href="SelectProd.action?prodId=33" >De'Longhi BCO 410</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$159.99</div></div></div></li><li><div class="item"><div class="item-over" id="691ov-39" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="691atc-39" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/1/5/F/8/15F8FBB1-13DA-4A47-B3D2-0F1E7BECAE7C_1_medium.jpg" border="0" alt="Rotak 40 Ergoflex" title="Rotak 40 Ergoflex" ><a class="item-title" href="SelectProd.action?prodId=39" >Rotak 40 Ergoflex</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$159.99</div></div></div></li><li><div class="item"><div class="item-over" id="989ov-40" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="989atc-40" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/4/A/6/B/4A6B2621-4689-41D7-9BB6-9C2A4200F39E_1_medium.jpg" border="0" alt="Rotak 32" title="Rotak 32" ><a class="item-title" href="SelectProd.action?prodId=40" >Rotak 32</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$89.99</div></div></div></li><li><div class="item"><div class="item-over" id="216ov-41" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="216atc-41" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/9/5/7/8/95782936-65F3-448F-BF8E-A0F5409B5048_1_medium.jpg" border="0" alt="Flymo Chevron 34VC" title="Flymo Chevron 34VC" ><a class="item-title" href="SelectProd.action?prodId=41" >Flymo Chevron 34VC</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$109.99</div></div></div></li><li><div class="item"><div class="item-over" id="409ov-42" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="409atc-42" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/1/1/B/C/11BC0D25-1B08-4141-BABB-1B1E633CB382_1_medium.jpg" border="0" alt="Bosch SHM 38G" title="Bosch SHM 38G" ><a class="item-title" href="SelectProd.action?prodId=42" >Bosch SHM 38G</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$55.95</div></div></div></li><li><div class="item"><div class="item-over" id="13ov-43" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="13atc-43" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/A/2/1/C/A21CA25F-645B-4D88-9539-1407737EC790_1_medium.jpg" border="0" alt="Brita Marella XL Water Filter" title="Brita Marella XL Water Filter" ><a class="item-title" href="SelectProd.action?prodId=43" >Brita Marella XL Water Filter</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$15.19</div></div></div></li><li><div class="item"><div class="item-over" id="771ov-44" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="771atc-44" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/9/4/C/A/94CA0B48-0BCA-4696-A688-93C626E120F0_1_medium.jpg" border="0" alt="Brabantia Touch Bin" title="Brabantia Touch Bin" ><a class="item-title" href="SelectProd.action?prodId=44" >Brabantia Touch Bin</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$149.49</div></div></div></li><li><div class="item"><div class="item-over" id="949ov-59" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="949atc-59" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/E/7/B/8/E7B8896B-3199-4C4A-966D-9CCD3EFAA33C_1_medium.jpg" border="0" alt="MUM48R1 Food Processor" title="MUM48R1 Food Processor" ><a class="item-title" href="SelectProd.action?prodId=59" >MUM48R1 Food Processor</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$199.49</div></div></div></li></ul></div></div>
+
+
+							
+
+
+
+
+
+
+		    	
+
+
+
+							
+							
+				    	</div>
+						
+
+
+
+
+
+
+<script>
+function onBlur(el) {
+    if (el.value == '') {
+        el.value = el.defaultValue;
+    }
+}
+function onFocus(el) {
+    if (el.value == el.defaultValue) {
+        el.value = '';
+    }
+}
+
+$(function() {
+	$("#newsletter-input").keydown(function (e){
+	    if(e.keyCode == 13){
+	    	submitNewsletterForm();
+	    }
+	});
+});		
+</script>
+
+
+<div id="kkfooter">
+    <div id="contact-info" class="footer-area narrow">
+    	KonaKart<br />
+		020 7946 0000<br />
+		<a href ="#">info@konakart.com</a>
+    </div>
+   	<div id="newsletter" class="footer-area wide">
+   		Subscribe to our Newsletter<br />
+ 		<input type="text" id="newsletter-input" class="rounded-corners-left" onblur="onBlur(this)" onfocus="onFocus(this)" value="Your Email">
+		<a id="newsletter-button" class="rounded-corners-right">Sign Up</a>
+		<div id="newsletter-msg"></div>
+   	</div>
+   	<div id="links-1" class="footer-area narrow">
+		<a href ="AboutUs.action">About Us</a><br />
+		<a href ="ShippingAndHandling.action">Shipping & Handling</a><br />
+		<a href ="Returns.action">Returns</a><br />
+		<a href ="InternationalOrders.action">International Orders</a><br />
+   	</div>
+   	<div id="links-2" class="footer-area narrow">
+		<a href ="PrivacyPolicy.action">Privacy Policy</a><br />
+		<a href ="TermsOfUse.action">Terms of use</a><br />
+		<a href ="Help.action">Help</a><br />
+		<a href ="ContactUs.action">Contact Us</a><br />
+   	</div>
+   	<div id="social" class="footer-area narrow last-child">
+		Connect with us<br />
+		<a href="http://www.twitter.com" target="_blank" class="fa fa-twitter-square"></a>
+		<a href="http://www.facebook.com" target="_blank" class="fa fa-facebook-square"></a>
+		<a href="http://www.pinterest.com" target="_blank" class="fa fa-pinterest-square"></a>
+   	</div>
+</div>
+		    		</div>
+	    		</div>
+				
+<div id="copyright-container">
+	<!-- Please leave the "Powered by KonaKart" link - it's a condition of the licence  -->
+	<div id="copyright">© 2014 - 2019 KonaKart Store - Powered by <a href="http://www.konakart.com">KonaKart</a></div>
+</div>
+						
+    
+			</body>
+		</html>
+	

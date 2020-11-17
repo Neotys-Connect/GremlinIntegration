@@ -1,0 +1,11 @@
+GET http://ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780/konakart/styles/kk-style.css HTTP/1.1
+Accept: text/css, */*
+Referer: http://ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780/konakart/Welcome.action
+Accept-Language: fr-FR
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780
+Proxy-Connection: Keep-Alive
+Pragma: no-cache
+Cookie: JSESSIONID=78CBE1F4FBE874DB236B3DE89543D978; CUSTOMER_UUID=375cfbed-334a-4d4e-8cc3-929063bc8c63
+

@@ -1,0 +1,41 @@
+<custom-action actionType="Blackhole" isHit="false" name="blackhole" uid="3a22de1a-9ea9-45d4-b391-b184c6b99d2a">
+    <description>Run a Choas Monkey engineering scenario defined in Gremlin.
+
+Possible parameters are:&#xd;
+- GremlinToken (required): Gremlin API Token Default value is "Gremlin API Token".&#xd;
+- GremlinTeamID (required): Gremlin  Team ID Default value is "Gremlin Team ID".&#xd;
+- GremlinTargetType (required): Type of target : hosts or containers Default value is "Type of target : hosts or containers".&#xd;
+- GremlinTargetHostTags (required): List of tags seperated by a ,  Default value is "List of tags to select the host that will be target by the attack".&#xd;
+- GremlinTarget (required): Select the target by Percent or exact Default value is "percent or exact".&#xd;
+- GremlinTargetNumber (required): Number of targets that would be impacted ( in percentage or exact depends on the value the parameter GremlinTarget Default value is "Number of targets that would be impacted ".&#xd;
+Drops all matching network traffic
+https://www.gremlin.com/docs/infrastructure-layer/attacks/blackhole
+
+Possible parameters are:&#xd;
+- Length (optional): The length of the attack (seconds)
+Value must be of type: Integer Default value is "60".&#xd;
+- IP Addresses (optional): Only impact traffic to these IP addresses
+Exclude an IP address from impact with a leading '^'
+Value must be of type: IP&#xd;
+- Device (optional): Impact traffic over this network interface
+Defaults to the first device it finds (Ex: `eth0`)
+Value must be of type: String&#xd;
+- Hostnames (optional): Only impact traffic to these hostnames
+Exclude a host from impact with a leading '^'
+Value must be of type: URL Default value is "^api.gremlin.com".&#xd;
+- Remote Ports (optional): Impact outgoing and incoming traffic to and from these remote ports
+Ranges work too: '8080-8085'
+Value must be of type: String Default value is "^53".&#xd;
+- Local Ports (optional): Impact outgoing and incoming traffic to and from these local ports
+Ranges work too: '8080-8085'
+Value must be of type: String</description>
+    <custom-action-parameter name="GremlinToken" type="TEXT" value="${apikey}"/>
+    <custom-action-parameter name="GremlinTeamID" type="TEXT" value="${teamid}"/>
+    <custom-action-parameter name="GremlinTargetType" type="TEXT" value="hosts"/>
+    <custom-action-parameter name="GremlinTargetHostTags" type="TEXT" value="cloud:&quot;AWS&quot;"/>
+    <custom-action-parameter name="GremlinTarget" type="TEXT" value="percent"/>
+    <custom-action-parameter name="GremlinTargetNumber" type="TEXT" value="100"/>
+    <custom-action-parameter name="Hostnames" type="TEXT" value="^api.gremlin.com"/>
+    <custom-action-parameter name="Length" type="TEXT" value="60"/>
+    <responsePageFileDescription>recorded-responses/res_3a22de1a-9ea9-45d4-b391-b184c6b99d2a</responsePageFileDescription>
+</custom-action>

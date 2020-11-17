@@ -1,0 +1,44 @@
+<http-page executeResourcesDynamically="false" name="/urstelemetry.asmx"
+    playRequestsSequentially="false"
+    recordedArtifactZipFileName="team/shared-containers/home/%resources%/recorded-artifacts/42859f85-1539-4048-a7f6-db0147b02c08.zip"
+    slaProfileEnabled="false" thinkTime="1229"
+    thinkTimeMode="MODE_SIMPLE_THINK_TIME" thinkTimeRangeEnd=""
+    thinkTimeRangeStart="" uid="42859f85-1539-4048-a7f6-db0147b02c08">
+    <embedded-action>019ecfd4-4ef8-41a8-86ed-233306a22c34</embedded-action>
+    <screenshotFileDescription>recorded-screenshots/sc_1b1f7848-a167-4eb5-8074-91069d105a3e.jpg</screenshotFileDescription>
+</http-page>
+<http-action actionType="1" contentType="application/json;charset=UTF-8"
+    extractorInjectPathPolicy="2" extractorPathPolicy="1"
+    followRedirects="false" generatedByClient="false"
+    linkExtractorSeveralMatchOccurrence="1"
+    linkExtractorSeveralMatchPolicy="1" linkExtractorType="6"
+    method="POST" name="/konakart/AgreeToCookies.action"
+    path="/konakart/AgreeToCookies.action" postType="4"
+    recordedArtifactZipFileName="team/shared-containers/home/%resources%/recorded-artifacts/42859f85-1539-4048-a7f6-db0147b02c08.zip"
+    recordedResponseCode="200" responseSize="61" serverUid="host"
+    slaProfileEnabled="false" uid="019ecfd4-4ef8-41a8-86ed-233306a22c34" useKeepAlive="false">
+    <responsePageFileDescription>recorded-responses/res_0a51b807-43c7-49b0-9443-e2629789354c</responsePageFileDescription>
+    <requestContentFileDescription>recorded-requests/req_0a51b807-43c7-49b0-9443-e2629789354c.txt</requestContentFileDescription>
+    <header name="Accept" value="application/json, text/javascript, */*; q=0.01"/>
+    <header name="Accept-Encoding" value="gzip, deflate"/>
+    <header name="Accept-Language" value="fr-FR"/>
+    <header name="Content-Type" value="application/json; charset=utf-8"/>
+    <header name="Cookie" value="JSESSIONID=78CBE1F4FBE874DB236B3DE89543D978; CUSTOMER_UUID=375cfbed-334a-4d4e-8cc3-929063bc8c63"/>
+    <header name="Host" value="ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780"/>
+    <header name="Pragma" value="no-cache"/>
+    <header name="Proxy-Connection" value="Keep-Alive"/>
+    <header name="Referer" value="http://ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780/konakart/Welcome.action"/>
+    <header name="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"/>
+    <header name="X-Requested-With" value="XMLHttpRequest"/>
+    <responseHeaders>HTTP/1.1 200 &#xd;
+Cache-Control: no-cache, no-store&#xd;
+Pragma: no-cache&#xd;
+Expires: Wed, 11 Jan 1984 05:00:00 GMT&#xd;
+Set-Cookie: CUSTOMER_UUID=375cfbed-334a-4d4e-8cc3-929063bc8c63; Max-Age=31536000; Expires=Sat, 15-May-2021 15:02:00 GMT; Path=/&#xd;
+Content-Type: application/json;charset=UTF-8&#xd;
+Content-Length: 61&#xd;
+Date: Fri, 15 May 2020 15:02:00 GMT&#xd;
+Server: KonaKart</responseHeaders>
+    <record-html-infos extractorRegExp="false" htmlType="0"/>
+    <textPostContent><![CDATA[{"":""}]]></textPostContent>
+</http-action>

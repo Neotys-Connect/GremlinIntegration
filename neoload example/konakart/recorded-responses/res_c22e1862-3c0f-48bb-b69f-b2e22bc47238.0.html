@@ -1,0 +1,713 @@
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+
+
+ 
+ 	
+    
+    
+    	
+    
+    
+    
+    
+    
+		<html>
+			<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=edge">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1" />
+				<title>KonaKart</title>
+				<meta name="keywords" content="KonaKart Java Shopping Cart eCommerce" />
+				<meta name="description" content="Powered by KonaKart Java Shopping Cart " />
+				<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+				
+				<link type="text/css" rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" />
+				<link type="text/css" rel="stylesheet" href="/konakart/styles/jquery.selectboxit.css" />
+				<link type="text/css" rel="stylesheet" href="/konakart/styles/font-awesome/css/font-awesome.css" />
+				<link type='text/css' rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700'  >		
+				<link type="text/css" rel="stylesheet" href="/konakart/styles/jcarousel.css" />				
+				<link type="text/css" rel="stylesheet" href="/konakart/styles/kk-style.css" />
+
+				<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>				
+				<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+				<script type="text/javascript" src="/konakart/script/jquery.validate.min.js"></script>
+				<script type="text/javascript" src="/konakart/script/jquery.selectboxit.min.js"></script>
+				<script type="text/javascript" src="/konakart/script/jquery.ui.datepicker-en.js"></script>			 
+				<script type="text/javascript" src="/konakart/script/jquery.ui.datepicker-de.js"></script>			 
+				<script type="text/javascript" src="/konakart/script/jquery.ui.datepicker-pt.js"></script>			 
+				<script type="text/javascript" src="/konakart/script/jquery.ui.datepicker-es.js"></script>			 
+				<script type="text/javascript" src="/konakart/script/ddpowerzoomer.js">
+				/***********************************************
+				* Image Power Zoomer- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+				* This notice MUST stay intact for legal use
+				* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+				***********************************************/
+				</script>			 
+				<script type="text/javascript" src="/konakart/script/jquery.jcarousel.min.js"></script>
+				<script type="text/javascript" src="/konakart/script/jquery.touchSwipe.min.js"></script>
+				<script type="text/javascript" src="/konakart/script/jquery.cookie.js"></script>
+				<script type="text/javascript" src="/konakart/script/jquery-backward-timer.min.js"></script>
+				<script type="text/javascript" src="/konakart/script/kk.js"></script>	
+				<script type="text/javascript" src="/konakart/script/kk.validation.js"></script>	
+				<script>
+				// Picture element HTML5 shiv
+				document.createElement( "picture" );
+				</script>
+				<script type="text/javascript" src="/konakart/script/picturefill-min.js"></script>							
+				
+				<base href="http://ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780/konakart/"/>										
+				<!--- KonaKart v9.0.0.0.17740 -->
+			</head>
+			
+				<body id="catalog.showprods.page">
+			
+
+			
+			
+
+			<input type="hidden" value="null" id="kk_xsrf_token"/>
+	
+	
+	<script language="JavaScript" type="text/javascript">
+		if (top.location != location) {
+					top.location.href = document.location.href ;
+			}
+				
+			// Set jquery validation messages
+			jQuery.validator.messages = {
+					state: 'Required field.',
+					country: 'Required field.',
+					required: 'Required field.',
+					creditcard: 'Please enter a valid credit card number.',
+					digits: 'Please enter only digits.',
+					maxlength: jQuery.validator.format('Please enter no more than {0} characters.'),
+					minlength: jQuery.validator.format('Please enter at least {0} characters.'),
+					expirydate: 'Please specify a valid expiry date in the format MMYY.',
+					email:	'Please enter a valid email address.',
+					url:	'Please enter a valid URL.',
+					number:	'Please enter a valid number.',
+ 					equalTo: 'The passwords do not match.'
+		};		 
+	</script>			
+	
+				
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+<script type="text/javascript">	
+$(function() {
+	$('#lang-select').selectBoxIt({
+		downArrowIcon: "selectboxit-down-arrow"
+    });	 
+
+	
+		
+	$('#currency-select').selectBoxIt({
+		downArrowIcon: "selectboxit-down-arrow"
+    });	
+	
+	
+    $('#open-search').click(function() {
+        $('#slide-out-search').slideToggle('fast');
+    });
+    $('#close-search').click(function() {
+        $('#slide-out-search').slideToggle('fast');
+    });
+    
+	
+
+});
+</script>
+
+<div id="top-bar-container">
+	<div id="slide-out-search">
+		 
+		 <div id="search">
+				
+				<form action="QuickSearch.action" id="quickSearchFormMobile" method="post">
+					<input type="hidden" value="null" name="xsrf_token"/>
+					<input type="hidden" value="true" name="searchInDesc"/>
+					<input type="text" id="search-input-mobile"  name="searchText" class="rounded-corners-left">
+					<a id="search-button-mobile" class="rounded-corners-right" onclick="javascript:document.getElementById('quickSearchFormMobile').submit();">Search</a>
+				</form>	
+            
+
+			<a id="adv-search-link" href="AdvancedSearch.action">Advanced Search</a>
+		</div>
+		<span id="close-search" class="fa fa-times" title='Close'></span>
+	</div>
+  	<div id="top-bar">
+  		<div id="search-container">
+	  		<div id="top-bar-search" class="top-bar-menu-item">
+			  	<span id="open-search" class="fa fa-search top-bar-menu-icon" title="Search"></span> 
+			</div>
+		</div>
+		<div id="selections-container">
+			<div id="selections">
+		  		<div id="language-selector" class="top-bar-menu-item">
+		  			<form action="SetLocale.action" method="post">  
+		  				<input type="hidden" value="null" name="xsrf_token"/>
+						<select id="lang-select" name="locale"  onchange="submit()">
+							<option  value="en_GB" data-icon="flag flag-en-GB" selected="selected">English</option>
+							<option  value="de_DE" data-icon="flag flag-de-DE"  >Deutsch</option>
+							<option  value="es_ES" data-icon="flag flag-es-ES"  >Español</option>
+							<option  value="pt_BR" data-icon="flag flag-pt-BR"  >Português</option>
+						</select>
+					</form>									
+		  		</div>
+		  		<div id="currency-selector"  class="top-bar-menu-item">
+					<form action="SelectCurrency.action" method="post">  
+						<input type="hidden" value="null" name="xsrf_token"/>
+						<select id="currency-select" name="currencyCode"  onchange="submit()">
+							
+								
+								
+									<option  value="USD">US $</option>
+								
+							
+								
+								
+									<option  value="EUR">EUR €</option>
+								
+							
+								
+								
+									<option  value="CHF">CHF</option>
+								
+							
+						</select>
+					</form>										  			
+		  		</div>
+		  	</div>
+		  </div>
+		 <div id="options-container">
+	  		<div id="options">		
+
+	  			  		
+	  		<div id="my-account" class="top-bar-menu-item">
+	  			<span class="fa fa-user top-bar-menu-icon"><a href="LogIn.action" title='My Account'></a></span>  			
+		  		<span class="top-bar-menu-title"><a href="LogIn.action">My Account</a></span>
+	  			
+	  		</div>
+	  			
+			
+			<div id="shopping-cart" class="top-bar-menu-item">
+				<span class="fa fa-shopping-cart top-bar-menu-icon" title='Shopping Cart'><span id="basket-items"></span></span>  			
+		  		<span class="shopping-cart-title top-bar-menu-title">Shopping Cart<span id="basket-items"> </span></span>
+		  		
+		  		
+		  	
+		    <div id="shopping-cart-container">
+			  	<div id="shopping-cart-mouseover-shadow" class="slide-out-shadow"></div>
+			  	<div id="shopping-cart-contents" class="slide-out-contents shadow">
+						
+						Your Shopping Cart is empty
+									  		
+			  	</div>	
+			</div>
+			</div>
+		</div>
+		</div>
+  	</div>
+</div>  
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+<div id="header-container">
+	<div id="header">
+		<div id="logo">
+			
+			 
+
+			
+				
+				
+				
+				
+				
+			 
+			<a href="Welcom.action"><img id="logo-1"  
+			    src="/konakart/images/content/logo.png"
+			    alt="KonaKart logo"/></a>
+		</div>
+		<div id="search">
+				
+				<form action="QuickSearch.action" id="quickSearchForm" method="post">
+					<input type="hidden" value="null" name="xsrf_token"/>
+					<input type="hidden" value="true" name="searchInDesc"/>
+					<input type="text" id="search-input" name="searchText" class="rounded-corners-left">
+					<a id="search-button" class="rounded-corners-right" onclick="javascript:document.getElementById('quickSearchForm').submit();">Search</a>
+				</form>	
+            
+		</div>
+		<a id="adv-search-link" href="AdvancedSearch.action">Advanced Search</a>
+ 	</div>
+</div>
+	    		<div id="page-container">
+	    			<div id="page" class="home">
+						
+
+
+
+
+
+
+
+<div id="main-menu">
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=1' class="menu-item rounded-corners" style="width: auto;">Computer Peripherals</a>
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=2' class="menu-item rounded-corners" style="width: auto;">Games</a>
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=3' class="menu-item rounded-corners" style="width: auto;">DVD Movies</a>
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=24' class="menu-item rounded-corners" style="width: auto;">Home & Garden</a>
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=23' class="menu-item rounded-corners" style="width: auto;">Electronics</a>
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=22' class="menu-item rounded-corners" style="width: auto;">Software</a>
+	
+		
+		
+		
+			
+		
+		<a href='SelectCat.action?catId=21' class="menu-item rounded-corners last-child" style="width: auto;">Gifts</a>
+						
+</div>
+
+						
+
+
+
+
+
+
+ <div id="breadcrumbs">
+	
+    	<span class="breadcrumb-item"><a href="Welcome.action">Home</a></span>
+													
+	
+    	 
+    	
+            
+			
+				<span class="breadcrumb-separator"></span>
+				<span class="breadcrumb-item">Search Results</span>
+					    												
+				    												
+	 	
+ </div>
+						
+
+
+
+
+
+
+
+
+
+ 
+	
+
+	<script>
+
+		if ($(window).width() < 750) {
+			  $(function() {
+			    $( "#side-menu-mobile" ).accordion({
+			    	collapsible: true,
+			    	active: false,
+			    	heightStyle: "content"
+			    });
+			  });
+		}else{
+			window.onresize = function() {
+				if ($(window).width() < 750) {
+				  $(function() {
+				    $( "#side-menu-mobile" ).accordion({
+				    	collapsible: true,
+				    	active: false,
+				    	heightStyle: "content"
+				    });
+				  });
+				}
+			};
+		}
+
+	  </script>
+
+	<div id="side-menu">	
+  					    																											
+	</div>
+	<div id="side-menu-mobile">	
+  				
+					    																											
+	</div>
+ 
+
+						<div id="content" class="wide">
+							
+
+
+
+
+
+
+
+<script type="text/javascript">
+ 
+$(function() {
+	
+	$( window ).resize(function() {
+		layoutItems();
+	});
+
+	layoutItems();
+
+});
+
+
+function layoutItems() {
+	var width = $(".items").width();
+	var tile = $(".item:first");
+	if (tile != null) {
+				
+		var tileTotalWidth = 180;
+		if (width < 440) {
+			tileTotalWidth = 150;
+		} 
+		
+		var numItems = Math.floor(width / tileTotalWidth);
+		var extra = width - (numItems*tileTotalWidth);
+		var extraPerItem  = Math.floor(extra / numItems);
+		
+		var extraLeft = Math.ceil(extraPerItem/2);
+		if (extraLeft > 0) {
+			extraLeft-= 1;
+		}
+		var extraRight = Math.floor(extraPerItem/2);
+		
+		$(".items li").each(function(index){
+			var item = $(this);
+			item.css("margin-left",extraLeft+'px');
+			item.css("margin-right",extraRight+'px');
+			item.width(tileTotalWidth);
+		});						
+	}
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+ 
+ 	    		<div id="item-overview" class="item-area wide rounded-corners">
+					<div class="item-area-header">
+	    				<div class="item-overview-area-navigation">
+	    					<div class="item-overview-area-navigation-left">
+		    					<span class="number-of-items navigation-element">
+		    					1-7 of 7 products
+		    					</span>
+			    				<span class="separator"></span>
+								<span class="sort-by navigation-element navigation-dropdown">
+									<form action="SortProd.action" method="post">Sort by:
+										<input type="hidden" value="null" name="xsrf_token"/>
+										<select name="orderBy" onchange="submit()">					
+											<option  value="ORDER_BY_TIMES_VIEWED_DESCENDING" >Most Viewed</option>
+											<option  value="ORDER_BY_TIMES_ORDERED_DESCENDING" >Most Sold</option>
+											<option  value="ORDER_BY_PRICE_ASCENDING" >Price: low to high</option>
+											<option  value="ORDER_BY_PRICE_DESCENDING" >Price: high to low</option>
+											<option  value="ORDER_BY_RATING_DESCENDING" >Review Rating</option>
+										</select>
+										<input type="hidden" name="t" value="1589555009642"/>
+									</form>	
+								</span>
+							</div>
+							<div class="item-overview-area-navigation-right">
+								<span class="show-per-page navigation-element navigation-dropdown"><form action="ProdPageSize.action" method="post"><input type="hidden" value="null" name="xsrf_token"/>Show<select name="numProds" onchange="submit()"><option value="8" >8</option><option value="12" >12</option><option value="16" >16</option><option value="20" selected="selected">20</option><option value="24" >24</option><option value="28" >28</option></select><input type="hidden" name="t" value="1589555009642"/>&nbsp;per page</form></span>
+			    				<span class="separator"></span>
+			    				<span class="item-overview-pagination navigation-element"><a class="pagination-element previous-items inactive"></a><a class="pagination-element current">1</a><a class="pagination-element next-items inactive"></a></span>
+							</div>
+	    				</div>
+	    				<div class="item-overview-area-navigation-mobile">
+	    					<div class="item-overview-area-navigation-top">
+		    					<span class="number-of-items navigation-element">
+		    					1-7 of 7 products
+		    					</span>
+			    			
+								
+								<span class="item-overview-pagination navigation-element"><a class="pagination-element previous-items inactive"></a><a class="pagination-element current">1</a><a class="pagination-element next-items inactive"></a></span>
+							</div>
+							<div class="item-overview-area-navigation-bottom">
+								<span class="show-per-page navigation-element navigation-dropdown"><form action="ProdPageSize.action" method="post"><input type="hidden" value="null" name="xsrf_token"/><select name="numProds" onchange="submit()"><option value="8" >8</option><option value="12" >12</option><option value="16" >16</option><option value="20" selected="selected">20</option><option value="24" >24</option><option value="28" >28</option></select><input type="hidden" name="t" value="1589555009642"/>&nbsp;per page</form></span>
+			    				
+			    				<span class="sort-by navigation-element navigation-dropdown">
+									<form action="SortProd.action" method="post">Sort:
+										<input type="hidden" value="null" name="xsrf_token"/>
+										<select name="orderBy" onchange="submit()">					
+											<option  value="ORDER_BY_TIMES_VIEWED_DESCENDING" >Most Viewed</option>
+											<option  value="ORDER_BY_TIMES_ORDERED_DESCENDING" >Most Sold</option>
+											<option  value="ORDER_BY_PRICE_ASCENDING" >Price: low to high</option>
+											<option  value="ORDER_BY_PRICE_DESCENDING" >Price: high to low</option>
+											<option  value="ORDER_BY_RATING_DESCENDING" >Review Rating</option>
+										</select>
+										<input type="hidden" name="t" value="1589555009642"/>
+									</form>	
+
+								</span>
+			    				
+							</div>
+	    				</div>
+	    			</div>
+	    			<div class="items">	    			
+	    				
+	 					<ul>
+	 					
+							
+							<li>
+							<div class="item"><div class="item-over" id="104ov-21" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="104atc-21" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/C/4/9/4/C4941395-021B-4C97-B46C-A4491AD3D620_1_medium.jpg" border="0" alt="SWAT 3: Close Quarters Battle" title="SWAT 3: Close Quarters Battle" ><a class="item-title" href="SelectProd.action?prodId=21" >SWAT 3: Close Quarters Battle</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$79.99</div></div></div>
+							</li>
+						
+							
+							<li>
+							<div class="item"><div class="item-over" id="104ov-35" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="104atc-35" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/3/7/4/F/374F4985-53E5-49FF-A277-4A8AEE40FE0D_1_medium.jpg" border="0" alt="iPhone 5" title="iPhone 5" ><a class="item-title" href="SelectProd.action?prodId=35" >iPhone 5</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$999.99</div></div></div>
+							</li>
+						
+							
+							<li>
+							<div class="item"><div class="item-over" id="104ov-47" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="104atc-47" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/6/D/F/6/6DF6E083-1AFA-4ADB-B91D-8C82D2CB3013_1_medium.jpg" border="0" alt="iPhone XS" title="iPhone XS" ><a class="item-title" href="SelectProd.action?prodId=47" >iPhone XS</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$999.99</div></div></div>
+							</li>
+						
+							
+							<li>
+							<div class="item"><div class="item-over" id="104ov-48" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="104atc-48" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/A/3/8/B/A38BC2F7-4BC2-4602-ABC1-053ABF1664DB_1_medium.jpg" border="0" alt="Sony XPERIA S" title="Sony XPERIA S" ><a class="item-title" href="SelectProd.action?prodId=48" >Sony XPERIA S</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$459.99</div></div></div>
+							</li>
+						
+							
+							<li>
+							<div class="item"><div class="item-over" id="104ov-52" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="104atc-52" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/7/0/2/6/70261953-3F55-4999-A644-5EC19A321886_1_medium.jpg" border="0" alt="Nikon COOLPIX L810" title="Nikon COOLPIX L810" ><a class="item-title" href="SelectProd.action?prodId=52" >Nikon COOLPIX L810</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$279.99</div></div></div>
+							</li>
+						
+							
+							<li>
+							<div class="item"><div class="item-over" id="104ov-54" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="104atc-54" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/E/C/D/2/ECD283D0-BFFD-4639-8B08-965C3470B895_1_medium.jpg" border="0" alt="Nikon 1 J2 Compact" title="Nikon 1 J2 Compact" ><a class="item-title" href="SelectProd.action?prodId=54" >Nikon 1 J2 Compact</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$549.95</div></div></div>
+							</li>
+						
+							
+							<li>
+							<div class="item"><div class="item-over" id="104ov-60" ><div class="items-left green">In<br/>Stock</div><div class="item-buttons-container"><div class="item-buttons centered"><a class="add-to-cart-button button small-rounded-corners" href="#" id="104atc-60" >Add to Cart</a></div></div><div class="item-overlay"></div></div><img  class="item-img" src="/konakart/images/prod/5/4/F/D/54FDD302-5B74-4075-8C2E-B9E11A0EEF2E_1_medium.jpg" border="0" alt="iPad" title="iPad" ><a class="item-title" href="SelectProd.action?prodId=60" >iPad</a><div class="rating"><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span><span class="star empty" ></span> (0 Reviews)</div><div class="pricing"><div class="price">$599.99</div></div></div>
+							</li>
+						
+						</ul>
+	    			</div>
+
+	       			<div class="item-area-footer">
+	    				<div class="item-overview-area-navigation">
+	    					<div class="item-overview-area-navigation-left">
+		    					<span class="number-of-items navigation-element">
+		    					1-7 of 7 products
+		    					</span>
+			    				<span class="separator"></span>
+								<span class="sort-by navigation-element navigation-dropdown">
+									<form action="SortProd.action" method="post">Sort by:
+										<input type="hidden" value="null" name="xsrf_token"/>
+										<select name="orderBy" onchange="submit()">					
+											<option  value="ORDER_BY_TIMES_VIEWED_DESCENDING" >Most Viewed</option>
+											<option  value="ORDER_BY_TIMES_ORDERED_DESCENDING" >Most Sold</option>
+											<option  value="ORDER_BY_PRICE_ASCENDING" >Price: low to high</option>
+											<option  value="ORDER_BY_PRICE_DESCENDING" >Price: high to low</option>
+											<option  value="ORDER_BY_RATING_DESCENDING" >Review Rating</option>
+										</select>
+										<input type="hidden" name="t" value="1589555009642"/>
+									</form>	
+								</span>
+							</div>
+							<div class="item-overview-area-navigation-right">
+								<span class="show-per-page navigation-element navigation-dropdown"><form action="ProdPageSize.action" method="post"><input type="hidden" value="null" name="xsrf_token"/>Show<select name="numProds" onchange="submit()"><option value="8" >8</option><option value="12" >12</option><option value="16" >16</option><option value="20" selected="selected">20</option><option value="24" >24</option><option value="28" >28</option></select><input type="hidden" name="t" value="1589555009642"/>&nbsp;per page</form></span>
+			    				<span class="separator"></span>
+			    				<span class="item-overview-pagination navigation-element"><a class="pagination-element previous-items inactive"></a><a class="pagination-element current">1</a><a class="pagination-element next-items inactive"></a></span>
+							</div>
+	    				</div>
+	    				<div class="item-overview-area-navigation-mobile">
+	    					<div class="item-overview-area-navigation-top">
+		    					<span class="number-of-items navigation-element">
+		    					1-7 of 7 products
+		    					</span>
+			    			
+								
+								<span class="item-overview-pagination navigation-element"><a class="pagination-element previous-items inactive"></a><a class="pagination-element current">1</a><a class="pagination-element next-items inactive"></a></span>
+							</div>
+							<div class="item-overview-area-navigation-bottom">
+								<span class="show-per-page navigation-element navigation-dropdown"><form action="ProdPageSize.action" method="post"><input type="hidden" value="null" name="xsrf_token"/><select name="numProds" onchange="submit()"><option value="8" >8</option><option value="12" >12</option><option value="16" >16</option><option value="20" selected="selected">20</option><option value="24" >24</option><option value="28" >28</option></select><input type="hidden" name="t" value="1589555009642"/>&nbsp;per page</form></span>
+			    				
+			    				<span class="sort-by navigation-element navigation-dropdown">
+									<form action="SortProd.action" method="post">Sort:
+										<input type="hidden" value="null" name="xsrf_token"/>
+										<select name="orderBy" onchange="submit()">					
+											<option  value="ORDER_BY_TIMES_VIEWED_DESCENDING" >Most Viewed</option>
+											<option  value="ORDER_BY_TIMES_ORDERED_DESCENDING" >Most Sold</option>
+											<option  value="ORDER_BY_PRICE_ASCENDING" >Price: low to high</option>
+											<option  value="ORDER_BY_PRICE_DESCENDING" >Price: high to low</option>
+											<option  value="ORDER_BY_RATING_DESCENDING" >Review Rating</option>
+										</select>
+										<input type="hidden" name="t" value="1589555009642"/>
+									</form>	
+
+								</span>
+			    				
+							</div>
+	    				</div>
+	    			</div>
+	    		</div>
+
+ 
+					 		 
+							
+							
+							
+							
+				    	</div>
+						
+
+
+
+
+
+
+<script>
+function onBlur(el) {
+    if (el.value == '') {
+        el.value = el.defaultValue;
+    }
+}
+function onFocus(el) {
+    if (el.value == el.defaultValue) {
+        el.value = '';
+    }
+}
+
+$(function() {
+	$("#newsletter-input").keydown(function (e){
+	    if(e.keyCode == 13){
+	    	submitNewsletterForm();
+	    }
+	});
+});		
+</script>
+
+
+<div id="kkfooter">
+    <div id="contact-info" class="footer-area narrow">
+    	KonaKart<br />
+		020 7946 0000<br />
+		<a href ="#">info@konakart.com</a>
+    </div>
+   	<div id="newsletter" class="footer-area wide">
+   		Subscribe to our Newsletter<br />
+ 		<input type="text" id="newsletter-input" class="rounded-corners-left" onblur="onBlur(this)" onfocus="onFocus(this)" value="Your Email">
+		<a id="newsletter-button" class="rounded-corners-right">Sign Up</a>
+		<div id="newsletter-msg"></div>
+   	</div>
+   	<div id="links-1" class="footer-area narrow">
+		<a href ="AboutUs.action">About Us</a><br />
+		<a href ="ShippingAndHandling.action">Shipping & Handling</a><br />
+		<a href ="Returns.action">Returns</a><br />
+		<a href ="InternationalOrders.action">International Orders</a><br />
+   	</div>
+   	<div id="links-2" class="footer-area narrow">
+		<a href ="PrivacyPolicy.action">Privacy Policy</a><br />
+		<a href ="TermsOfUse.action">Terms of use</a><br />
+		<a href ="Help.action">Help</a><br />
+		<a href ="ContactUs.action">Contact Us</a><br />
+   	</div>
+   	<div id="social" class="footer-area narrow last-child">
+		Connect with us<br />
+		<a href="http://www.twitter.com" target="_blank" class="fa fa-twitter-square"></a>
+		<a href="http://www.facebook.com" target="_blank" class="fa fa-facebook-square"></a>
+		<a href="http://www.pinterest.com" target="_blank" class="fa fa-pinterest-square"></a>
+   	</div>
+</div>
+		    		</div>
+	    		</div>
+				
+<div id="copyright-container">
+	<!-- Please leave the "Powered by KonaKart" link - it's a condition of the licence  -->
+	<div id="copyright">© 2014 - 2019 KonaKart Store - Powered by <a href="http://www.konakart.com">KonaKart</a></div>
+</div>
+						
+    
+			</body>
+		</html>
+	

@@ -1,0 +1,34 @@
+<virtual-user errorPolicy="DO_NOTHING"
+    failedAssertionPolicy="DO_NOTHING" slaProfileEnabled="false" uid="GremlinAttack">
+    <init-container element-number="1" execution-type="0" pacingEnd="0"
+        pacingMode="MODE_NO_PACING" pacingStart="0" pacingValue="0"
+        slaProfileEnabled="false" traceVariableNamesAsString="" weightsEnabled="false">
+        <description>Elements executed once when the Virtual User starts.</description>
+    </init-container>
+    <actions-container clearUserIterationDataMode="AUTO"
+        element-number="1" execution-type="0" pacingEnd="0"
+        pacingMode="MODE_NO_PACING" pacingStart="0" pacingValue="0"
+        slaProfileEnabled="false" traceVariableNamesAsString="" weightsEnabled="false">
+        <description>Elements repeated until the Virtual User stops.</description>
+        <weighted-embedded-action uid="e0152b46-d5cf-4b77-90f6-b0935428579b"/>
+        <weighted-embedded-action uid="c86d9af2-20b2-45bc-bfe0-14e3f1c585f8"/>
+        <weighted-embedded-action uid="ce49c366-7935-486d-a48a-1803ee8c243f"/>
+        <weighted-embedded-action uid="cbb1aa37-161d-4a30-a375-4c8c522291d6"/>
+        <weighted-embedded-action uid="b0804204-e3af-489a-90dd-c73e229e2857"/>
+        <weighted-embedded-action uid="0cf25078-be8c-4f56-ba24-a7ff5a79e18b"/>
+        <weighted-embedded-action uid="a32f7b88-dfcc-4a17-86cc-fc8feee4d252"/>
+        <weighted-embedded-action uid="4145fcfe-bac6-4b36-bf7f-66418ef64245"/>
+        <weighted-embedded-action uid="3a22de1a-9ea9-45d4-b391-b184c6b99d2a"/>
+        <weighted-embedded-action uid="e5cefe8b-47a9-4957-b7df-c9962e005a54"/>
+        <weighted-embedded-action uid="b671be3b-fa83-43b2-808c-6949edcb2e21"/>
+        <weighted-embedded-action uid="87818706-647b-4b17-9520-1fbea50513bf"/>
+    </actions-container>
+    <end-container element-number="1" execution-type="0" pacingEnd="0"
+        pacingMode="MODE_NO_PACING" pacingStart="0" pacingValue="0"
+        slaProfileEnabled="false" traceVariableNamesAsString="" weightsEnabled="false">
+        <description>Elements executed before the Virtual User stops.</description>
+    </end-container>
+    <thinktime-policy thinkTimeMode="MODE_SIMPLE_THINK_TIME"
+        thinktimeFactorValue="100" thinktimePolicy="0"
+        thinktimeRangeValue="0" thinktimeValue="5000"/>
+</virtual-user>

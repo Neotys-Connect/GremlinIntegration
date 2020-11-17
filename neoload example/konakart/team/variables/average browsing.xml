@@ -1,0 +1,1 @@
+<variable-random-number max-value="5" min-value="2" name="average browsing" order="1" policy="5" random-seed="false" range="2" uid="85a726ec-7dc1-40bb-9328-19e493d98e62" whenOutOfValues="CYCLE_VALUES"/>

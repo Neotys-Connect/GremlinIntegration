@@ -1,0 +1,68 @@
+<http-page executeResourcesDynamically="false" name="/konakart"
+    playRequestsSequentially="false"
+    recordedArtifactZipFileName="team/shared-containers/home/%resources%/recorded-artifacts/6b2bf0bb-d0c1-4508-a74f-e8006fb2e1ce.zip"
+    slaProfileEnabled="false" thinkTime="0"
+    thinkTimeMode="MODE_SIMPLE_THINK_TIME" thinkTimeRangeEnd=""
+    thinkTimeRangeStart="" uid="6b2bf0bb-d0c1-4508-a74f-e8006fb2e1ce">
+    <embedded-action>5c3c3310-8b9b-4e94-a6ae-c6f6a57c8ea6</embedded-action>
+    <embedded-action>667a1259-2a93-49aa-a51c-d7e0e4c41530</embedded-action>
+    <screenshotFileDescription>recorded-screenshots/sc_edb4de4c-951d-43cc-8b41-b8b2e8883b92.jpg</screenshotFileDescription>
+</http-page>
+<http-action actionType="1" extractorInjectPathPolicy="2"
+    extractorPathPolicy="1" followRedirects="false"
+    generatedByClient="false" linkExtractorSeveralMatchOccurrence="1"
+    linkExtractorSeveralMatchPolicy="1" linkExtractorType="6"
+    method="GET" name="/konakart" path="/konakart" postType="2"
+    recordedArtifactZipFileName="team/shared-containers/home/%resources%/recorded-artifacts/6b2bf0bb-d0c1-4508-a74f-e8006fb2e1ce.zip"
+    recordedResponseCode="302" responseSize="0" serverUid="host"
+    slaProfileEnabled="false" uid="5c3c3310-8b9b-4e94-a6ae-c6f6a57c8ea6" useKeepAlive="false">
+    <responsePageFileDescription>recorded-responses/res_5c3c3310-8b9b-4e94-a6ae-c6f6a57c8ea6</responsePageFileDescription>
+    <requestContentFileDescription>recorded-requests/req_14a0b8fd-a98a-41e2-80f5-e11973ce9f4e.txt</requestContentFileDescription>
+    <header name="Accept" value="text/html, application/xhtml+xml, image/jxr, */*"/>
+    <header name="Accept-Encoding" value="gzip, deflate"/>
+    <header name="Accept-Language" value="fr-FR"/>
+    <header name="Cookie" value="CUSTOMER_UUID=375cfbed-334a-4d4e-8cc3-929063bc8c63"/>
+    <header name="Host" value="ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780"/>
+    <header name="Pragma" value="no-cache"/>
+    <header name="Proxy-Connection" value="Keep-Alive"/>
+    <header name="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"/>
+    <responseHeaders>HTTP/1.1 302 &#xd;
+Location: /konakart/&#xd;
+Transfer-Encoding: chunked&#xd;
+Date: Fri, 15 May 2020 15:01:44 GMT&#xd;
+Server: KonaKart</responseHeaders>
+    <record-html-infos extractorRegExp="false" htmlType="0"/>
+</http-action>
+<http-action actionType="2" contentType="text/html;charset=UTF-8"
+    eTag="W/&quot;139-1563274410000&quot;" extractorInjectPathPolicy="2"
+    extractorPathPolicy="1" followRedirects="false"
+    generatedByClient="false"
+    lastModified="Tue, 16 Jul 2019 10:53:30 GMT"
+    linkExtractorSeveralMatchOccurrence="1"
+    linkExtractorSeveralMatchPolicy="1" linkExtractorType="6"
+    method="GET" name="/konakart/" path="/konakart/" postType="2"
+    recordedArtifactZipFileName="team/shared-containers/home/%resources%/recorded-artifacts/6b2bf0bb-d0c1-4508-a74f-e8006fb2e1ce.zip"
+    recordedResponseCode="200"
+    refererUid="5c3c3310-8b9b-4e94-a6ae-c6f6a57c8ea6" responseSize="139"
+    serverUid="host" slaProfileEnabled="false"
+    uid="667a1259-2a93-49aa-a51c-d7e0e4c41530" useKeepAlive="false">
+    <responsePageFileDescription>recorded-responses/res_0b7cd913-ed91-4c4b-b976-41bbc147460f.html</responsePageFileDescription>
+    <requestContentFileDescription>recorded-requests/req_0b7cd913-ed91-4c4b-b976-41bbc147460f.txt</requestContentFileDescription>
+    <header name="Accept" value="text/html, application/xhtml+xml, image/jxr, */*"/>
+    <header name="Accept-Encoding" value="gzip, deflate"/>
+    <header name="Accept-Language" value="fr-FR"/>
+    <header name="Cookie" value="CUSTOMER_UUID=375cfbed-334a-4d4e-8cc3-929063bc8c63"/>
+    <header name="Host" value="ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780"/>
+    <header name="Pragma" value="no-cache"/>
+    <header name="Proxy-Connection" value="Keep-Alive"/>
+    <header name="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"/>
+    <responseHeaders>HTTP/1.1 200 &#xd;
+Accept-Ranges: bytes&#xd;
+ETag: W/"139-1563274410000"&#xd;
+Last-Modified: Tue, 16 Jul 2019 10:53:30 GMT&#xd;
+Content-Type: text/html;charset=UTF-8&#xd;
+Content-Length: 139&#xd;
+Date: Fri, 15 May 2020 15:01:44 GMT&#xd;
+Server: KonaKart</responseHeaders>
+    <record-html-infos extractorRegExp="false" htmlType="0"/>
+</http-action>

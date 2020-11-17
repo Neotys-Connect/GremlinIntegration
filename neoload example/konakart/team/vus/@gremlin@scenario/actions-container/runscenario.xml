@@ -1,0 +1,12 @@
+<custom-action actionType="RunScenario" isHit="false" name="runscenario" uid="64439629-b7d1-4402-8407-d443ceb8723f">
+    <description>Run a Choas Monkey engineering scenario defined in Gremlin.
+
+Possible parameters are:&#xd;
+- Scenario (required): Name of the Gremlin Scenario to run Default value is "Name of the Gremlin Scenario to run".&#xd;
+- GremlinToken (required): Gremlin API Token Default value is "Gremlin API Token".&#xd;
+- GremlinTeamID (optional): Gremlin Team ID Default value is "Gremlin Team ID".</description>
+    <custom-action-parameter name="Scenario" type="TEXT" value="test"/>
+    <custom-action-parameter name="GremlinToken" type="TEXT" value="${apikey}"/>
+    <custom-action-parameter name="GremlinTeamID" type="TEXT" value="${teamid}"/>
+    <responsePageFileDescription>recorded-responses/res_64439629-b7d1-4402-8407-d443ceb8723f</responsePageFileDescription>
+</custom-action>

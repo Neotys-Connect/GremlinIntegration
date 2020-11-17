@@ -1,0 +1,3 @@
+<loop-action loop="${pictures_matchNr}" name="loop" uid="18fcb24e-1705-4cf9-9321-c611988f9841">
+    <embedded-action>b6830d18-a8a9-435f-8e51-16ef32ce1d40</embedded-action>
+</loop-action>

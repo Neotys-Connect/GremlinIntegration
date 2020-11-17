@@ -1,0 +1,49 @@
+<http-page executeResourcesDynamically="false"
+    name="/konakart/Welcome.action" playRequestsSequentially="false"
+    recordedArtifactZipFileName="team/shared-containers/back home/%resources%/recorded-artifacts/68e78df2-efa7-4355-838c-f959945af6b6.zip"
+    slaProfileEnabled="false" thinkTime="20266"
+    thinkTimeMode="MODE_RANGE_THINK_TIME" thinkTimeRangeEnd="8000"
+    thinkTimeRangeStart="5000" uid="68e78df2-efa7-4355-838c-f959945af6b6">
+    <embedded-action>db73ee3f-2b5d-40df-a981-8c7ef3777fe9</embedded-action>
+    <screenshotFileDescription>recorded-screenshots/sc_3648482f-87e9-4390-9db5-4bc7e2b20a4c.jpg</screenshotFileDescription>
+</http-page>
+<http-action actionType="1" contentType="text/html;charset=UTF-8"
+    extractorInjectPathPolicy="2" extractorPathPolicy="1"
+    followRedirects="false" generatedByClient="false"
+    linkExtractorSeveralMatchOccurrence="1"
+    linkExtractorSeveralMatchPolicy="1" linkExtractorType="6"
+    method="GET" name="/konakart/Welcome.action"
+    path="/konakart/Welcome.action" postCharset="" postType="2"
+    recordedArtifactZipFileName="team/shared-containers/back home/%resources%/recorded-artifacts/68e78df2-efa7-4355-838c-f959945af6b6.zip"
+    recordedResponseCode="200" responseSize="33821" serverUid="host"
+    slaProfileEnabled="false" uid="db73ee3f-2b5d-40df-a981-8c7ef3777fe9" useKeepAlive="false">
+    <responsePageFileDescription>recorded-responses/res_db73ee3f-2b5d-40df-a981-8c7ef3777fe9.html</responsePageFileDescription>
+    <requestContentFileDescription>recorded-requests/req_db73ee3f-2b5d-40df-a981-8c7ef3777fe9.txt</requestContentFileDescription>
+    <variable-extractor assertionOnNoMatch="true"
+        defaultValue="&lt;NOT FOUND>" displayMode="0" endsWithSimple="'"
+        extractFromVarNameAdv="" extractFromVarNameSimple=""
+        extractType="0" extractTypeAdv="0" extractTypeSimple="0"
+        matchNumber="0" matchNumberAdv="1" matchNumberSimple="0"
+        name="Category"
+        refererUid="9a930e7d-0a83-4301-b215-018273ef7f81"
+        regExp="'SelectCat\.action\?catId=(\d*?)'" regExpAdv=""
+        setDefaultValue="true"
+        startsWithSimple="'SelectCat.action?catId=" template="$1$"
+        templateAdv="$1$" uid="56c10e3d-7a22-46d8-b105-dca0e18b0711" xpath="">
+        <variable-extractor-group extract="true" occurs="1" pattern="" type="3"/>
+    </variable-extractor>
+    <header name="Accept" value="text/html, application/xhtml+xml, image/jxr, */*"/>
+    <header name="Accept-Encoding" value="gzip, deflate"/>
+    <header name="Accept-Language" value="fr-FR"/>
+    <header name="Cookie" value="JSESSIONID=78CBE1F4FBE874DB236B3DE89543D978; CUSTOMER_UUID=375cfbed-334a-4d4e-8cc3-929063bc8c63"/>
+    <header name="Host" value="ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780"/>
+    <header name="Proxy-Connection" value="Keep-Alive"/>
+    <header name="Referer" value="http://ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780/konakart/DVD-Movies/Drama/Warner/The-Dark-Knight/DVD-BELOVED/2_20.action"/>
+    <header name="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"/>
+    <responseHeaders>HTTP/1.1 200 &#xd;
+Content-Type: text/html;charset=UTF-8&#xd;
+Transfer-Encoding: chunked&#xd;
+Date: Fri, 15 May 2020 15:02:44 GMT&#xd;
+Server: KonaKart</responseHeaders>
+    <record-html-infos extractorRegExp="false" htmlType="0"/>
+</http-action>

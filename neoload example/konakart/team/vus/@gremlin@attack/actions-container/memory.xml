@@ -1,0 +1,30 @@
+<custom-action actionType="Memory" isHit="false" name="memory" uid="c86d9af2-20b2-45bc-bfe0-14e3f1c585f8">
+    <description>Run a Choas Monkey engineering scenario defined in Gremlin.
+
+Possible parameters are:&#xd;
+- GremlinToken (required): Gremlin API Token Default value is "Gremlin API Token".&#xd;
+- GremlinTeamID (required): Gremlin  Team ID Default value is "Gremlin Team ID".&#xd;
+- GremlinTargetType (required): Type of target : hosts or containers Default value is "Type of target : hosts or containers".&#xd;
+- GremlinTargetHostTags (required): List of tags seperated by a ,  Default value is "List of tags to select the host that will be target by the attack".&#xd;
+- GremlinTarget (required): Select the target by Percent or exact Default value is "percent or exact".&#xd;
+- GremlinTargetNumber (required): Number of targets that would be impacted ( in percentage or exact depends on the value the parameter GremlinTarget Default value is "Number of targets that would be impacted ".&#xd;
+Consumes memory
+https://www.gremlin.com/docs/infrastructure-layer/attacks/memory
+
+Possible parameters are:&#xd;
+- Length (optional): The length of the attack (seconds)
+Value must be of type: Integer Default value is "60".&#xd;
+- MB (optional): The number of megabytes to allocate
+Value must be of type: Integer&#xd;
+- GB (optional): The number of gigabytes to allocate
+Value must be of type: Float Default value is "0.5".&#xd;
+- % (optional): The percent of total memory to allocate
+Value must be of type: Integer&#xd;
+</description>
+    <custom-action-parameter name="GremlinToken" type="TEXT" value="Gremlin API Token"/>
+    <custom-action-parameter name="GremlinTeamID" type="TEXT" value="Gremlin Team ID"/>
+    <custom-action-parameter name="GremlinTargetType" type="TEXT" value="Type of target : hosts or containers"/>
+    <custom-action-parameter name="GremlinTargetHostTags" type="TEXT" value="List of tags to select the host that will be target by the attack"/>
+    <custom-action-parameter name="GremlinTarget" type="TEXT" value="percent or exact"/>
+    <custom-action-parameter name="GremlinTargetNumber" type="TEXT" value="Number of targets that would be impacted "/>
+</custom-action>

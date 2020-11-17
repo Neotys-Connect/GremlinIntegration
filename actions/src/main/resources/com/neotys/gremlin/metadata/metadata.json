@@ -1,0 +1,1689 @@
+[
+  {
+    "args": [
+      {
+        "default": 60,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          }
+        },
+        "name": "Length",
+        "validator": {
+          "min": {
+            "value": 1
+          },
+          "max": {}
+        },
+        "short": "-l",
+        "type": "Integer",
+        "key": "length",
+        "long": "--length",
+        "required": false,
+        "info": "The length of the attack (seconds)"
+      },
+      {
+        "subinfo": "Exclude a host from impact with a leading '^'",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          }
+        },
+        "multiple": true,
+        "name": "IP Addresses",
+        "short": "-i",
+        "type": "IP",
+        "key": "ipAddresses",
+        "long": "--ipaddress",
+        "required": false,
+        "info": "Only impact traffic to these IP addresses"
+      },
+      {
+        "subinfo": "Defaults to the first device it finds (Ex: `eth0`)",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          }
+        },
+        "name": "Device",
+        "short": "-d",
+        "type": "String",
+        "key": "device",
+        "long": "--device",
+        "required": false,
+        "info": "Impact traffic over this network interface"
+      },
+      {
+        "default": "^api.gremlin.com",
+        "subinfo": "Exclude a host from impact with a leading '^'",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          }
+        },
+        "multiple": true,
+        "name": "Hostnames",
+        "short": "-h",
+        "type": "URL",
+        "key": "hostnames",
+        "long": "--hostname",
+        "required": false,
+        "info": "Only impact traffic to these hostnames"
+      },
+      {
+        "default": "^53",
+        "subinfo": "Ranges work too: '8080-8085'",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          }
+        },
+        "multiple": true,
+        "name": "Remote Ports",
+        "short": "-p",
+        "type": "String",
+        "key": "egressPorts",
+        "long": "--egress_port",
+        "required": false,
+        "info": "Only impact outgoing traffic to these remote ports"
+      },
+      {
+        "subinfo": "Ranges work too: '8080-8085'",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          }
+        },
+        "multiple": true,
+        "name": "Local Ports",
+        "short": "-s",
+        "type": "String",
+        "key": "sourcePorts",
+        "long": "--src_port",
+        "required": false,
+        "info": "Only impact outgoing traffic from these local ports"
+      },
+      {
+        "default": 1,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          }
+        },
+        "name": "Percent",
+        "validator": {
+          "min": {
+            "value": 1
+          },
+          "max": {
+            "value": 100
+          }
+        },
+        "short": "-r",
+        "type": "Integer",
+        "key": "percent",
+        "long": "--percent",
+        "required": false,
+        "info": "Percentage of packets to drop (10 is 10%)"
+      },
+      {
+        "subinfo": "Defaults to all protocols",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.5.3"
+          }
+        },
+        "advanced": true,
+        "name": "Protocol",
+        "options": {
+          "TCP": "TCP",
+          "UDP": "UDP",
+          "ICMP": "ICMP"
+        },
+        "short": "-P",
+        "type": "Enum",
+        "key": "protocol",
+        "long": "--ipprotocol",
+        "required": false,
+        "info": "Impact traffic only for this protocol"
+      },
+      {
+        "default": false,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          }
+        },
+        "advanced": true,
+        "name": "Corrupt",
+        "short": "-c",
+        "type": "Boolean",
+        "key": "corrupt",
+        "long": "--corrupt",
+        "required": false,
+        "info": "Corrupt the packets instead of just dropping them."
+      }
+    ],
+    "created_at": "2020-10-28T19:57:28.921Z",
+    "tiers": [
+      "Enterprise"
+    ],
+    "versions": {
+      "Linux": {
+        "deprecated": false,
+        "version": "0.0.1"
+      }
+    },
+    "name": "Packet Loss",
+    "doc": "https://www.gremlin.com/docs/infrastructure-layer/attacks/packetloss",
+    "type": "Network",
+    "command": "packet_loss",
+    "info": "Introduces packet loss to all matching egress network traffic",
+    "revision": 3,
+    "updated_at": "2020-10-28T19:57:28.921Z"
+  },
+  {
+    "args": [
+      {
+        "default": 60,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.8.0"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.4"
+          }
+        },
+        "name": "Length",
+        "validator": {
+          "min": {
+            "value": 1
+          },
+          "max": {}
+        },
+        "short": "-l",
+        "type": "Integer",
+        "key": "length",
+        "long": "--length",
+        "required": false,
+        "info": "The length of the attack (seconds)"
+      },
+      {
+        "default": "/tmp",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.8.0"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.4"
+          }
+        },
+        "name": "Directory",
+        "short": "-d",
+        "type": "String",
+        "key": "directory",
+        "long": "--dir",
+        "required": false,
+        "info": "The directory files will be written to"
+      },
+      {
+        "default": 1,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.8.0"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.4"
+          }
+        },
+        "advanced": true,
+        "name": "Workers",
+        "validator": {
+          "min": {
+            "value": 1
+          },
+          "max": {}
+        },
+        "short": "-w",
+        "type": "Integer",
+        "key": "workers",
+        "long": "--workers",
+        "required": false,
+        "info": "The number of disk-write workers to run concurrently"
+      },
+      {
+        "default": 4,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.8.0"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.4"
+          }
+        },
+        "advanced": true,
+        "name": "Block Size",
+        "validator": {
+          "min": {
+            "value": 1
+          },
+          "max": {}
+        },
+        "short": "-b",
+        "type": "Integer",
+        "key": "blockSize",
+        "long": "--block-size",
+        "required": false,
+        "info": "Number of Kilobytes (KB) that are written at a time"
+      },
+      {
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.8.0"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.4"
+          }
+        },
+        "name": "Volume Percentage",
+        "validator": {
+          "min": {
+            "value": 0
+          },
+          "max": {
+            "value": 100
+          }
+        },
+        "short": "-p",
+        "type": "Integer",
+        "key": "percent",
+        "long": "--percent",
+        "required": false,
+        "info": "Percent of Volume to fill (0-100)"
+      }
+    ],
+    "created_at": "2020-10-28T19:57:28.909Z",
+    "tiers": [
+      "Enterprise"
+    ],
+    "versions": {
+      "Linux": {
+        "deprecated": false,
+        "version": "1.8.0"
+      },
+      "Windows": {
+        "deprecated": false,
+        "version": "0.0.4"
+      }
+    },
+    "name": "Disk",
+    "doc": "https://www.gremlin.com/docs/infrastructure-layer/attacks/disk",
+    "type": "Resource",
+    "command": "disk",
+    "info": "Consumes disk space",
+    "revision": 1,
+    "updated_at": "2020-10-28T19:57:28.909Z"
+  },
+  {
+    "tiers": [
+      "Enterprise"
+    ],
+    "display": {
+      "grouped_args": [
+        [
+          "--megabytes",
+          "--gigabytes",
+          "--percent"
+        ]
+      ],
+      "arg_groups": [
+        {
+          "args": [
+            "megabytes",
+            "gigabytes",
+            "percent"
+          ],
+          "name": "Memory Amount",
+          "description": "How much memory to consume"
+        }
+      ]
+    },
+    "type": "Resource",
+    "command": "memory",
+    "revision": 2,
+    "args": [
+      {
+        "default": 60,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.4"
+          }
+        },
+        "name": "Length",
+        "validator": {
+          "min": {
+            "value": 1
+          },
+          "max": {}
+        },
+        "short": "-l",
+        "type": "Integer",
+        "key": "length",
+        "long": "--length",
+        "info": "The length of the attack (seconds)"
+      },
+      {
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.4"
+          }
+        },
+        "name": "MB",
+        "validator": {
+          "min": {
+            "value": 1
+          },
+          "max": {}
+        },
+        "short": "-m",
+        "type": "Integer",
+        "key": "megabytes",
+        "long": "--megabytes",
+        "required": false,
+        "info": "The number of megabytes to allocate"
+      },
+      {
+        "default": 0.5,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.4"
+          }
+        },
+        "name": "GB",
+        "validator": {
+          "min": {
+            "value": 0.1
+          },
+          "max": {}
+        },
+        "short": "-g",
+        "type": "Float",
+        "key": "gigabytes",
+        "long": "--gigabytes",
+        "required": false,
+        "info": "The number of gigabytes to allocate"
+      },
+      {
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "2.8.30"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.4"
+          }
+        },
+        "name": "%",
+        "validator": {
+          "min": {
+            "value": 1
+          },
+          "max": {
+            "value": 100
+          }
+        },
+        "short": "-p",
+        "type": "Integer",
+        "key": "percent",
+        "long": "--percent",
+        "required": false,
+        "info": "The percent of total memory to allocate"
+      }
+    ],
+    "created_at": "2020-10-28T19:57:28.937Z",
+    "versions": {
+      "Linux": {
+        "deprecated": false,
+        "version": "0.0.1"
+      },
+      "Windows": {
+        "deprecated": false,
+        "version": "0.0.4"
+      }
+    },
+    "name": "Memory",
+    "doc": "https://www.gremlin.com/docs/infrastructure-layer/attacks/memory",
+    "info": "Consumes memory",
+    "updated_at": "2020-10-28T19:57:28.937Z"
+  },
+  {
+    "tiers": [
+      "Enterprise"
+    ],
+    "display": {
+      "grouped_args": [
+        [
+          "--newest",
+          "--oldest"
+        ]
+      ],
+      "arg_groups": [
+        {
+          "args": [
+            "newest",
+            "oldest"
+          ],
+          "name": "Process Selection",
+          "description": "Out of matching processes, which should get killed?"
+        }
+      ]
+    },
+    "type": "State",
+    "command": "process_killer",
+    "revision": 1,
+    "args": [
+      {
+        "default": 60,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.8.0"
+          }
+        },
+        "name": "Length",
+        "validator": {
+          "min": {
+            "value": 1
+          },
+          "max": {}
+        },
+        "short": "-l",
+        "type": "Integer",
+        "key": "length",
+        "long": "--length",
+        "required": false,
+        "info": "The length of the attack (seconds)"
+      },
+      {
+        "default": 1,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.8.0"
+          }
+        },
+        "name": "Interval",
+        "short": "-i",
+        "type": "Integer",
+        "key": "interval",
+        "long": "--interval",
+        "required": false,
+        "info": "The number of seconds to delay before kills"
+      },
+      {
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.8.0"
+          }
+        },
+        "name": "Process",
+        "short": "-p",
+        "type": "String",
+        "key": "process",
+        "long": "--process",
+        "required": true,
+        "info": "The process name to match (allows regex) or the process ID"
+      },
+      {
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.8.0"
+          }
+        },
+        "name": "Group",
+        "short": "-g",
+        "type": "String",
+        "key": "group",
+        "long": "--group",
+        "required": false,
+        "info": "The group name or ID to match against (name matches only)"
+      },
+      {
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.8.0"
+          }
+        },
+        "name": "User",
+        "short": "-u",
+        "type": "String",
+        "key": "user",
+        "long": "--user",
+        "required": false,
+        "info": "The user name or ID to match against (name matches only)"
+      },
+      {
+        "default": false,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.8.0"
+          }
+        },
+        "advanced": true,
+        "name": "Newest",
+        "short": "-n",
+        "type": "Boolean",
+        "key": "newest",
+        "long": "--newest",
+        "required": false,
+        "info": "If set the newest matching process will be killed (name matches only, cannot be used with -o)"
+      },
+      {
+        "default": false,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.8.0"
+          }
+        },
+        "advanced": true,
+        "name": "Oldest",
+        "short": "-o",
+        "type": "Boolean",
+        "key": "oldest",
+        "long": "--oldest",
+        "required": false,
+        "info": "If set the oldest matching process will be killed (name matches only, cannot be used with -n)"
+      },
+      {
+        "default": false,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.8.0"
+          }
+        },
+        "advanced": true,
+        "name": "Exact",
+        "short": "-e",
+        "type": "Boolean",
+        "key": "exact",
+        "long": "--exact",
+        "required": false,
+        "info": "If set the match must be exact and not just a substring match (name matches only)"
+      },
+      {
+        "default": false,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.8.0"
+          }
+        },
+        "advanced": true,
+        "name": "Kill Children",
+        "short": "-c",
+        "type": "Boolean",
+        "key": "killChildren",
+        "long": "--kill_children",
+        "required": false,
+        "info": "If set the processes children will also be killed"
+      },
+      {
+        "default": false,
+        "subinfo": "(allows regex)",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.8.0"
+          }
+        },
+        "advanced": true,
+        "name": "Full Match",
+        "short": "-f",
+        "type": "Boolean",
+        "key": "fullMatch",
+        "long": "--full",
+        "required": false,
+        "info": "If set the processes name match will occur against the full command line string that the process was launched with"
+      }
+    ],
+    "created_at": "2020-10-28T19:57:28.956Z",
+    "versions": {
+      "Linux": {
+        "deprecated": false,
+        "version": "1.8.0"
+      }
+    },
+    "name": "Process Killer",
+    "doc": "https://www.gremlin.com/docs/infrastructure-layer/attacks/processkiller",
+    "info": "An attack which kills the specified process",
+    "updated_at": "2020-10-28T19:57:28.956Z"
+  },
+  {
+    "args": [
+      {
+        "default": 60,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.4.0"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.4"
+          }
+        },
+        "name": "Length",
+        "validator": {
+          "min": {
+            "value": 1
+          },
+          "max": {}
+        },
+        "short": "-l",
+        "type": "Integer",
+        "key": "length",
+        "long": "--length",
+        "required": false,
+        "info": "The length of the attack (seconds)"
+      },
+      {
+        "default": "/tmp",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.4.0"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.4"
+          }
+        },
+        "name": "Directory",
+        "short": "-d",
+        "type": "String",
+        "key": "directory",
+        "long": "--dir",
+        "required": false,
+        "info": "The root directory for the IO attack"
+      },
+      {
+        "default": 1,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.4.0"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.4"
+          }
+        },
+        "advanced": true,
+        "name": "Workers",
+        "validator": {
+          "min": {
+            "value": 1
+          },
+          "max": {}
+        },
+        "short": "-w",
+        "type": "Integer",
+        "key": "workers",
+        "long": "--workers",
+        "required": false,
+        "info": "The number of IO workers to run concurrently"
+      },
+      {
+        "default": "rw",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.4.0"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.4"
+          }
+        },
+        "name": "Mode",
+        "options": {
+          "r": "Reading",
+          "rw": "Reading + Writing",
+          "w": "Writing"
+        },
+        "short": "-m",
+        "type": "Enum",
+        "key": "mode",
+        "long": "--mode",
+        "required": false,
+        "info": "Do only reads, only writes, or both"
+      },
+      {
+        "default": 4,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.4.0"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.4"
+          }
+        },
+        "advanced": true,
+        "name": "Block Size",
+        "validator": {
+          "min": {
+            "value": 1
+          },
+          "max": {}
+        },
+        "short": "-s",
+        "type": "Integer",
+        "key": "blockSize",
+        "long": "--block-size",
+        "required": false,
+        "info": "Number of Kilobytes (KB) that are read/written at a time"
+      },
+      {
+        "default": 1,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.4.0"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.4"
+          }
+        },
+        "advanced": true,
+        "name": "Block Count",
+        "validator": {
+          "min": {
+            "value": 1
+          },
+          "max": {}
+        },
+        "short": "-c",
+        "type": "Integer",
+        "key": "blockCount",
+        "long": "--block-count",
+        "required": false,
+        "info": "The number of blocks read/written by workers"
+      }
+    ],
+    "created_at": "2020-10-28T19:57:28.882Z",
+    "tiers": [
+      "Enterprise"
+    ],
+    "versions": {
+      "Linux": {
+        "deprecated": false,
+        "version": "1.4.0"
+      },
+      "Windows": {
+        "deprecated": false,
+        "version": "0.0.4"
+      }
+    },
+    "name": "IO",
+    "doc": "https://www.gremlin.com/docs/infrastructure-layer/attacks/io",
+    "type": "Resource",
+    "command": "io",
+    "info": "Consumes targeted file system devices resources",
+    "revision": 2,
+    "updated_at": "2020-10-28T19:57:28.882Z"
+  },
+  {
+    "args": [
+      {
+        "default": 60,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "1.0.10"
+          }
+        },
+        "name": "Length",
+        "validator": {
+          "min": {
+            "value": 1
+          },
+          "max": {}
+        },
+        "short": "-l",
+        "type": "Integer",
+        "key": "length",
+        "long": "--length",
+        "required": false,
+        "info": "The length of the attack (seconds)"
+      },
+      {
+        "default": 100,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "1.0.10"
+          }
+        },
+        "name": "MS",
+        "validator": {
+          "min": {
+            "value": 10
+          },
+          "max": {}
+        },
+        "short": "-m",
+        "type": "Integer",
+        "key": "delay",
+        "long": "--ms",
+        "required": false,
+        "info": "How long to delay egress packets (millis)"
+      },
+      {
+        "subinfo": "Exclude a host from impact with a leading '^'",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "1.0.10"
+          }
+        },
+        "multiple": true,
+        "name": "IP Addresses",
+        "short": "-i",
+        "type": "IP",
+        "key": "ipAddresses",
+        "long": "--ipaddress",
+        "required": false,
+        "info": "Only impact traffic to these IP addresses"
+      },
+      {
+        "subinfo": "Defaults to the first device it finds (Ex: `eth0`)",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "1.0.10"
+          }
+        },
+        "name": "Device",
+        "short": "-d",
+        "type": "String",
+        "key": "device",
+        "long": "--device",
+        "required": false,
+        "info": "Impact traffic over this network interface"
+      },
+      {
+        "default": "^api.gremlin.com",
+        "subinfo": "Exclude a host from impact with a leading '^'",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "1.0.10"
+          }
+        },
+        "multiple": true,
+        "name": "Hostnames",
+        "short": "-h",
+        "type": "URL",
+        "key": "hostnames",
+        "long": "--hostname",
+        "required": false,
+        "info": "Only impact traffic to these hostnames"
+      },
+      {
+        "default": "^53",
+        "subinfo": "Ranges work too: '8080-8085'",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "1.0.10"
+          }
+        },
+        "multiple": true,
+        "name": "Remote Ports",
+        "short": "-p",
+        "type": "String",
+        "key": "egressPorts",
+        "long": "--egress_port",
+        "required": false,
+        "info": "Only impact outgoing traffic to these remote ports"
+      },
+      {
+        "subinfo": "Ranges work too: '8080-8085'",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "1.0.10"
+          }
+        },
+        "multiple": true,
+        "name": "Local Ports",
+        "short": "-s",
+        "type": "String",
+        "key": "sourcePorts",
+        "long": "--src_port",
+        "required": false,
+        "info": "Only impact outgoing traffic from these local ports"
+      },
+      {
+        "subinfo": "Defaults to all protocols",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.5.3"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "1.0.10"
+          }
+        },
+        "advanced": true,
+        "name": "Protocol",
+        "options": {
+          "TCP": "TCP",
+          "UDP": "UDP",
+          "ICMP": "ICMP"
+        },
+        "short": "-P",
+        "type": "Enum",
+        "key": "protocol",
+        "long": "--ipprotocol",
+        "required": false,
+        "info": "Impact traffic only for this protocol"
+      }
+    ],
+    "created_at": "2020-10-28T19:57:28.850Z",
+    "tiers": [
+      "Enterprise"
+    ],
+    "versions": {
+      "Linux": {
+        "deprecated": false,
+        "version": "0.0.1"
+      },
+      "Windows": {
+        "deprecated": false,
+        "version": "1.0.10"
+      }
+    },
+    "name": "Latency",
+    "doc": "https://www.gremlin.com/docs/infrastructure-layer/attacks/latency",
+    "type": "Network",
+    "command": "latency",
+    "info": "Adds latency to all matching egress network traffic",
+    "revision": 5,
+    "updated_at": "2020-10-28T19:57:28.850Z"
+  },
+  {
+    "args": [
+      {
+        "default": 60,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.4.7"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "1.0.5"
+          }
+        },
+        "name": "Length",
+        "validator": {
+          "min": {
+            "value": 1
+          },
+          "max": {}
+        },
+        "short": "-l",
+        "type": "Integer",
+        "key": "length",
+        "long": "--length",
+        "required": false,
+        "info": "The length of the attack (seconds)"
+      },
+      {
+        "subinfo": "Exclude a host from impact with a leading '^'",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.4.7"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "1.0.5"
+          }
+        },
+        "multiple": true,
+        "name": "IP Addresses",
+        "short": "-i",
+        "type": "IP",
+        "key": "ipAddresses",
+        "long": "--ipaddress",
+        "required": false,
+        "info": "Prevent lookups from these DNS servers"
+      },
+      {
+        "subinfo": "Defaults to the first device it finds (Ex: `eth0`)",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.4.7"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "1.0.5"
+          }
+        },
+        "name": "Device",
+        "short": "-d",
+        "type": "String",
+        "key": "device",
+        "long": "--device",
+        "required": false,
+        "info": "Impact traffic over this network interface"
+      },
+      {
+        "subinfo": "Defaults to all protocols",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.4.7"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "1.0.5"
+          }
+        },
+        "name": "Protocol",
+        "options": {
+          "TCP": "TCP",
+          "UDP": "UDP"
+        },
+        "short": "-P",
+        "type": "Enum",
+        "key": "protocol",
+        "long": "--ipprotocol",
+        "required": false,
+        "info": "Impact traffic only for this protocol"
+      }
+    ],
+    "created_at": "2020-10-28T19:57:28.895Z",
+    "tiers": [
+      "Enterprise"
+    ],
+    "versions": {
+      "Linux": {
+        "deprecated": false,
+        "version": "1.4.7"
+      },
+      "Windows": {
+        "deprecated": false,
+        "version": "1.0.5"
+      }
+    },
+    "name": "DNS",
+    "doc": "https://www.gremlin.com/docs/infrastructure-layer/attacks/dns",
+    "type": "Network",
+    "command": "dns",
+    "info": "Blocks access to DNS servers",
+    "revision": 3,
+    "updated_at": "2020-10-28T19:57:28.895Z"
+  },
+  {
+    "tiers": [
+      "Free",
+      "Enterprise"
+    ],
+    "display": {
+      "grouped_args": [
+        [
+          "--cores",
+          "--all-cores"
+        ]
+      ],
+      "arg_groups": [
+        {
+          "args": [
+            "cores",
+            "isAllCores"
+          ],
+          "name": "Cores",
+          "description": "Number of CPUs to consume"
+        }
+      ]
+    },
+    "type": "Resource",
+    "command": "cpu",
+    "revision": 2,
+    "args": [
+      {
+        "default": 60,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.4"
+          }
+        },
+        "name": "Length",
+        "validator": {
+          "min": {
+            "value": 1
+          },
+          "max": {}
+        },
+        "short": "-l",
+        "type": "Integer",
+        "key": "length",
+        "long": "--length",
+        "required": false,
+        "info": "The length of the attack (seconds)"
+      },
+      {
+        "default": 1,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.4"
+          }
+        },
+        "name": "Cores",
+        "validator": {
+          "min": {
+            "value": 1
+          },
+          "max": {}
+        },
+        "short": "-c",
+        "type": "Integer",
+        "key": "cores",
+        "long": "--cores",
+        "required": false,
+        "info": "The number of CPU cores to hog"
+      },
+      {
+        "default": false,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "2.11.0"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.4"
+          }
+        },
+        "name": "All Cores",
+        "short": "-a",
+        "type": "Boolean",
+        "key": "allCores",
+        "long": "--all-cores",
+        "required": false,
+        "info": "Consume all CPU cores"
+      },
+      {
+        "subinfo": "Percent utilization is subject to active processes and will not exceed the requested amount",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "2.11.0"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.4"
+          }
+        },
+        "name": "CPU Capacity",
+        "validator": {
+          "min": {
+            "value": 1
+          },
+          "max": {
+            "value": 100
+          }
+        },
+        "short": "-p",
+        "type": "Integer",
+        "key": "percent",
+        "long": "--percent",
+        "required": false,
+        "info": "The percentage of CPU to consume on each core"
+      }
+    ],
+    "created_at": "2020-10-28T19:57:28.862Z",
+    "versions": {
+      "Linux": {
+        "deprecated": false,
+        "version": "0.0.1"
+      },
+      "Windows": {
+        "deprecated": false,
+        "version": "0.0.4"
+      }
+    },
+    "name": "CPU",
+    "doc": "https://www.gremlin.com/docs/infrastructure-layer/attacks/cpu",
+    "info": "Consumes CPU resources",
+    "updated_at": "2020-10-28T19:57:28.862Z"
+  },
+  {
+    "args": [
+      {
+        "default": 60,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.5.0"
+          }
+        },
+        "name": "Length",
+        "validator": {
+          "min": {
+            "value": 1
+          },
+          "max": {}
+        },
+        "short": "-l",
+        "type": "Integer",
+        "key": "length",
+        "long": "--length",
+        "required": false,
+        "info": "The length of the attack (seconds)"
+      },
+      {
+        "default": false,
+        "subinfo": "Blackholes outbound udp traffic over port 123",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.5.0"
+          }
+        },
+        "display": {
+          "values": [
+            "No",
+            "Yes"
+          ]
+        },
+        "name": "NTP",
+        "short": "-n",
+        "type": "Boolean",
+        "key": "disableNTP",
+        "long": "--ntp",
+        "required": false,
+        "info": "Block NTP network communication"
+      },
+      {
+        "default": 86400,
+        "subinfo": "Can be positive or negative",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.5.0"
+          }
+        },
+        "name": "Offset",
+        "short": "-o",
+        "type": "Integer",
+        "key": "offset",
+        "long": "--offset",
+        "required": false,
+        "info": "The offset to the current time (seconds)"
+      }
+    ],
+    "created_at": "2020-10-28T19:57:28.872Z",
+    "tiers": [
+      "Enterprise"
+    ],
+    "versions": {
+      "Linux": {
+        "deprecated": false,
+        "version": "1.5.0"
+      }
+    },
+    "name": "Time Travel",
+    "doc": "https://www.gremlin.com/docs/infrastructure-layer/attacks/timetravel",
+    "type": "State",
+    "command": "time_travel",
+    "info": "Changes the system time",
+    "revision": 2,
+    "updated_at": "2020-10-28T19:57:28.872Z"
+  },
+  {
+    "args": [
+      {
+        "default": 60,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.6.0"
+          }
+        },
+        "name": "Length",
+        "validator": {
+          "min": {
+            "value": 1
+          },
+          "max": {}
+        },
+        "short": "-l",
+        "type": "Integer",
+        "key": "length",
+        "long": "--length",
+        "required": false,
+        "info": "The length of the attack (seconds)"
+      },
+      {
+        "subinfo": "Exclude an IP address from impact with a leading '^'",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.6.0"
+          }
+        },
+        "multiple": true,
+        "name": "IP Addresses",
+        "short": "-i",
+        "type": "IP",
+        "key": "ipAddresses",
+        "long": "--ipaddress",
+        "required": false,
+        "info": "Only impact traffic to these IP addresses"
+      },
+      {
+        "subinfo": "Defaults to the first device it finds (Ex: `eth0`)",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.6.0"
+          }
+        },
+        "name": "Device",
+        "short": "-d",
+        "type": "String",
+        "key": "device",
+        "long": "--device",
+        "required": false,
+        "info": "Impact traffic over this network interface"
+      },
+      {
+        "default": "^api.gremlin.com",
+        "subinfo": "Exclude a host from impact with a leading '^'",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.6.0"
+          }
+        },
+        "multiple": true,
+        "name": "Hostnames",
+        "short": "-h",
+        "type": "URL",
+        "key": "hostnames",
+        "long": "--hostname",
+        "required": false,
+        "info": "Only impact traffic to these hostnames"
+      },
+      {
+        "default": "^53",
+        "subinfo": "Ranges work too: '8080-8085'",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.6.0"
+          }
+        },
+        "advanced": false,
+        "multiple": true,
+        "name": "Remote Ports",
+        "short": "-p",
+        "type": "String",
+        "key": "egressPorts",
+        "long": "--egress_port",
+        "required": false,
+        "info": "Impact outgoing and incoming traffic to and from these remote ports"
+      },
+      {
+        "subinfo": "Ranges work too: '8080-8085'",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "0.0.1"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.6.0"
+          }
+        },
+        "advanced": false,
+        "multiple": true,
+        "name": "Local Ports",
+        "short": "-n",
+        "type": "String",
+        "key": "ingressPorts",
+        "long": "--ingress_port",
+        "required": false,
+        "info": "Impact outgoing and incoming traffic to and from these local ports"
+      },
+      {
+        "subinfo": "Defaults to all protocols",
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.5.3"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.6.0"
+          }
+        },
+        "advanced": true,
+        "name": "Protocol",
+        "options": {
+          "TCP": "TCP",
+          "UDP": "UDP",
+          "ICMP": "ICMP"
+        },
+        "short": "-P",
+        "type": "Enum",
+        "key": "protocol",
+        "long": "--ipprotocol",
+        "required": false,
+        "info": "Impact traffic only for this protocol"
+      }
+    ],
+    "created_at": "2020-10-28T19:57:28.828Z",
+    "tiers": [
+      "Free",
+      "Enterprise"
+    ],
+    "versions": {
+      "Linux": {
+        "deprecated": false,
+        "version": "0.0.1"
+      },
+      "Windows": {
+        "deprecated": false,
+        "version": "0.6.0"
+      }
+    },
+    "name": "Blackhole",
+    "doc": "https://www.gremlin.com/docs/infrastructure-layer/attacks/blackhole",
+    "type": "Network",
+    "command": "blackhole",
+    "info": "Drops all matching network traffic",
+    "revision": 3,
+    "updated_at": "2020-10-28T19:57:28.828Z"
+  },
+  {
+    "args": [
+      {
+        "default": 1,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.4.0"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.5"
+          }
+        },
+        "name": "Delay",
+        "validator": {
+          "min": {
+            "value": 0
+          },
+          "max": {}
+        },
+        "short": "-d",
+        "type": "Integer",
+        "key": "delay",
+        "long": "--delay",
+        "required": false,
+        "info": "The number of minutes to delay before shutting down"
+      },
+      {
+        "default": true,
+        "versions": {
+          "Linux": {
+            "deprecated": false,
+            "version": "1.4.0"
+          },
+          "Windows": {
+            "deprecated": false,
+            "version": "0.0.5"
+          }
+        },
+        "name": "Reboot",
+        "short": "-r",
+        "type": "Boolean",
+        "key": "reboot",
+        "long": "--reboot",
+        "required": false,
+        "info": "Indicates the host should reboot after shutting down"
+      }
+    ],
+    "created_at": "2020-10-28T19:57:28.971Z",
+    "tiers": [
+      "Free",
+      "Enterprise"
+    ],
+    "versions": {
+      "Linux": {
+        "deprecated": false,
+        "version": "1.4.0"
+      },
+      "Windows": {
+        "deprecated": false,
+        "version": "0.0.5"
+      }
+    },
+    "name": "Shutdown",
+    "doc": "https://www.gremlin.com/docs/infrastructure-layer/attacks/shutdown",
+    "type": "State",
+    "command": "shutdown",
+    "info": "Reboots or shuts down the targeted host operating system",
+    "revision": 4,
+    "updated_at": "2020-10-28T19:57:28.971Z"
+  }
+]

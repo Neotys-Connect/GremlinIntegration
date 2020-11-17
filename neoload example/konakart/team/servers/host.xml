@@ -1,0 +1,5 @@
+<http-server
+    hostname="ec2-34-240-196-130.eu-west-1.compute.amazonaws.com"
+    port="8780" ssl="false" uid="host" urlrewriting-argument-name=""
+    urlrewriting-enabled="false" urlrewriting-path-extension="false"
+    urlrewriting-path-not-equals="false" urlrewriting-path-separator=";"/>

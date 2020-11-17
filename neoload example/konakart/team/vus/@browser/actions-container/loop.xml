@@ -1,0 +1,5 @@
+<loop-action loop="${average browsing}" name="loop" uid="de83cbec-5aea-4097-8de4-ae374ddd4721">
+    <embedded-action>ece69a65-c3b9-436f-9537-8086c04934b8</embedded-action>
+    <embedded-action>b905bad1-a31e-46b2-8637-6b56158e4e00</embedded-action>
+    <embedded-action>ae52b0e2-0765-4e2b-9b2e-231cbecb0f00</embedded-action>
+</loop-action>

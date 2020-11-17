@@ -1,0 +1,73 @@
+<http-page executeResourcesDynamically="false"
+    name="/konakart/Checkout.action" playRequestsSequentially="false"
+    recordedArtifactZipFileName="team/vus/@buyer/%resources%/recorded-artifacts/7ac41641-1caf-48bb-8798-7c06c8aa1a15.zip"
+    slaProfileEnabled="false" thinkTime="10983"
+    thinkTimeMode="MODE_SIMPLE_THINK_TIME" thinkTimeRangeEnd=""
+    thinkTimeRangeStart="" uid="7ac41641-1caf-48bb-8798-7c06c8aa1a15">
+    <embedded-action>07299086-fb15-434a-84fa-08bd70beb338</embedded-action>
+    <embedded-action>3683cd8f-a619-47a4-9d2b-72bd190576ba</embedded-action>
+    <screenshotFileDescription>recorded-screenshots/sc_f003db6b-15a9-4bec-81eb-f32d84832687.jpg</screenshotFileDescription>
+</http-page>
+<http-action actionType="1" contentType="text/html;charset=UTF-8"
+    extractorInjectPathPolicy="2" extractorPathPolicy="1"
+    followRedirects="false" generatedByClient="false"
+    linkExtractorSeveralMatchOccurrence="1"
+    linkExtractorSeveralMatchPolicy="1" linkExtractorType="6"
+    method="GET" name="/konakart/Checkout.action"
+    path="/konakart/Checkout.action" postType="2"
+    recordedArtifactZipFileName="team/vus/@buyer/%resources%/recorded-artifacts/7ac41641-1caf-48bb-8798-7c06c8aa1a15.zip"
+    recordedResponseCode="302" responseSize="0" serverUid="host"
+    slaProfileEnabled="false" uid="07299086-fb15-434a-84fa-08bd70beb338" useKeepAlive="false">
+    <responsePageFileDescription>recorded-responses/res_07299086-fb15-434a-84fa-08bd70beb338.html</responsePageFileDescription>
+    <requestContentFileDescription>recorded-requests/req_4a284f59-1fb9-494a-93b5-a13dc0122e55.txt</requestContentFileDescription>
+    <header name="Accept" value="text/html, application/xhtml+xml, image/jxr, */*"/>
+    <header name="Accept-Encoding" value="gzip, deflate"/>
+    <header name="Accept-Language" value="fr-FR"/>
+    <header name="Cookie" value="JSESSIONID=98A9693F3C013D03BD7D6B6735CBECBC; __atuvc=1%7C20; __atuvs=5ebeb7c0e81d88a3000; CUSTOMER_UUID=375cfbed-334a-4d4e-8cc3-929063bc8c63"/>
+    <header name="Host" value="ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780"/>
+    <header name="Proxy-Connection" value="Keep-Alive"/>
+    <header name="Referer" value="http://ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780/konakart/Computer-Peripherals/Keyboards/1_8_-1_3.action"/>
+    <header name="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"/>
+    <responseHeaders>HTTP/1.1 302 &#xd;
+Cache-Control: no-cache, no-store&#xd;
+Pragma: no-cache&#xd;
+Expires: Wed, 11 Jan 1984 05:00:00 GMT&#xd;
+Location: /konakart/LogIn.action&#xd;
+Content-Type: text/html;charset=UTF-8&#xd;
+Content-Length: 0&#xd;
+Date: Fri, 15 May 2020 15:52:44 GMT&#xd;
+Server: KonaKart</responseHeaders>
+    <record-html-infos extractorRegExp="false" htmlType="0"/>
+</http-action>
+<http-action actionType="2" contentType="text/html;charset=UTF-8"
+    extractorInjectPathPolicy="2" extractorPathPolicy="1"
+    followRedirects="false" generatedByClient="false"
+    linkExtractorSeveralMatchOccurrence="1"
+    linkExtractorSeveralMatchPolicy="1" linkExtractorType="6"
+    method="GET" name="/konakart/LogIn.action"
+    path="/konakart/LogIn.action" postType="2"
+    recordedArtifactZipFileName="team/vus/@buyer/%resources%/recorded-artifacts/7ac41641-1caf-48bb-8798-7c06c8aa1a15.zip"
+    recordedResponseCode="200"
+    refererUid="07299086-fb15-434a-84fa-08bd70beb338"
+    responseSize="15773" serverUid="host" slaProfileEnabled="false"
+    uid="3683cd8f-a619-47a4-9d2b-72bd190576ba" useKeepAlive="false">
+    <responsePageFileDescription>recorded-responses/res_a2496f04-4ecb-448c-8ebf-8fef251fc5c2.html</responsePageFileDescription>
+    <requestContentFileDescription>recorded-requests/req_a2496f04-4ecb-448c-8ebf-8fef251fc5c2.txt</requestContentFileDescription>
+    <header name="Accept" value="text/html, application/xhtml+xml, image/jxr, */*"/>
+    <header name="Accept-Encoding" value="gzip, deflate"/>
+    <header name="Accept-Language" value="fr-FR"/>
+    <header name="Cookie" value="JSESSIONID=98A9693F3C013D03BD7D6B6735CBECBC; __atuvc=1%7C20; __atuvs=5ebeb7c0e81d88a3000; CUSTOMER_UUID=375cfbed-334a-4d4e-8cc3-929063bc8c63"/>
+    <header name="Host" value="ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780"/>
+    <header name="Proxy-Connection" value="Keep-Alive"/>
+    <header name="Referer" value="http://ec2-3-127-90-16.eu-central-1.compute.amazonaws.com:8780/konakart/Computer-Peripherals/Keyboards/1_8_-1_3.action"/>
+    <header name="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"/>
+    <responseHeaders>HTTP/1.1 200 &#xd;
+Cache-Control: no-cache, no-store&#xd;
+Pragma: no-cache&#xd;
+Expires: Wed, 11 Jan 1984 05:00:00 GMT&#xd;
+Content-Type: text/html;charset=UTF-8&#xd;
+Transfer-Encoding: chunked&#xd;
+Date: Fri, 15 May 2020 15:52:44 GMT&#xd;
+Server: KonaKart</responseHeaders>
+    <record-html-infos extractorRegExp="false" htmlType="0"/>
+</http-action>
