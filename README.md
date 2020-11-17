@@ -1,5 +1,5 @@
 # NeoLoad Gremlin Integration
-<p align="center"><img src="/screeshot/icon.png" width="40%" alt="Gremlin" /></p>
+<p align="center"><img src="/screenshot/icon.png" width="40%" alt="Gremlin" /></p>
 
 This project is aimed to integrate NeoLoad with Gremlin, giving users the ability to trigger attacks during a NeoLoad test.
 This project has 2 disctinct way of launching attacks :
@@ -21,7 +21,7 @@ This project has 2 disctinct way of launching attacks :
 1. Download the [latest release]() for NeoLoad from version 7.7
 1. Read the NeoLoad documentation to see [How to install a custom Advanced Action](https://www.neotys.com/documents/doc/neoload/latest/en/html/#25928.htm).
 
-<p align="center"><img src="/screeshot/custom_action.png" alt="SupermonContext Advanced Action" /></p>
+<p align="center"><img src="/screenshot/custom_action.png" alt="SupermonContext Advanced Action" /></p>
 
 ### Gremlin Custom Actions
 
@@ -166,24 +166,24 @@ Once installed, how to use in a given NeoLoad project:
 
 1. Create a `Gremlin` User Path.
 1. Insert one of the Gremlin custom Action in the `Action` block.
-<p align="center"><img src="/screeshot/vu.png" alt="Gremlin User Path" /></p>
+<p align="center"><img src="/screenshot/vu.png" alt="Gremlin User Path" /></p>
 1. Add a `Delay` in the  `Action` block between each attack
 
 1. Create a NeoLoad Population Gremlin having only the userPath Gremlin
-<p align="center"><img src="/screeshot/population.png" alt="Gremlin Population" /></p>
+<p align="center"><img src="/screenshot/population.png" alt="Gremlin Population" /></p>
 1. Create a NeoLoad Scenario Using your population and the Gremlin Population
 The Gremlin Population would need to be added to your NeoLoad scenario with the following settings :
 * Duration : iteration
 * Load Policy : Constant : 1 user doing 1 iteration
-<p align="center"><img src="/screeshot/scenario.png" alt="Gremlin scenario" /></p>
+<p align="center"><img src="/screenshot/scenario.png" alt="Gremlin scenario" /></p>
 
 
 ### Where would you find the details of the attack during the test execution
 
 #### Events
 Every single attack will be recorded as an event in NeoLoad Web. 
-<p align="center"><img src="/screeshot/events.png" alt="Gremlin events" /></p>
+<p align="center"><img src="/screenshot/events.png" alt="Gremlin events" /></p>
 
 #### Montoring data
 Every attacks collecting metrics will report the metrics in the monitoring of NeoLoad
-<p align="center"><img src="/screeshot/graph.png" alt="Gremlin graph" /></p>
+<p align="center"><img src="/screenshot/graph.png" alt="Gremlin graph" /></p>
