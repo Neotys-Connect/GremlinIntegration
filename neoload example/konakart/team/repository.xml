@@ -1,13 +1,13 @@
 <!--****** MONITORED HOSTS ******-->
 <monitored-host-system host-name="" load-generator="false" uid="NeoLoad">
-    <embedded-action>706841b2-6950-4d6e-9872-5b1c7725969b</embedded-action>
+    <embedded-action>97752644-540a-4f69-b554-ddc6ad1c780f</embedded-action>
 </monitored-host-system>
 <monitored-host-system host-name="localhost:7100" load-generator="true" uid="LG localhost:7100">
-    <embedded-action>51766ed5-aa47-4c74-9198-15a32ec5216d</embedded-action>
+    <embedded-action>3a4d036a-d2d5-4d14-8b5e-dc4b3513a746</embedded-action>
 </monitored-host-system>
 <!--****** END MONITORED HOSTS ******-->
 <!--****** MONITOR CONNECTIONS ******-->
-<connection-system interval="1000" name="NeoLoad" server-port="0" uid="706841b2-6950-4d6e-9872-5b1c7725969b">
+<connection-system interval="1000" name="NeoLoad" server-port="0" uid="97752644-540a-4f69-b554-ddc6ad1c780f">
     <monitor-category name="Default" short-display-name="Default">
         <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
             format="NUMBER" name="UserLoad" sampling="0" unit=""/>
@@ -21,10 +21,10 @@
             format="NUMBER" name="WarningAlerts" sampling="0" unit=""/>
         <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
             format="NUMBER" name="cpu" sampling="0"
-            threshold="93e0915c-ab4f-42ce-ac96-906860260148" unit="%"/>
+            threshold="6dd73fba-14fd-49d7-b7a8-108fbd60c396" unit="%"/>
         <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
             format="NUMBER" name="memory" sampling="0"
-            threshold="b8ef2c65-ef9a-4e2b-8f48-be3641a0a42f" unit="%"/>
+            threshold="6f6b51e1-844a-4f5d-99bf-09d2f0ebae95" unit="%"/>
         <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
             format="NUMBER" name="threadcount" sampling="0" unit=""/>
         <monitor-category name="Load Generator Connections" short-display-name="Load Generator Connections">
@@ -33,7 +33,7 @@
             <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
                 format="NUMBER" name="totallgdisconnections"
                 sampling="0"
-                threshold="28dd010e-d1f5-4cb0-9b85-23244c7dfd36" unit=""/>
+                threshold="a88d9078-c6c8-4b10-8f00-50ac410b8d08" unit=""/>
             <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
                 format="NUMBER" name="totallgreconnections" sampling="0" unit=""/>
         </monitor-category>
@@ -101,7 +101,7 @@
             </monitor-category>
         </monitor-category>
     </monitor-category>
-    <threshold enabled="true" uid="93e0915c-ab4f-42ce-ac96-906860260148">
+    <threshold enabled="true" uid="6dd73fba-14fd-49d7-b7a8-108fbd60c396">
         <threshold-condition durationKind="SECONDS" durationNumber="15"
             operator="GREATER_THAN" severity="LOW" valueMax="Infinity" valueMin="80.0">
             <threshold-comment language="fr">
@@ -121,7 +121,7 @@
             </threshold-comment>
         </threshold-condition>
     </threshold>
-    <threshold enabled="true" uid="b8ef2c65-ef9a-4e2b-8f48-be3641a0a42f">
+    <threshold enabled="true" uid="6f6b51e1-844a-4f5d-99bf-09d2f0ebae95">
         <threshold-condition durationKind="SECONDS" durationNumber="15"
             operator="GREATER_THAN" severity="LOW" valueMax="Infinity" valueMin="80.0">
             <threshold-comment language="fr">
@@ -141,7 +141,7 @@
             </threshold-comment>
         </threshold-condition>
     </threshold>
-    <threshold enabled="true" uid="28dd010e-d1f5-4cb0-9b85-23244c7dfd36">
+    <threshold enabled="true" uid="a88d9078-c6c8-4b10-8f00-50ac410b8d08">
         <threshold-condition durationKind="NB_OF_TIMES"
             durationNumber="1" operator="GREATER_THAN" severity="LOW"
             valueMax="Infinity" valueMin="1.0">
@@ -154,14 +154,14 @@
         </threshold-condition>
     </threshold>
 </connection-system>
-<connection-system interval="1000" name="NeoLoad" server-port="0" uid="51766ed5-aa47-4c74-9198-15a32ec5216d">
+<connection-system interval="1000" name="NeoLoad" server-port="0" uid="3a4d036a-d2d5-4d14-8b5e-dc4b3513a746">
     <monitor-category name="Default" short-display-name="Default">
         <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
             format="NUMBER" name="lgcpu.localhost:7100" sampling="0"
-            threshold="24553c25-e175-4c4d-8c7d-b0cd7443d3a3" unit="%"/>
+            threshold="8d037a83-f267-4e6a-8c33-e10a7a7f0f8c" unit="%"/>
         <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
             format="NUMBER" name="lgmemory.localhost:7100" sampling="0"
-            threshold="a659360d-9897-43ac-98ff-418c50cd35d8" unit="%"/>
+            threshold="9e41fea0-9e9b-4cd1-a2c2-c0f3fcdfd7c2" unit="%"/>
         <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
             format="NUMBER" name="lgthroughput.localhost:7100"
             sampling="0" unit="Mb/s"/>
@@ -180,7 +180,7 @@
                 format="NUMBER"
                 name="lg.jetty.httpclient.taskpool.used.localhost:7100"
                 sampling="0"
-                threshold="9e616a6b-9bd5-47c6-bca7-d18019be5d17" unit="%"/>
+                threshold="cb2c674d-d383-4ffa-9b9e-8bdf0b78113e" unit="%"/>
         </monitor-category>
         <monitor-category name="Controller Connection" short-display-name="Controller Connection">
             <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
@@ -211,7 +211,7 @@
             </monitor-category>
         </monitor-category>
     </monitor-category>
-    <threshold enabled="true" uid="24553c25-e175-4c4d-8c7d-b0cd7443d3a3">
+    <threshold enabled="true" uid="8d037a83-f267-4e6a-8c33-e10a7a7f0f8c">
         <threshold-condition durationKind="SECONDS" durationNumber="15"
             operator="GREATER_THAN" severity="LOW" valueMax="Infinity" valueMin="80.0">
             <threshold-comment language="fr">
@@ -231,7 +231,7 @@
             </threshold-comment>
         </threshold-condition>
     </threshold>
-    <threshold enabled="true" uid="a659360d-9897-43ac-98ff-418c50cd35d8">
+    <threshold enabled="true" uid="9e41fea0-9e9b-4cd1-a2c2-c0f3fcdfd7c2">
         <threshold-condition durationKind="SECONDS" durationNumber="15"
             operator="GREATER_THAN" severity="LOW" valueMax="Infinity" valueMin="80.0">
             <threshold-comment language="fr">
@@ -251,7 +251,7 @@
             </threshold-comment>
         </threshold-condition>
     </threshold>
-    <threshold enabled="true" uid="9e616a6b-9bd5-47c6-bca7-d18019be5d17">
+    <threshold enabled="true" uid="cb2c674d-d383-4ffa-9b9e-8bdf0b78113e">
         <threshold-condition durationKind="SECONDS" durationNumber="15"
             operator="GREATER_THAN" severity="LOW" valueMax="Infinity" valueMin="70.0">
             <threshold-comment language="fr">

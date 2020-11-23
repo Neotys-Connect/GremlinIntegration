@@ -10,3 +10,4 @@ com.neotys.gremlin.customactions.generated.packetloss.PacketLossAction
 com.neotys.gremlin.customactions.generated.processkiller.ProcessKillerAction
 com.neotys.gremlin.customactions.generated.shutdown.ShutdownAction
 com.neotys.gremlin.customactions.generated.timetravel.TimeTravelAction
+com.neotys.gremlin.customactions.GremlinAttackFromJsonAction

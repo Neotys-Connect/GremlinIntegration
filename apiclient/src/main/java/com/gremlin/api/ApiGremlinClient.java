@@ -746,7 +746,13 @@ public class ApiGremlinClient {
                 content = null;
             }
             return RequestBody.create(MediaType.parse(contentType), content);
-        } else {
+        }
+        else if(obj instanceof String)
+        {
+            return RequestBody.create(MediaType.parse(contentType),  (String) obj);
+        }
+        else
+        {
             throw new ApiGremlinException("Content type \"" + contentType + "\" is not supported");
         }
     }

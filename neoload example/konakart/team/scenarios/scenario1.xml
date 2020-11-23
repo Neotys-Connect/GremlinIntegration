@@ -2,9 +2,11 @@
     slaProfileEnabled="false" traceVariables="true" uid="scenario1" virtualUsersStates="true">
     <!--****** POPULATION POLICY ******-->
     <population-policy name="Retail">
-        <duration-policy-entry iterations="1" time="300" timeUnit="0" type="2"/>
+        <duration-policy-entry iterations="1" time="600" timeUnit="0" type="2"/>
         <volume-policy-entry>
-            <constant-volume-policy iterationNumber="1" userNumber="10"/>
+            <rampup-volume-policy delayIncrement="2.0"
+                delayTypeIncrement="2" initialUserNumber="10"
+                iterationNumber="1" maxUserNumber="0" userIncrement="10"/>
         </volume-policy-entry>
         <start-stop-policy-entry start-delay="0" start-type="0"
             stop-delay="60000" stop-type="0"/>
@@ -19,9 +21,9 @@
     <population-policy name="Gremlin Scenario">
         <duration-policy-entry iterations="1" time="120" timeUnit="0" type="1"/>
         <volume-policy-entry>
-            <constant-volume-policy iterationNumber="1" userNumber="1"/>
+            <constant-volume-policy iterationNumber="2" userNumber="1"/>
         </volume-policy-entry>
-        <start-stop-policy-entry start-delay="0" start-type="0"
+        <start-stop-policy-entry start-delay="10000" start-type="1"
             stop-delay="60000" stop-type="0"/>
         <runtime-policy continueOnError="true" thinktimePolicy="0"
             thinktimeValue="5000" vuStartDelay="0" vuStartMode="0"/>

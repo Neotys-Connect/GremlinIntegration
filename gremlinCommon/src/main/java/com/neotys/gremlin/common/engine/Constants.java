@@ -17,7 +17,9 @@ public class Constants {
     public static final String NL_SCENARIO="Neoload_Scenario";
     public static final String NL_TESTNAME="Neoload_TestName";
     public static final String NL_URL="Neoload_Test_Result_URL";
-
+    public static final String GREMLIN_ANNOTATION_METRICURL="metrics";
+    public static final String GREMLIN_ANNOTATION_NOTES="notes";
+    public static final String NL_DEFAULT_VERSION="7.6";
     public static final String NOTSTARTED="NotStarted";
     public static final String GREMLINSOURCE="Gremlin";
     public static final String SUCESSFUL="Successful";

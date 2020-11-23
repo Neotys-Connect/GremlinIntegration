@@ -1,6 +1,7 @@
 package com.neotys.gremlin.common.engine;
 
 import com.gremlin.api.ApiGremlinClient;
+import com.gremlin.api.ApiGremlinException;
 import com.gremlin.api.api.AttacksApi;
 import com.gremlin.api.api.MetricsApi;
 import com.gremlin.api.api.ScenariosApi;
@@ -8,6 +9,7 @@ import com.neotys.ascode.api.v3.client.ApiClient;
 import com.neotys.ascode.api.v3.client.ApiException;
 import com.neotys.ascode.api.v3.client.api.ResultsApi;
 import com.neotys.ascode.api.v3.client.model.TestResultDefinition;
+import com.neotys.ascode.api.v3.client.model.TestResultStatistics;
 import com.neotys.extensions.action.engine.Context;
 import com.neotys.gremlin.common.GremlinException;
 import com.neotys.gremlin.common.GremlinMetriException;
@@ -35,6 +37,7 @@ public class GremlinSyncTask implements Runnable {
     private String testid;
     private HashMap<String, EventSyncronized> taksID;
     private long statTestTime;
+    private String neoloadTestUrl;
 
     public GremlinSyncTask(final ApiGremlinClient gremlinClient, final ApiClient nlapiclient, TaskType taskType, Context context,String teamid) throws GremlinException {
         this.apiClient = nlapiclient;
@@ -48,6 +51,7 @@ public class GremlinSyncTask implements Runnable {
         this.teamid=teamid;
         this.taksID=new HashMap<>();
         statTestTime=getStatTestTime();
+        neoloadTestUrl=context.getWebPlatformRunningTestUrl();
     }
 
     private long getStatTestTime() throws GremlinException {
@@ -151,6 +155,50 @@ public class GremlinSyncTask implements Runnable {
             }
         });
     }
+
+    private void updateAttack(String uuid) throws GremlinException {
+        try
+        {
+            ResultsApi resultsApi=new ResultsApi(apiClient);
+            TestResultStatistics testResultStatistics=resultsApi.getTestResultStatistics(workspaceid,testid);
+
+            String notes=GremlinUtils.getNotesFromResultStatistics(testResultStatistics);
+
+            AttacksApi attacksApi=new AttacksApi(gremlinClient);
+        }
+        catch (ApiException e)
+        {
+            e.printStackTrace();
+            throw new GremlinException("NL API exeption while retrieving summary data on from the test result "+e.getResponseBody());
+        }
+       /* catch (ApiGremlinException e)
+        {
+            e.printStackTrace();
+            throw new GremlinException("Gremlin API Exeption while upating the attack "+e.getResponseBody());
+        }*/
+    }
+
+    public  void updateScenarioResultsNote(String scenarioid,String runnumber) throws GremlinException {
+        try
+        {
+            ResultsApi resultsApi=new ResultsApi(apiClient);
+            ScenariosApi scenariosApi=new ScenariosApi(gremlinClient);
+            TestResultStatistics testResultStatistics=resultsApi.getTestResultStatistics(workspaceid,testid);
+            String body=GremlinUtils.getNotesFromResultStatistics(testResultStatistics);
+            body+="\n link to the NeoLoad test result : "+ neoloadTestUrl;
+            scenariosApi.setScenarioRunResultNotes(scenarioid,new Long(runnumber),body,teamid);
+        }
+        catch(ApiGremlinException e)
+        {
+            e.printStackTrace();
+            throw new GremlinException(" Unable to add notes to the scenario results "+ e.getResponseBody());
+        }
+         catch (ApiException e) {
+            e.printStackTrace();
+             throw new GremlinException(" Unable to get the neoload test statistics "+ e.getResponseBody());
+
+         }
+    }
     
     private void syncScenario()
     {
@@ -172,6 +220,7 @@ public class GremlinSyncTask implements Runnable {
                                         //--end time define
                                         //#TODO update the event in neoload
                                         try {
+                                            updateScenarioResultsNote(scenarioid,runid);
                                             GremlinUtils.updateNeoLoadEvent(apiClient, eventSyncronized.getEventid(), neoLoadEvent, workspaceid, testid);
                                             eventSyncronized.setIsended();
                                             taksID.put(neoLoadEvent.getGuid(), eventSyncronized);
@@ -214,6 +263,7 @@ public class GremlinSyncTask implements Runnable {
                                     EventSyncronized eventSyncronized=new EventSyncronized(neoloadeventid);
                                     if(neoLoadEvent.getEndtime()>0)
                                     {
+                                        updateScenarioResultsNote(scenarioid,runid);
                                         eventSyncronized.setIsended();
                                         //get the monitoring
                                         List<NeoLoadMetric> neoLoadMetricList=GremlinUtils.getScenarioMetrics(scenarioid,new Long(runid),teamid,new MetricsApi(gremlinClient));

@@ -141,6 +141,10 @@ public class GremlinUtils {
 
     }
 
+    //#TODO create a methods that update the attack with the neoload url
+
+    //#TODO create a method that update the task witht the neoload url
+
     public static List<NeoLoadMetric> getScenarioMetrics(String scenarioid, Long runNumber, String teamid,MetricsApi metricsApi) throws GremlinException {
         try {
             List<NeoLoadMetric> neoLoadMetricList=new ArrayList<>();
@@ -163,6 +167,9 @@ public class GremlinUtils {
 
     }
 
+
+
+
     public static List<NeoLoadMetric> getAttackMetrics(String guid,String teamid,MetricsApi metricsApi) throws GremlinException, GremlinMetriException {
         try {
             List<NeoLoadMetric> neoLoadMetricList=new ArrayList<>();
@@ -183,5 +190,14 @@ public class GremlinUtils {
             throw new GremlinException("GetMetrics apiexeption "+e.getResponseBody());
         }
 
+    }
+
+    public static String getNotesFromResultStatistics(TestResultStatistics testResultStatistics) {
+       StringBuilder notebuilder=new StringBuilder();
+       notebuilder.append(testResultStatistics.getLastVirtualUserCount().toString()+" concurrent users during the attack \n");
+       notebuilder.append(" Current statistics :\n"+ " \t hit/s:"+testResultStatistics.getLastRequestCountPerSecond().toString()+"\n");
+       notebuilder.append(" \t average transaction duration (ms) : "+testResultStatistics.getLastTransactionDurationAverage().toString()+"\n");
+
+       return notebuilder.toString();
     }
 }
