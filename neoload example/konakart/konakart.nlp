@@ -1,11 +1,11 @@
 # Project description file
 
 project.name=konakart
-project.version=8.1
+project.version=8.2
 project.original.version=6.6
 product.name=NeoLoad
 product.original.name=NeoLoad
-product.version=7.5.0
+product.version=7.7.0
 product.original.version=7.0.2
 project.id=f25ab01e-01c3-4247-9f5e-6411ea709cdb
 project.config.path=team

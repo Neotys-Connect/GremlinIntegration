@@ -1,13 +1,13 @@
 <!--****** MONITORED HOSTS ******-->
 <monitored-host-system host-name="" load-generator="false" uid="NeoLoad">
-    <embedded-action>97752644-540a-4f69-b554-ddc6ad1c780f</embedded-action>
+    <embedded-action>d01954cc-0a98-4a43-b884-236c4c363ba0</embedded-action>
 </monitored-host-system>
 <monitored-host-system host-name="localhost:7100" load-generator="true" uid="LG localhost:7100">
-    <embedded-action>3a4d036a-d2d5-4d14-8b5e-dc4b3513a746</embedded-action>
+    <embedded-action>00adc1c8-48b8-4ff1-95d8-0d16f1824638</embedded-action>
 </monitored-host-system>
 <!--****** END MONITORED HOSTS ******-->
 <!--****** MONITOR CONNECTIONS ******-->
-<connection-system interval="1000" name="NeoLoad" server-port="0" uid="97752644-540a-4f69-b554-ddc6ad1c780f">
+<connection-system interval="1000" name="NeoLoad" server-port="0" uid="d01954cc-0a98-4a43-b884-236c4c363ba0">
     <monitor-category name="Default" short-display-name="Default">
         <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
             format="NUMBER" name="UserLoad" sampling="0" unit=""/>
@@ -21,10 +21,10 @@
             format="NUMBER" name="WarningAlerts" sampling="0" unit=""/>
         <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
             format="NUMBER" name="cpu" sampling="0"
-            threshold="6dd73fba-14fd-49d7-b7a8-108fbd60c396" unit="%"/>
+            threshold="5e9ff30d-e060-43ae-8736-ca0e62534fe1" unit="%"/>
         <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
             format="NUMBER" name="memory" sampling="0"
-            threshold="6f6b51e1-844a-4f5d-99bf-09d2f0ebae95" unit="%"/>
+            threshold="a9144b62-07ad-4cf5-bf12-b69b50d5fc3e" unit="%"/>
         <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
             format="NUMBER" name="threadcount" sampling="0" unit=""/>
         <monitor-category name="Load Generator Connections" short-display-name="Load Generator Connections">
@@ -33,7 +33,7 @@
             <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
                 format="NUMBER" name="totallgdisconnections"
                 sampling="0"
-                threshold="a88d9078-c6c8-4b10-8f00-50ac410b8d08" unit=""/>
+                threshold="5905d776-db37-480c-803d-287b44dadf35" unit=""/>
             <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
                 format="NUMBER" name="totallgreconnections" sampling="0" unit=""/>
         </monitor-category>
@@ -42,15 +42,57 @@
                 format="NUMBER" name="otcp.NeoLoad" sampling="0" unit=""/>
             <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
                 format="NUMBER" name="tcp.NeoLoad" sampling="0" unit=""/>
-            <monitor-category name="wlp2s0 (wlp2s0)" short-display-name="wlp2s0 (wlp2s0)">
+            <monitor-category
+                name="wlan0 (Microsoft Wi-Fi Direct Virtual Adapter)" short-display-name="wlan0 (Microsoft Wi-Fi Direct Virtual Adapter)">
                 <monitor-wrapped-statistic callTime="ON_BENCH"
                     computing="0" format="NUMBER"
-                    name="ibytesperinterface~NeoLoad~wlp2s0"
-                    sampling="0" unit="Mb/s"/>
+                    name="ibytesperinterface~NeoLoad~wlan0" sampling="0" unit="Mb/s"/>
                 <monitor-wrapped-statistic callTime="ON_BENCH"
                     computing="0" format="NUMBER"
-                    name="obytesperinterface~NeoLoad~wlp2s0"
-                    sampling="0" unit="Mb/s"/>
+                    name="obytesperinterface~NeoLoad~wlan0" sampling="0" unit="Mb/s"/>
+            </monitor-category>
+            <monitor-category name="eth6 (TAP-Windows Adapter V9)" short-display-name="eth6 (TAP-Windows Adapter V9)">
+                <monitor-wrapped-statistic callTime="ON_BENCH"
+                    computing="0" format="NUMBER"
+                    name="ibytesperinterface~NeoLoad~eth6" sampling="0" unit="Mb/s"/>
+                <monitor-wrapped-statistic callTime="ON_BENCH"
+                    computing="0" format="NUMBER"
+                    name="obytesperinterface~NeoLoad~eth6" sampling="0" unit="Mb/s"/>
+            </monitor-category>
+            <monitor-category
+                name="eth4 (Bluetooth Device (Personal Area Network))" short-display-name="eth4 (Bluetooth Device (Personal Area Network))">
+                <monitor-wrapped-statistic callTime="ON_BENCH"
+                    computing="0" format="NUMBER"
+                    name="ibytesperinterface~NeoLoad~eth4" sampling="0" unit="Mb/s"/>
+                <monitor-wrapped-statistic callTime="ON_BENCH"
+                    computing="0" format="NUMBER"
+                    name="obytesperinterface~NeoLoad~eth4" sampling="0" unit="Mb/s"/>
+            </monitor-category>
+            <monitor-category
+                name="eth3 (Intel(R) Ethernet Connection (2) I219-LM)" short-display-name="eth3 (Intel(R) Ethernet Connection (2) I219-LM)">
+                <monitor-wrapped-statistic callTime="ON_BENCH"
+                    computing="0" format="NUMBER"
+                    name="ibytesperinterface~NeoLoad~eth3" sampling="0" unit="Mb/s"/>
+                <monitor-wrapped-statistic callTime="ON_BENCH"
+                    computing="0" format="NUMBER"
+                    name="obytesperinterface~NeoLoad~eth3" sampling="0" unit="Mb/s"/>
+            </monitor-category>
+            <monitor-category name="eth0 (HMA TAP-Windows Adapter V9)" short-display-name="eth0 (HMA TAP-Windows Adapter V9)">
+                <monitor-wrapped-statistic callTime="ON_BENCH"
+                    computing="0" format="NUMBER"
+                    name="ibytesperinterface~NeoLoad~eth0" sampling="0" unit="Mb/s"/>
+                <monitor-wrapped-statistic callTime="ON_BENCH"
+                    computing="0" format="NUMBER"
+                    name="obytesperinterface~NeoLoad~eth0" sampling="0" unit="Mb/s"/>
+            </monitor-category>
+            <monitor-category
+                name="wlan2 (Intel(R) Dual Band Wireless-AC 8260)" short-display-name="wlan2 (Intel(R) Dual Band Wireless-AC 8260)">
+                <monitor-wrapped-statistic callTime="ON_BENCH"
+                    computing="0" format="NUMBER"
+                    name="ibytesperinterface~NeoLoad~wlan2" sampling="0" unit="Mb/s"/>
+                <monitor-wrapped-statistic callTime="ON_BENCH"
+                    computing="0" format="NUMBER"
+                    name="obytesperinterface~NeoLoad~wlan2" sampling="0" unit="Mb/s"/>
             </monitor-category>
         </monitor-category>
         <monitor-category name="NeoLoad Web" short-display-name="NeoLoad Web">
@@ -87,25 +129,25 @@
                         sampling="0" unit=""/>
                 </monitor-category>
             </monitor-category>
-            <monitor-category name="Gremlin Scenario" short-display-name="Gremlin Scenario">
+            <monitor-category name="gremlin Attack" short-display-name="gremlin Attack">
                 <monitor-wrapped-statistic callTime="ON_BENCH"
                     computing="0" format="NUMBER"
-                    name="zoneuserloadperpopulation~Default zone~Gremlin Scenario"
+                    name="zoneuserloadperpopulation~Default zone~gremlin Attack"
                     sampling="0" unit=""/>
-                <monitor-category name="GremlinScenario" short-display-name="GremlinScenario">
+                <monitor-category name="GremlinAttack" short-display-name="GremlinAttack">
                     <monitor-wrapped-statistic callTime="ON_BENCH"
                         computing="0" format="NUMBER"
-                        name="zoneuserloadperpopulation~Default zone~Gremlin Scenario~GremlinScenario"
+                        name="zoneuserloadperpopulation~Default zone~gremlin Attack~GremlinAttack"
                         sampling="0" unit=""/>
                 </monitor-category>
             </monitor-category>
         </monitor-category>
     </monitor-category>
-    <threshold enabled="true" uid="6dd73fba-14fd-49d7-b7a8-108fbd60c396">
+    <threshold enabled="true" uid="5e9ff30d-e060-43ae-8736-ca0e62534fe1">
         <threshold-condition durationKind="SECONDS" durationNumber="15"
             operator="GREATER_THAN" severity="LOW" valueMax="Infinity" valueMin="80.0">
             <threshold-comment language="fr">
-                <threshold-content>CPU du Contrï¿½leur surchargï¿½.</threshold-content>
+                <threshold-content>CPU du Contrôleur surchargé.</threshold-content>
             </threshold-comment>
             <threshold-comment language="en">
                 <threshold-content>Controller CPU high.</threshold-content>
@@ -114,18 +156,18 @@
         <threshold-condition durationKind="SECONDS" durationNumber="15"
             operator="GREATER_THAN" severity="HIGH" valueMax="Infinity" valueMin="90.0">
             <threshold-comment language="fr">
-                <threshold-content>CPU du Contrï¿½leur surchargï¿½.</threshold-content>
+                <threshold-content>CPU du Contrôleur surchargé.</threshold-content>
             </threshold-comment>
             <threshold-comment language="en">
                 <threshold-content>Controller CPU high.</threshold-content>
             </threshold-comment>
         </threshold-condition>
     </threshold>
-    <threshold enabled="true" uid="6f6b51e1-844a-4f5d-99bf-09d2f0ebae95">
+    <threshold enabled="true" uid="a9144b62-07ad-4cf5-bf12-b69b50d5fc3e">
         <threshold-condition durationKind="SECONDS" durationNumber="15"
             operator="GREATER_THAN" severity="LOW" valueMax="Infinity" valueMin="80.0">
             <threshold-comment language="fr">
-                <threshold-content>Quantitï¿½ de mï¿½moire en cours d'utilisation ï¿½levï¿½e</threshold-content>
+                <threshold-content>Quantité de mémoire en cours d'utilisation élevée</threshold-content>
             </threshold-comment>
             <threshold-comment language="en">
                 <threshold-content>Too high amount of memory used</threshold-content>
@@ -134,19 +176,19 @@
         <threshold-condition durationKind="SECONDS" durationNumber="15"
             operator="GREATER_THAN" severity="HIGH" valueMax="Infinity" valueMin="90.0">
             <threshold-comment language="fr">
-                <threshold-content>Quantitï¿½ de mï¿½moire en cours d'utilisation ï¿½levï¿½e</threshold-content>
+                <threshold-content>Quantité de mémoire en cours d'utilisation élevée</threshold-content>
             </threshold-comment>
             <threshold-comment language="en">
                 <threshold-content>Too high amount of memory used</threshold-content>
             </threshold-comment>
         </threshold-condition>
     </threshold>
-    <threshold enabled="true" uid="a88d9078-c6c8-4b10-8f00-50ac410b8d08">
+    <threshold enabled="true" uid="5905d776-db37-480c-803d-287b44dadf35">
         <threshold-condition durationKind="NB_OF_TIMES"
             durationNumber="1" operator="GREATER_THAN" severity="LOW"
             valueMax="Infinity" valueMin="1.0">
             <threshold-comment language="fr">
-                <threshold-content>Injecteur  dï¿½connectï¿½ &gt;= 1</threshold-content>
+                <threshold-content>Injecteur  déconnecté &gt;= 1</threshold-content>
             </threshold-comment>
             <threshold-comment language="en">
                 <threshold-content>Load Generator Diconnected &gt;=1</threshold-content>
@@ -154,14 +196,14 @@
         </threshold-condition>
     </threshold>
 </connection-system>
-<connection-system interval="1000" name="NeoLoad" server-port="0" uid="3a4d036a-d2d5-4d14-8b5e-dc4b3513a746">
+<connection-system interval="1000" name="NeoLoad" server-port="0" uid="00adc1c8-48b8-4ff1-95d8-0d16f1824638">
     <monitor-category name="Default" short-display-name="Default">
         <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
             format="NUMBER" name="lgcpu.localhost:7100" sampling="0"
-            threshold="8d037a83-f267-4e6a-8c33-e10a7a7f0f8c" unit="%"/>
+            threshold="6c4d31f5-0b0e-4f02-8ad7-4df253adb296" unit="%"/>
         <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
             format="NUMBER" name="lgmemory.localhost:7100" sampling="0"
-            threshold="9e41fea0-9e9b-4cd1-a2c2-c0f3fcdfd7c2" unit="%"/>
+            threshold="6eb9f3d1-0ba6-4e78-8eed-436522ef3a85" unit="%"/>
         <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
             format="NUMBER" name="lgthroughput.localhost:7100"
             sampling="0" unit="Mb/s"/>
@@ -180,7 +222,7 @@
                 format="NUMBER"
                 name="lg.jetty.httpclient.taskpool.used.localhost:7100"
                 sampling="0"
-                threshold="cb2c674d-d383-4ffa-9b9e-8bdf0b78113e" unit="%"/>
+                threshold="536404c1-ffab-460c-a347-ef7e1e05a623" unit="%"/>
         </monitor-category>
         <monitor-category name="Controller Connection" short-display-name="Controller Connection">
             <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
@@ -199,23 +241,77 @@
                 sampling="0" unit=""/>
             <monitor-wrapped-statistic callTime="ON_BENCH" computing="0"
                 format="NUMBER" name="lgtcp.localhost:7100" sampling="0" unit=""/>
-            <monitor-category name="wlp2s0 (wlp2s0)" short-display-name="wlp2s0 (wlp2s0)">
+            <monitor-category
+                name="wlan0 (Microsoft Wi-Fi Direct Virtual Adapter)" short-display-name="wlan0 (Microsoft Wi-Fi Direct Virtual Adapter)">
                 <monitor-wrapped-statistic callTime="ON_BENCH"
                     computing="0" format="NUMBER"
-                    name="lgibytesperinterface~localhost:7100~wlp2s0"
+                    name="lgibytesperinterface~localhost:7100~wlan0"
                     sampling="0" unit="Mb/s"/>
                 <monitor-wrapped-statistic callTime="ON_BENCH"
                     computing="0" format="NUMBER"
-                    name="lgobytesperinterface~localhost:7100~wlp2s0"
+                    name="lgobytesperinterface~localhost:7100~wlan0"
+                    sampling="0" unit="Mb/s"/>
+            </monitor-category>
+            <monitor-category name="eth6 (TAP-Windows Adapter V9)" short-display-name="eth6 (TAP-Windows Adapter V9)">
+                <monitor-wrapped-statistic callTime="ON_BENCH"
+                    computing="0" format="NUMBER"
+                    name="lgibytesperinterface~localhost:7100~eth6"
+                    sampling="0" unit="Mb/s"/>
+                <monitor-wrapped-statistic callTime="ON_BENCH"
+                    computing="0" format="NUMBER"
+                    name="lgobytesperinterface~localhost:7100~eth6"
+                    sampling="0" unit="Mb/s"/>
+            </monitor-category>
+            <monitor-category
+                name="eth4 (Bluetooth Device (Personal Area Network))" short-display-name="eth4 (Bluetooth Device (Personal Area Network))">
+                <monitor-wrapped-statistic callTime="ON_BENCH"
+                    computing="0" format="NUMBER"
+                    name="lgibytesperinterface~localhost:7100~eth4"
+                    sampling="0" unit="Mb/s"/>
+                <monitor-wrapped-statistic callTime="ON_BENCH"
+                    computing="0" format="NUMBER"
+                    name="lgobytesperinterface~localhost:7100~eth4"
+                    sampling="0" unit="Mb/s"/>
+            </monitor-category>
+            <monitor-category
+                name="eth3 (Intel(R) Ethernet Connection (2) I219-LM)" short-display-name="eth3 (Intel(R) Ethernet Connection (2) I219-LM)">
+                <monitor-wrapped-statistic callTime="ON_BENCH"
+                    computing="0" format="NUMBER"
+                    name="lgibytesperinterface~localhost:7100~eth3"
+                    sampling="0" unit="Mb/s"/>
+                <monitor-wrapped-statistic callTime="ON_BENCH"
+                    computing="0" format="NUMBER"
+                    name="lgobytesperinterface~localhost:7100~eth3"
+                    sampling="0" unit="Mb/s"/>
+            </monitor-category>
+            <monitor-category name="eth0 (HMA TAP-Windows Adapter V9)" short-display-name="eth0 (HMA TAP-Windows Adapter V9)">
+                <monitor-wrapped-statistic callTime="ON_BENCH"
+                    computing="0" format="NUMBER"
+                    name="lgibytesperinterface~localhost:7100~eth0"
+                    sampling="0" unit="Mb/s"/>
+                <monitor-wrapped-statistic callTime="ON_BENCH"
+                    computing="0" format="NUMBER"
+                    name="lgobytesperinterface~localhost:7100~eth0"
+                    sampling="0" unit="Mb/s"/>
+            </monitor-category>
+            <monitor-category
+                name="wlan2 (Intel(R) Dual Band Wireless-AC 8260)" short-display-name="wlan2 (Intel(R) Dual Band Wireless-AC 8260)">
+                <monitor-wrapped-statistic callTime="ON_BENCH"
+                    computing="0" format="NUMBER"
+                    name="lgibytesperinterface~localhost:7100~wlan2"
+                    sampling="0" unit="Mb/s"/>
+                <monitor-wrapped-statistic callTime="ON_BENCH"
+                    computing="0" format="NUMBER"
+                    name="lgobytesperinterface~localhost:7100~wlan2"
                     sampling="0" unit="Mb/s"/>
             </monitor-category>
         </monitor-category>
     </monitor-category>
-    <threshold enabled="true" uid="8d037a83-f267-4e6a-8c33-e10a7a7f0f8c">
+    <threshold enabled="true" uid="6c4d31f5-0b0e-4f02-8ad7-4df253adb296">
         <threshold-condition durationKind="SECONDS" durationNumber="15"
             operator="GREATER_THAN" severity="LOW" valueMax="Infinity" valueMin="80.0">
             <threshold-comment language="fr">
-                <threshold-content>CPU de l'injecteur surchargï¿½.</threshold-content>
+                <threshold-content>CPU de l'injecteur surchargé.</threshold-content>
             </threshold-comment>
             <threshold-comment language="en">
                 <threshold-content>Load generator CPU high.</threshold-content>
@@ -224,18 +320,18 @@
         <threshold-condition durationKind="SECONDS" durationNumber="15"
             operator="GREATER_THAN" severity="HIGH" valueMax="Infinity" valueMin="90.0">
             <threshold-comment language="fr">
-                <threshold-content>CPU de l'injecteur surchargï¿½.</threshold-content>
+                <threshold-content>CPU de l'injecteur surchargé.</threshold-content>
             </threshold-comment>
             <threshold-comment language="en">
                 <threshold-content>Load generator CPU high.</threshold-content>
             </threshold-comment>
         </threshold-condition>
     </threshold>
-    <threshold enabled="true" uid="9e41fea0-9e9b-4cd1-a2c2-c0f3fcdfd7c2">
+    <threshold enabled="true" uid="6eb9f3d1-0ba6-4e78-8eed-436522ef3a85">
         <threshold-condition durationKind="SECONDS" durationNumber="15"
             operator="GREATER_THAN" severity="LOW" valueMax="Infinity" valueMin="80.0">
             <threshold-comment language="fr">
-                <threshold-content>Quantitï¿½ de mï¿½moire en cours d'utilisation ï¿½levï¿½e</threshold-content>
+                <threshold-content>Quantité de mémoire en cours d'utilisation élevée</threshold-content>
             </threshold-comment>
             <threshold-comment language="en">
                 <threshold-content>Too high amount of memory used</threshold-content>
@@ -244,18 +340,18 @@
         <threshold-condition durationKind="SECONDS" durationNumber="15"
             operator="GREATER_THAN" severity="HIGH" valueMax="Infinity" valueMin="90.0">
             <threshold-comment language="fr">
-                <threshold-content>Quantitï¿½ de mï¿½moire en cours d'utilisation ï¿½levï¿½e</threshold-content>
+                <threshold-content>Quantité de mémoire en cours d'utilisation élevée</threshold-content>
             </threshold-comment>
             <threshold-comment language="en">
                 <threshold-content>Too high amount of memory used</threshold-content>
             </threshold-comment>
         </threshold-condition>
     </threshold>
-    <threshold enabled="true" uid="cb2c674d-d383-4ffa-9b9e-8bdf0b78113e">
+    <threshold enabled="true" uid="536404c1-ffab-460c-a347-ef7e1e05a623">
         <threshold-condition durationKind="SECONDS" durationNumber="15"
             operator="GREATER_THAN" severity="LOW" valueMax="Infinity" valueMin="70.0">
             <threshold-comment language="fr">
-                <threshold-content>Quantitï¿½ de tï¿½ches Jetty en cours d'exï¿½cution ï¿½levï¿½e</threshold-content>
+                <threshold-content>Quantité de tâches Jetty en cours d'exécution élevée</threshold-content>
             </threshold-comment>
             <threshold-comment language="en">
                 <threshold-content>Too high amount of tasks queue by Jetty</threshold-content>
@@ -264,7 +360,7 @@
         <threshold-condition durationKind="SECONDS" durationNumber="15"
             operator="GREATER_THAN" severity="HIGH" valueMax="Infinity" valueMin="90.0">
             <threshold-comment language="fr">
-                <threshold-content>Quantitï¿½ de tï¿½ches Jetty en cours d'exï¿½cution ï¿½levï¿½e</threshold-content>
+                <threshold-content>Quantité de tâches Jetty en cours d'exécution élevée</threshold-content>
             </threshold-comment>
             <threshold-comment language="en">
                 <threshold-content>Too high amount of tasks queue by Jetty</threshold-content>
