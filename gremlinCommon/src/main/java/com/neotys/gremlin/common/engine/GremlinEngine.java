@@ -56,7 +56,7 @@ public class GremlinEngine {
         nlapiclient.setBasePath(getBasePath(context));
 
         String nlversion=getProjectVersion(context);
-        apiGremlinClient.addDefaultHeader("X-Gremlin-Agent",new String("Neotys/"+nlversion).toLowerCase());
+        apiGremlinClient.addDefaultHeader("X-Gremlin-Agent",new String("neotys/"+nlversion).toLowerCase());
         this.context=context;
     }
 
