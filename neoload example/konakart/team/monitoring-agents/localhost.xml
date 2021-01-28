@@ -1,71 +1,24 @@
 <me-host citrixSupport="false" loadWeight="1" sapSupport="false"
     standalone="false" supportWANEmulation="false" uid="localhost" version="7.7.0;build=20201130-37">
     <!--****** LG NETWORK INTERFACES ******-->
-    <lg-networkiface
-        description="Microsoft Wi-Fi Direct Virtual Adapter"
-        enabled="false" isLoopBack="false" name="wlan0">
+    <lg-networkiface description="wlp2s0" enabled="false"
+        isLoopBack="false" name="wlp2s0">
         <!--****** LG ADDRESSES ******-->
-        <lg-address enabled="false" hostname="fe80:0:0:0:b878:5172:155:da66%wlan0">
-            <ip value="fe80:0:0:0:b878:5172:155:da66%wlan0"/>
+        <lg-address enabled="false" hostname="192.168.1.81">
+            <ip value="192.168.1.81"/>
+        </lg-address>
+        <lg-address enabled="false" hostname="fe80:0:0:0:688f:374b:4c3f:4d3a%wlp2s0">
+            <ip value="fe80:0:0:0:688f:374b:4c3f:4d3a%wlp2s0"/>
         </lg-address>
         <!--****** END LG ADDRESSES ******-->
     </lg-networkiface>
-    <lg-networkiface description="TAP-Windows Adapter V9"
-        enabled="false" isLoopBack="false" name="eth6">
-        <!--****** LG ADDRESSES ******-->
-        <lg-address enabled="false" hostname="fe80:0:0:0:fc6a:82a0:929d:5483%eth6">
-            <ip value="fe80:0:0:0:fc6a:82a0:929d:5483%eth6"/>
-        </lg-address>
-        <!--****** END LG ADDRESSES ******-->
-    </lg-networkiface>
-    <lg-networkiface description="Software Loopback Interface 1"
-        enabled="false" isLoopBack="true" name="lo">
+    <lg-networkiface description="lo" enabled="false" isLoopBack="true" name="lo">
         <!--****** LG ADDRESSES ******-->
         <lg-address enabled="false" hostname="localhost">
             <ip value="127.0.0.1"/>
         </lg-address>
-        <lg-address enabled="false" hostname="0:0:0:0:0:0:0:1">
-            <ip value="0:0:0:0:0:0:0:1"/>
-        </lg-address>
-        <!--****** END LG ADDRESSES ******-->
-    </lg-networkiface>
-    <lg-networkiface
-        description="Bluetooth Device (Personal Area Network)"
-        enabled="false" isLoopBack="false" name="eth4">
-        <!--****** LG ADDRESSES ******-->
-        <lg-address enabled="false" hostname="fe80:0:0:0:7886:a4df:f3ba:3464%eth4">
-            <ip value="fe80:0:0:0:7886:a4df:f3ba:3464%eth4"/>
-        </lg-address>
-        <!--****** END LG ADDRESSES ******-->
-    </lg-networkiface>
-    <lg-networkiface
-        description="Intel(R) Ethernet Connection (2) I219-LM"
-        enabled="false" isLoopBack="false" name="eth3">
-        <!--****** LG ADDRESSES ******-->
-        <lg-address enabled="false" hostname="fe80:0:0:0:4451:3357:4549:d403%eth3">
-            <ip value="fe80:0:0:0:4451:3357:4549:d403%eth3"/>
-        </lg-address>
-        <!--****** END LG ADDRESSES ******-->
-    </lg-networkiface>
-    <lg-networkiface description="HMA TAP-Windows Adapter V9"
-        enabled="false" isLoopBack="false" name="eth0">
-        <!--****** LG ADDRESSES ******-->
-        <lg-address enabled="false" hostname="pc014.intranet.neotys.com">
-            <ip value="100.120.33.161"/>
-        </lg-address>
-        <lg-address enabled="false" hostname="fe80:0:0:0:497c:9f20:ae2e:ecc4%eth0">
-            <ip value="fe80:0:0:0:497c:9f20:ae2e:ecc4%eth0"/>
-        </lg-address>
-        <!--****** END LG ADDRESSES ******-->
-    </lg-networkiface>
-    <lg-networkiface description="Intel(R) Dual Band Wireless-AC 8260"
-        enabled="false" isLoopBack="false" name="wlan2">
-        <!--****** LG ADDRESSES ******-->
-        <lg-address enabled="false" hostname="host.docker.internal">
-            <ip value="192.168.1.81"/>
-        </lg-address>
-        <lg-address enabled="false" hostname="fe80:0:0:0:f880:99ed:3d34:637d%wlan2">
-            <ip value="fe80:0:0:0:f880:99ed:3d34:637d%wlan2"/>
+        <lg-address enabled="false" hostname="0:0:0:0:0:0:0:1%lo">
+            <ip value="0:0:0:0:0:0:0:1%lo"/>
         </lg-address>
         <!--****** END LG ADDRESSES ******-->
     </lg-networkiface>

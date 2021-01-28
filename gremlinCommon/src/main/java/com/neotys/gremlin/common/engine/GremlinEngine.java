@@ -56,7 +56,7 @@ public class GremlinEngine {
         nlapiclient.setBasePath(getBasePath(context));
 
         String nlversion=getProjectVersion(context);
-        apiGremlinClient.addDefaultHeader("X-Gremlin-Agent",new String("neotys/"+nlversion).toLowerCase());
+        apiGremlinClient.addDefaultHeader("X-GREMLIN-AGENT",new String("neotys/"+nlversion).toLowerCase());
         this.context=context;
     }
 
@@ -81,7 +81,7 @@ public class GremlinEngine {
     private String getBasePath(final Context context) {
         final String webPlatformApiUrl = context.getWebPlatformApiUrl();
         final StringBuilder basePathBuilder = new StringBuilder(webPlatformApiUrl);
-
+        context.getLogger().debug(context.getWebPlatformApiUrl());
         return basePathBuilder.toString();
     }
 
@@ -94,7 +94,7 @@ public class GremlinEngine {
             AttacksApi attacksApi = new AttacksApi(apiGremlinClient);
 
             TaskInput taskInput = new TaskInput();
-            taskInput.setSource(TaskInput.SourceEnum.API);
+            //taskInput.setSource(TaskInput.SourceEnum.API);
             Map<String, String> annotation = new HashMap<>();
             annotation.put(NL_PROJECT, context.getProjectName());
             annotation.put(NL_SCENARIO, context.getScenarioName());
