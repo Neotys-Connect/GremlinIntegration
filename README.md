@@ -45,7 +45,7 @@ Every attack will have common parameters  :
 
 | Name             | Description |
 | -----            | ----- |
-| `GremlinTargetType`      | Type of Target ( Hosts or containers) |
+| `GremlinTargetType`      | Type of Target ( Host or container) |
 | `GremlinToken`   |   Gremlin API token|
 | `GremlinTeamID`   |  Gremlin Team ID |
 | `GremlinTargetHostTags`      | This parameter will select the client that will run the attack with a the help of tags.List of tags seperated by a , |

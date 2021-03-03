@@ -2,7 +2,7 @@
     slaProfileEnabled="false" traceVariables="true" uid="scenario1" virtualUsersStates="true">
     <!--****** POPULATION POLICY ******-->
     <population-policy name="Retail">
-        <duration-policy-entry iterations="1" time="1200" timeUnit="0" type="2"/>
+        <duration-policy-entry iterations="1" time="600" timeUnit="0" type="2"/>
         <volume-policy-entry>
             <rampup-volume-policy delayIncrement="2.0"
                 delayTypeIncrement="2" initialUserNumber="10"
@@ -70,7 +70,6 @@
                 monitorName="lgcpu.localhost:7100"
                 monitoredHostName="LG localhost:7100" scale="1.0" selected="false"/>
         </chart-description>
-        <empty-chart-description/>
     </charts-model-description>
     <!--****** END DASHBOARDS  ******-->
     <!--****** START DATA FILTERS  ******-->

@@ -100,14 +100,14 @@ public class GremlinEngine {
             annotation.put(NL_SCENARIO, context.getScenarioName());
             annotation.put(NL_TESTNAME, context.getTestName());
             annotation.put(NL_URL, context.getWebPlatformRunningTestUrl());
-            annotation.put(NL_URL, context.getWebPlatformRunningTestUrl());
             annotation.put(GREMLIN_ANNOTATION_METRICURL,context.getWebPlatformRunningTestUrl());
             taskInput.setAnnotations(annotation);
 
             HashMap<String, Object> target = new HashMap<>();
             target.put("type", RANDOM);
             HashMap<String, Object> targettype = new HashMap<>();
-            if (gremlinTypeOfTarget.equalsIgnoreCase(Task.TargetTypeEnum.HOST.getValue())) {
+            if (gremlinTypeOfTarget.equalsIgnoreCase(Task.TargetTypeEnum.HOST.getValue()))
+            {
                 //--host----
                 targettype.put("multiSelectTags", getTags(gremlinTags));
                 target.put(Task.TargetTypeEnum.HOST.getValue().toLowerCase(), targettype);
