@@ -25,6 +25,8 @@ public class Constants {
     public static final String SUCESSFUL="Successful";
 
     public static final String RANDOM="Random";
+    public static final String CONTAINER="containers";
+    public static final String HOST="hosts";
 
     public static final Task.StageEnum[] STATEWITHEND ={
         Task.StageEnum.TARGETNOTFOUND,Task.StageEnum.INVALIDARGUMENT,Task.StageEnum.SUCCESSFUL,Task.StageEnum.USERHALTED,Task.StageEnum.CLIENTABORTED,Task.StageEnum.LOSTCOMMUNICATION,Task.StageEnum.INITIALIZATIONFAILED,Task.StageEnum.TEARDOWNFAILED,Task.StageEnum.HALTFAILED,Task.StageEnum.FAILED,Task.StageEnum.HALT};

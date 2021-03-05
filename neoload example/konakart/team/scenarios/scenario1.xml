@@ -70,6 +70,7 @@
                 monitorName="lgcpu.localhost:7100"
                 monitoredHostName="LG localhost:7100" scale="1.0" selected="false"/>
         </chart-description>
+        <empty-chart-description/>
     </charts-model-description>
     <!--****** END DASHBOARDS  ******-->
     <!--****** START DATA FILTERS  ******-->

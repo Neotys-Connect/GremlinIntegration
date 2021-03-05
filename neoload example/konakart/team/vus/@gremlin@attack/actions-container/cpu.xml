@@ -23,8 +23,8 @@ Percent utilization is subject to active processes and will not exceed the reque
 Value must be of type: Integer</description>
     <custom-action-parameter name="GremlinToken" type="TEXT" value="${apikey}"/>
     <custom-action-parameter name="GremlinTeamID" type="TEXT" value="${teamid}"/>
-    <custom-action-parameter name="GremlinTargetType" type="TEXT" value="host"/>
-    <custom-action-parameter name="GremlinTargetHostTags" type="TEXT" value="cloud:&quot;AWS&quot;"/>
+    <custom-action-parameter name="GremlinTargetType" type="TEXT" value="container"/>
+    <custom-action-parameter name="GremlinTargetHostTags" type="TEXT" value="com.docker.compose.service:&quot;konakart&quot; "/>
     <custom-action-parameter name="GremlinTarget" type="TEXT" value="percent"/>
     <custom-action-parameter name="GremlinTargetNumber" type="TEXT" value="100"/>
     <custom-action-parameter name="Length" type="TEXT" value="90"/>

@@ -3,6 +3,8 @@ package com.neotys.gremlin.common.engine;
 import com.google.common.base.Optional;
 
 
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Multimap;
 import com.gremlin.api.ApiGremlinClient;
 import com.gremlin.api.ApiGremlinException;
 import com.gremlin.api.api.AttacksApi;
@@ -110,11 +112,11 @@ public class GremlinEngine {
             {
                 //--host----
                 targettype.put("multiSelectTags", getTags(gremlinTags));
-                target.put(Task.TargetTypeEnum.HOST.getValue().toLowerCase(), targettype);
+                target.put(HOST, targettype);
             } else {
                 if (gremlinTypeOfTarget.equalsIgnoreCase(Task.TargetTypeEnum.CONTAINER.getValue())) {
-                    targettype.put("multiSelectTags", getTags(gremlinTags));
-                    target.put(Task.TargetTypeEnum.CONTAINER.getValue().toLowerCase(), targettype);
+                    targettype.put("multiSelectLabels", getTags(gremlinTags));
+                    target.put(CONTAINER, targettype);
                     //--containers----
 
                 } else {
@@ -219,30 +221,13 @@ public class GremlinEngine {
         }
     }
 
-    private HashMap<String,String[]> getTags(String tag)
-    {
-        HashMap<String,String[]> hashMap=new HashMap<>();
-        if(tag.contains(","))
-        {
-            //case of several tags
-            List<String> listofTags= Arrays.asList(tag.split(","));
-            listofTags.stream().forEach(s -> {
-                String[] strings=s.split(":");
-                if(strings.length>0) {
-                    String[] values = {strings[1]};
-                    hashMap.put(strings[0], values);
-                }
-            });
-        }
-        else {
-            String[] strings = tag.split(":");
-            if(strings.length>0) {
-                String[] values = {strings[1]};
-                hashMap.put(strings[0], values);
-            }
-        }
-
-        return hashMap;
+    private  Map<String, String[]> getTags(String tag) {
+        Multimap<String, String> hashMap = ArrayListMultimap.create();
+        Arrays.stream(tag.split(","))
+                .map(s -> s.split((":")))
+                .filter(strings -> strings.length > 0)
+                .forEach(strings -> hashMap.put(strings[0], strings[1]));
+        return hashMap.asMap().entrySet().stream().collect(Collectors.toMap(Map.Entry::getKey, o -> o.getValue().toArray(new String[]{})));
     }
 
     private boolean containsTags(HashMap<String,String> tags, Map<String, String> clienttag)
